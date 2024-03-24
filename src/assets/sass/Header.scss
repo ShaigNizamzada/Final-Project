@@ -1,0 +1,50 @@
+.navbar {
+  .header-end-section {
+    .social-media {
+      i {
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 50%;
+        padding: 12px;
+        transition: 0.5s ease;
+      }
+      .fa-instagram:hover {
+        background-color: brown;
+        color: white;
+      }
+      .fa-youtube:hover {
+        background-color: red;
+        color: white;
+      }
+      .fa-tiktok:hover {
+        background-color: #000000;
+        color: white;
+      }
+      .fa-discord:hover {
+        background-color: rgb(59, 59, 207);
+        color: white;
+      }
+    }
+    .header-user-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        font-size: 18px;
+      }
+      .mode--change {
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1280px) {
+  .social-media,
+  .header-user-section {
+    display: none;
+  }
+}
+.img-header {
+  width: 750px;
+  height: 400px;
+}

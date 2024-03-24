@@ -1,0 +1,51 @@
+.starwars--section {
+  width: 90% !important;
+  margin: 0 auto !important;
+  .starwars--left--section {
+    background-image: url("https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-sw-j-d.jpg?id=6973");
+    width: 120%;
+    height: 85vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 999 !important;
+    border-radius: 16px 0 0 16px !important;
+    left: 0;
+  }
+  .starwars--right--section {
+    border-radius: 0 16px 16px 0 !important;
+    height: 85vh;
+    .starwars--right--section--top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 36px;
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 2;
+    }
+    .button {
+      padding: 10px 34px;
+    }
+    .buy--now--button {
+      text-decoration: none;
+    }
+    .starwars--right--section--bottom {
+      font-size: 14px;
+      width: 85%;
+      margin: 72px auto;
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .starwars--left--section {
+    display: none;
+  }
+  .starwars--right--section {
+    // margin: 0 -34px !important;
+    // border-radius: 16px !important;
+  }
+}

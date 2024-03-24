@@ -1,0 +1,26 @@
+.login--section {
+  .form-control {
+    border-radius: 24px;
+  }
+  .login--button--section {
+    .login--button {
+      width: 100%;
+    }
+  }
+  .have--account {
+    text-decoration: none;
+    color: rgb(109, 78, 236);
+    transition: 0.2s ease;
+  }
+  .have-account:hover {
+    text-decoration: underline;
+    color: rgb(164, 147, 230);
+  }
+}
+.login--header--section {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  .home--button {
+    text-decoration: none;
+    color: rgb(109, 78, 236);
+  }
+}

@@ -1,0 +1,30 @@
+.home-lorem {
+  height: 80vh;
+}
+@media screen and (max-width: 1200px) {
+  .discounted-games {
+    display: none;
+  }
+}
+.fa-percent {
+  color: #8f72ea !important;
+}
+.category--store--games {
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 2.2;
+    font-size: 16px;
+    cursor: pointer;
+    li:hover {
+      color: rgb(93, 48, 216) !important;
+    }
+  }
+}
+.category--store--games {
+  ul {
+    li {
+      transition: 0.5s ease;
+    }
+  }
+}

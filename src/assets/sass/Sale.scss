@@ -1,0 +1,23 @@
+.sale--section {
+  .sale--section--top {
+    .sale--button {
+      text-decoration: none;
+      color: rgb(109, 78, 236);
+    }
+  }
+  .sale--section--middle {
+    background-image: url("https://woodmart.xtemos.com/games/wp-content/uploads/sites/14/2023/05/wd-vgs-discount-b.jpg.webp");
+    background-position: unset;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1520px !important;
+    margin: 0 auto;
+    height: 50vh;
+    .text--section {
+      margin: 100px 25px;
+      p {
+        color: #e1defb !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.category--section {
+  position: relative;
+  overflow: hidden;
+  img {
+    border-radius: 12px !important;
+    transition: transform 0.5s;
+  }
+  .category--section--text h4 {
+    position: absolute !important;
+    top: 100px;
+    left: 8px;
+    font-size: 18px;
+    z-index: 99;
+    margin-left: 6px;
+  }
+}
+.category--section:hover {
+  img {
+    transform: scale(1.1);
+  }
+}

@@ -1,0 +1,25 @@
+.about--section {
+  .header--text--section {
+    .header--text {
+      font-size: 64px !important;
+      font-weight: bold;
+      width: 57%;
+      margin: 0 auto;
+      letter-spacing: 2px;
+    }
+    .paragraph--text--section {
+      width: 70%;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+  }
+  .contact--us--button {
+    text-decoration: none;
+  }
+  .bottom--section {
+    h1 {
+      font-size: 42px;
+      line-height: 1.4;
+    }
+  }
+}

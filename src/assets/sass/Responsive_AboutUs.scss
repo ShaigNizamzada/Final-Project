@@ -1,0 +1,35 @@
+.about-us {
+  margin: 50px 0;
+  .card {
+    margin: 0 20px;
+    height: 450px;
+    padding: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    h4 {
+      color: #ffffff !important;
+    }
+    p {
+      color: #ebf0f0;
+    }
+  }
+  .card-1 {
+    background-image: url("https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/06/wd-vgs-safe-payments-w.jpg");
+  }
+  .card-2 {
+    background-image: url("https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/06/wd-vgs-support-w.jpg");
+  }
+  .card-3 {
+    background-image: url("https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/06/wd-vgs-from-gamers-w.jpg.webp");
+  }
+  .card-4 {
+    background-image: url("https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/06/wd-vgs-our-stores-w.jpg");
+  }
+  .card-5 {
+    background-image: url("https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/06/wd-vgs-customers-w.jpg");
+  }
+  .card-6 {
+    background-image: url("https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/06/wd-vgs-experiance-w.jpg");
+  }
+}

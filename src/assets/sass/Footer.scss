@@ -1,0 +1,30 @@
+.footer {
+  .nav-item {
+    .nav-link {
+      line-height: 1.8;
+      transition: 0.5s ease;
+    }
+  }
+}
+.footer {
+  .nav-item {
+    .nav-link:hover {
+      color: rgb(93, 48, 216) !important;
+    }
+  }
+}
+
+.footer-bottom-section {
+  .right-section {
+    .nav-link {
+      transition: 0.5s ease;
+    }
+  }
+}
+.footer-bottom-section {
+  .right-section {
+    .nav-link:hover {
+      color: grey;
+    }
+  }
+}

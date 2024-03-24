@@ -1,0 +1,30 @@
+.card {
+  border: none !important;
+  padding: 0;
+  background-color: transparent !important;
+  .hot {
+    position: absolute;
+    font-size: 12px;
+    font-weight: bolder;
+    border-radius: 12px;
+    margin: 6px;
+    padding: 4px 12px;
+  }
+  img {
+    width: auto;
+  }
+}
+.card-bottom {
+  .card--bottom--title {
+    .product--title {
+      font-size: 16px;
+    }
+    .rating--section {
+      font-size: 16px;
+      .fa-star {
+        font-size: 16px;
+        color: #e3c043;
+      }
+    }
+  }
+}

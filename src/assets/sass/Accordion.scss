@@ -1,0 +1,26 @@
+.ant-collapse {
+  background-color: transparent !important;
+  border: none;
+  .ant-collapse-item {
+    padding: 4px 0;
+    .ant-collapse-header {
+      line-height: 2 !important;
+      .ant-collapse-header-text {
+        font-weight: bold;
+        font-size: 22px;
+        margin-left: 24px;
+      }
+      .ant-collapse-expand-icon {
+        position: absolute;
+        top: 25px;
+        // display: none;
+      }
+    }
+    .ant-collapse-header:hover {
+      color: rgb(109, 78, 236);
+    }
+    .ant-collapse-content-box {
+      font-size: 18px;
+    }
+  }
+}

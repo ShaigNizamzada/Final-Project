@@ -1,0 +1,192 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* remove the gap so it doesn't close */
+}
+@import url(Header.scss);
+@import url(Footer.scss);
+@import url(Home.scss);
+@import url(Responsive_categories.scss);
+@import url(Responsive_TopSellers.scss);
+@import url(Responsive_Hero.scss);
+@import url(Hero.scss);
+@import url(Description.scss);
+@import url(SingleProduct.scss);
+@import url(SingleProduct2.scss);
+@import url(About.scss);
+@import url(Responsive_AboutUs.scss);
+@import url(Contact.scss);
+@import url(Sale.scss);
+@import url(StarWars.scss);
+@import url(Accordion.scss);
+@import url(DiscoverAll.scss);
+@import url(Login.scss);
+@import url(Register.scss);
+@import url(Account.scss);
+@import url(ForgotPassword.scss);
+@import url(FAQs.scss);
+@import url(ProductDetails.scss);
+@import url(SingleProductSale.scss);
+:root {
+  --header-background-dark: #212121;
+  --header-background-light: #e0dede;
+  --header-text-dark: #ffffff;
+  --header-text-light: #000000;
+  --icon-background: #646464;
+  --body-background-dark: #1a1a1a;
+  --body-background-light: #ffffff;
+  --footer-background-light: #f7f7f7;
+  --icon-background-color-light: #efefef;
+  --icon-background-color-dark: #646464;
+  --hero-text-color: #d3d4d7;
+}
+
+//  DARK MODE COLORS
+.dark {
+  background-color: var(--body-background-dark);
+  color: var(--header-text-dark);
+  .nav-link,
+  .product--title,
+  .ant-collapse-header-text,
+  .ant-collapse-content-box,
+  .ant-collapse-expand-icon {
+    color: var(--header-text-dark) !important;
+  }
+  .navbar,
+  .footer,
+  .single--product-2,
+  .popular--by--category--section,
+  .starwars--right--section,
+  .login--header--section {
+    background-color: var(--header-background-dark);
+    color: var(--header-text-dark);
+  }
+  i {
+    color: var(--header-text-dark);
+  }
+  .social-media-icon {
+    i {
+      background-color: var(--icon-background-color-dark);
+    }
+  }
+  .slider-container--hero {
+    color: var(--hero-text-color);
+  }
+  .hot,
+  .ant-collapse-content-box {
+    background-color: var(--body-background-dark);
+    color: var(--header-text-dark);
+  }
+  .read--more--button {
+    color: var(--header-text-dark);
+  }
+  .cart--is--empty {
+    filter: invert(0.899);
+  }
+}
+
+// LIGHT MODE COLORS
+.light {
+  body {
+    background-color: var(--body-background-light);
+    color: var(--header-text-light);
+  }
+  .navbar {
+    background-color: var(--footer-background-light);
+    color: var(--header-text-light);
+  }
+  .footer,
+  .single--product-2,
+  .popular--by--category--section,
+  .starwars--right--section,
+  .login--header--section {
+    background-color: var(--footer-background-light);
+    color: var(--header-text-light);
+  }
+  .nav-link,
+  .product--title,
+  .ant-collapse-header-text,
+  .ant-collapse-content-box,
+  .ant-collapse-expand-icon {
+    color: var(--header-text-light);
+  }
+  i {
+    color: var(--header-text-light);
+  }
+  .social-media-icon {
+    i {
+      background-color: var(--icon-background-color-light);
+    }
+  }
+  .slider-container--hero {
+    color: var(--hero-text-color);
+  }
+  .hot,
+  .ant-collapse-content-box {
+    background-color: var(--body-background-light);
+    color: var(--header-text-light);
+  }
+  .woodmart--logo,
+  .starwars--jedi--survivor,
+  .starwars--section--platforms {
+    filter: invert(1);
+  }
+  .read--more--button {
+    color: var(--header-text-light);
+  }
+}
+
+// body {
+//   background-color: var(--body-background-dark) !important;
+//   color: var(--header-text-dark) !important;
+// }
+body {
+  overflow-x: hidden;
+}
+.slick-arrow {
+  display: none !important;
+}
+
+// PRICE Colors
+.product--title {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.product--title:hover {
+  color: #bebcbc !important;
+}
+
+.product--price {
+  color: rgb(109, 78, 236);
+}
+
+.discounted--price {
+  color: #929292;
+}
+
+.product--title {
+  text-decoration: none !important;
+}
+
+// BUTTON Config.
+.button {
+  background-color: rgb(109, 78, 236);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  padding: 9px 22px;
+  border-radius: 35px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  text-shadow: none;
+  line-height: 2;
+  transition: 0.2s ease;
+}
+.button:hover {
+  background-color: rgb(97, 62, 235);
+}

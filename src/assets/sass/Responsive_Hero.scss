@@ -1,0 +1,38 @@
+.responsivehero--slide {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s ease;
+  width: 95% !important;
+  margin: 0 12px !important;
+  height: 50vh;
+  border-radius: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 148px 54px;
+  border-radius: 12px;
+  p,
+  span {
+    color: #d3d4d4;
+  }
+}
+.responsivehero--first--slide {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-hg-lg.jpg.webp");
+}
+.responsivehero--second--slide {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-nfs-u.jpg.webp");
+}
+.responsivehero--third--slide {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-banner-tloz-totk.jpg.webp");
+}
+.responsivehero--fourth--slide {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-d-4.jpg.webp");
+}
+.buy--now--button {
+  text-decoration: none;
+}
