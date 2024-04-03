@@ -16,6 +16,17 @@
     text-decoration: underline;
     color: rgb(164, 147, 230);
   }
+  .password--section {
+    .password--input--section {
+      position: relative;
+      .show--password--icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+    }
+  }
 }
 .login--header--section {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

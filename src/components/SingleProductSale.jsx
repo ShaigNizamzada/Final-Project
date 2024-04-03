@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "react-use-cart";
-const SingleProductSale = ({ title, photo, rating, price }) => {
-  const { addItem } = useCart();
+import slug from "react-slugify";
+const SingleProductSale = ({ title, photo, rating, price, id }) => {
   return (
     <>
-      <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 single--product--sale">
+      <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 single--product--sale g-2">
         <div className="card me-3">
           <img
             src={photo}
@@ -13,13 +12,20 @@ const SingleProductSale = ({ title, photo, rating, price }) => {
             className="card-img-top"
             alt="tech"
           />
-
           <span className="hot">HOT</span>
+          <div className="add--to--cart--section d-flex flex-column">
+            <Link to={`/sale/${slug(title)}`}>
+              <i class="fa-solid fa-magnifying-glass fs-5 pb-4 text-light"></i>
+            </Link>
+            <Link to="/sale">
+              <i class="fa-regular fa-heart fs-5 text-light"></i>
+            </Link>
+          </div>
         </div>
         <div className="card-bottom">
           <div className="card--bottom--title d-flex justify-content-between me-3 mt-2">
-            <Link className="product--title" to="/sale">
-              <span>{title.slice(0, 20)}</span>
+            <Link className="product--title" to={`/sale/${slug(title)}`}>
+              <span>{title.slice(0, 11)}...</span>
             </Link>
             <div className="rating--section">
               <span>{rating}</span>

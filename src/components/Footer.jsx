@@ -125,13 +125,13 @@ const Footer = () => {
             Based on WoodMart theme 2024 WooCommerce Themes.
           </div>
           <div className="right-section d-flex fs-7">
-            <Link className="nav-link me-4" to="/">
+            <Link className="nav-link me-4" to="/faqs">
               Terms of Service
             </Link>
-            <Link className="nav-link me-4" to="/">
+            <Link className="nav-link me-4" to="/privacypolicy">
               Privacy Policy
             </Link>
-            <Link className="nav-link" to="/">
+            <Link className="nav-link" to="/contact">
               Store Refund Policy
             </Link>
           </div>

@@ -1,31 +1,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "react-use-cart";
-const SingleProduct = ({ title, photo, rating, price }) => {
-  const { addItem } = useCart();
+import slug from "react-slugify";
+const SingleProduct = ({ title, photo, rating, price, id }) => {
   return (
     <>
-      <div className="card me-3">
-        <img
-          src={photo}
-          style={{ objectFit: "contain" }}
-          className="card-img-top"
-          alt="tech"
-        />
-        <span className="hot">HOT</span>
-      </div>
-      <div className="card-bottom">
-        <div className="card--bottom--title d-flex justify-content-between me-3 mt-2">
-          <Link className="product--title" to="/sale">
-            <span>{title.slice(0, 20)}</span>
-          </Link>
-          <div className="rating--section">
-            <span>{rating}</span>
-            <i class="fa-solid fa-star ms-1"></i>
+      <div className="card--section">
+        <div className="card me-2">
+          <img
+            src={photo}
+            style={{ objectFit: "contain" }}
+            className="card-img-top"
+            alt="tech"
+          />
+          <span className="hot">HOT</span>
+          <div className="add--to--cart--section d-flex flex-column">
+            <Link to={`/sale/${slug(title)}`}>
+              <i class="fa-solid fa-magnifying-glass fs-5 pb-4 text-light"></i>
+            </Link>
+            <Link to="/sale">
+              <i class="fa-regular fa-heart fs-5 text-light"></i>
+            </Link>
           </div>
         </div>
-        <div className="card--bottom--pric mt-1">
-          <span className="product--price price">£{price}</span>
+        <div className="card-bottom">
+          <div className="card--bottom--title d-flex justify-content-between me-3 mt-2">
+            <Link className="product--title" to={`/sale/${slug(title)}`}>
+              <span>{title.slice(0, 20)}</span>
+            </Link>
+            <div className="rating--section">
+              <span>{rating}</span>
+              <i class="fa-solid fa-star ms-1"></i>
+            </div>
+          </div>
+          <div className="card--bottom--pric mt-1">
+            <span className="product--price price">£{price}</span>
+          </div>
         </div>
       </div>
     </>

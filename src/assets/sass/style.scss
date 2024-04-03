@@ -27,6 +27,9 @@
 @import url(FAQs.scss);
 @import url(ProductDetails.scss);
 @import url(SingleProductSale.scss);
+@import url(PrivacyPolicy.scss);
+@import url(Cart.scss);
+@import url(Campaign.scss);
 :root {
   --header-background-dark: #212121;
   --header-background-light: #e0dede;
@@ -57,11 +60,16 @@
   .single--product-2,
   .popular--by--category--section,
   .starwars--right--section,
-  .login--header--section {
-    background-color: var(--header-background-dark);
+  .login--header--section,
+  .specification--section,
+  .product--details--section,
+  .privacy--policy--section,
+  .cart--section {
+    background-color: var(--header-background-dark) !important;
     color: var(--header-text-dark);
   }
-  i {
+  i,
+  .link {
     color: var(--header-text-dark);
   }
   .social-media-icon {
@@ -91,8 +99,12 @@
     background-color: var(--body-background-light);
     color: var(--header-text-light);
   }
-  .navbar {
-    background-color: var(--footer-background-light);
+  .navbar,
+  .specification--section,
+  .product--details--section,
+  .privacy--policy--section,
+  .cart--section {
+    background-color: var(--footer-background-light) !important;
     color: var(--header-text-light);
   }
   .footer,
@@ -110,7 +122,8 @@
   .ant-collapse-expand-icon {
     color: var(--header-text-light);
   }
-  i {
+  i,
+  .link {
     color: var(--header-text-light);
   }
   .social-media-icon {
@@ -149,7 +162,7 @@ body {
 
 // PRICE Colors
 .product--title {
-  text-decoration: none;
+  text-decoration: none !important;
   transition: 0.3s ease;
 }
 .product--title:hover {

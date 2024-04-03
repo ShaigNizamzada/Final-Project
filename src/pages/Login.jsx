@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const [showPassword, setshowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -50,11 +51,25 @@ const Login = () => {
               <label>
                 Password <span className="text-danger">*</span>
               </label>
-              <input
-                onChange={(e) => setPassword(e.target.value)}
-                type="password"
-                className="form-control p-2"
-              />
+              <div className="password--section">
+                <div className="password--input--section">
+                  <input
+                    onChange={(e) => setPassword(e.target.value)}
+                    type={showPassword ? "text" : "password"}
+                    className="form-control p-2"
+                  />
+                  <div
+                    className="show--password--icon"
+                    onClick={() => setshowPassword(!showPassword)}
+                  >
+                    {showPassword ? (
+                      <i class="fa-solid fa-eye"></i>
+                    ) : (
+                      <i class="fa-regular fa-eye"></i>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="login--button--section">
               <button type="submit" className="button login--button  mx-auto">

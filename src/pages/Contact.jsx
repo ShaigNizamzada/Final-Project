@@ -66,7 +66,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-              <div className="contact--section--top--right">
+              <div className="contact--section--top--right mt-5">
                 <img
                   src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/06/wd-vgs-contact-us.png"
                   alt="headphone"

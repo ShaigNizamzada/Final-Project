@@ -1,9 +1,12 @@
-import React from "react";
-import { FaRegTrashAlt } from "react-icons/fa";
+import React, { useContext } from "react";
+import slug from "react-slugify";
 import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
+import { ProductContext } from "../context/ProductContext";
+import SingleProductSale from "../components/SingleProductSale";
 
 const Cart = () => {
+  const [product] = useContext(ProductContext);
   const {
     items,
     updateItemQuantity,
@@ -31,90 +34,145 @@ const Cart = () => {
     </>
   ) : (
     <>
-      <h2 className="text-center my-3">Shopping List</h2>
-      <div className="container mt-5">
-        <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Photo</th>
-              <th scope="col">Product</th>
-              <th scope="col">Price</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">
-                <div className="d-flex justify-content-center">Remove Item</div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {items.map((item, c) => (
-              <tr key={c}>
-                <th scope="row">
-                  <div className="item-number mt-4">{c + 1}</div>
-                </th>
-                <td>
-                  <img
-                    className="mt-1"
-                    width={100}
-                    src={item.images[0]}
-                    alt=""
-                  />
-                </td>
-                <td>
-                  <div className="item-title mt-4">{item.title}</div>
-                </td>
-                <td>
-                  <div className="item-price mt-4">
-                    {item.price * item.quantity}$
-                  </div>
-                </td>
-                <td>
-                  <div className="item-quantity mt-3">
-                    <button
-                      className="btn btn-outline-danger"
-                      onClick={() =>
-                        updateItemQuantity(item.id, item.quantity - 1)
-                      }
-                    >
-                      -
-                    </button>
-                    <span className="mx-3"> {item.quantity}</span>
-                    <button
-                      className="btn btn-outline-success"
-                      onClick={() =>
-                        updateItemQuantity(item.id, item.quantity + 1)
-                      }
-                    >
-                      +
-                    </button>
-                  </div>
-                </td>
-                <td>
-                  <div className="trash-icon d-flex justify-content-center mt-3">
-                    <FaRegTrashAlt
-                      onClick={() => removeItem(item.id)}
-                      className="trash-icon-2"
-                    />
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        <div className="d-flex justify-content-center mt-5">
-          <h1>
-            Total Price is : <span className="fw-bold"> {cartTotal} $</span>
-          </h1>
+      <div className="container-fluid cart--section pt-5">
+        <h2 className="text-center pb-5">Shopping List</h2>
+        <div className="row">
+          <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+            <div className="cart--left--section">
+              <table className="table--shopping--list">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th scope="col"></th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Subtotal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {items.map((item, c) => (
+                    <tr key={c}>
+                      <td>
+                        <div className="item-remove me-3">
+                          <i
+                            onClick={() => removeItem(item.id)}
+                            class="fa-solid fa-xmark d-flex justify-content-center"
+                          ></i>
+                        </div>
+                      </td>
+                      <td>
+                        <div className="item-photo mb-4">
+                          <img
+                            className=""
+                            width={100}
+                            src={item.photo}
+                            alt=""
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <div className="item-title">
+                          <Link
+                            className="product--title"
+                            to={`/sale/${slug(item.title)}`}
+                          >
+                            {item.title}{" "}
+                          </Link>
+                        </div>
+                      </td>
+                      <td>
+                        <div className="item-price discounted--price">
+                          £{item.price}
+                        </div>
+                      </td>
+                      <td>
+                        <div className="quantity">
+                          <input
+                            type="button"
+                            className="minus"
+                            onClick={() =>
+                              updateItemQuantity(item.id, item.quantity - 1)
+                            }
+                            value="-"
+                          />
+                          <input
+                            type="text"
+                            className="item--quantity"
+                            value={item.quantity}
+                          />
+                          <input
+                            type="button"
+                            className="plus"
+                            onClick={() =>
+                              updateItemQuantity(item.id, item.quantity + 1)
+                            }
+                            value="+"
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <div className="item-subtotal product--price">
+                          £{item.price * item.quantity}
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <button onClick={() => emptyCart()} className="button mt-4\">
+                Remove Cart
+              </button>
+            </div>
+          </div>
+          <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+            <div className="cart--right--section p-4">
+              <h3 className="fw-bold">Cart Totals</h3>
+              <div className="subtotal--section d-flex pt-3 justify-content-between align-items-center">
+                <h6>Subtotal</h6>
+                <p className="discounted--price">£{cartTotal}</p>
+              </div>
+              <hr />
+              <div className="shipping--section d-flex pt-3 justify-content-between align-items-center">
+                <h6>Shipping</h6>
+                <p>Will be updated during checkout.</p>
+              </div>
+              <hr />
+              <div className="total--section d-flex pt-3 justify-content-between align-items-center">
+                <h6>Total</h6>
+                <p className="product--price fs-4 fw-bold">£{cartTotal}</p>
+              </div>
+              <div className="proceed--to--checkout--section">
+                <Link to="/">
+                  <button className="button mt-2 align-items-center justify-content-center">
+                    Proceed To Checkout
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="d-flex justify-content-center mt-5">
-          <button
-            onClick={() => {
-              emptyCart();
-            }}
-            className="btn btn-outline-danger"
-          >
-            Remove Items
-          </button>
+        <div className="coupon--section d-flex align-items-center mt-4 pb-5">
+          <input
+            type="text"
+            className="input--coupon"
+            placeholder="Coupon code"
+          />
+          <button className="button ms-3">Apply Coupon</button>
+        </div>
+        <h2 className="fw-bold">They buy with these goods</h2>
+        <div className="col-lg-5 ms-2 pb-5">
+          <div className="row">
+            {product.slice(33, 37).map((item) => (
+              <SingleProductSale
+                key={item.id}
+                title={item.title}
+                photo={item.photo}
+                rating={item.rating}
+                price={item.price}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </>

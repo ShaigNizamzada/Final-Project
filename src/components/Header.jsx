@@ -1,9 +1,16 @@
-import React, { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { ModeContext } from "../context/ModeContext";
-
+import { useCart } from "react-use-cart";
+import { LuShoppingCart } from "react-icons/lu";
 const Header = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   const [mode, setMode] = useContext(ModeContext);
+  const { totalItems } = useCart();
   return (
     <nav className="navbar navbar-expand-lg py-4">
       <div className="container-fluid">
@@ -76,12 +83,12 @@ const Header = () => {
                 </span>
               </Link>
               <Link to="https://discord.com/" target="_blank">
-                <span className="social-media-icon discord">
+                <span className="social-media-icon discord me-5">
                   <i class="fa-brands fa-discord"></i>
                 </span>
               </Link>
             </div>
-            <form role="search" className="search-section mx-5">
+            <form role="search" className="search-section me-5">
               <input
                 className="form-control mt-2"
                 type="search"
@@ -102,12 +109,21 @@ const Header = () => {
                   <i class="fa-regular fa-user"></i>
                 </NavLink>
               )}
-              <NavLink className="favorite mx-4" to="/wishlist">
+              <NavLink className="favorite ms-3 me-1" to="/wishlist">
                 <i class="fa-regular fa-heart"></i>
               </NavLink>
-              <NavLink className="shopping-cart" to="/cart">
+              <Link
+                to={
+                  localStorage.getItem("login") === "true" ? "/cart" : "/login"
+                }
+                type="button"
+                className="btn position-relative shopping-cart"
+              >
                 <i class="fa-solid fa-cart-shopping"></i>
-              </NavLink>
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {localStorage.getItem("login") === "true" ? totalItems : 0}
+                </span>
+              </Link>
               <div
                 className="mx-4 mode"
                 onClick={() => {
@@ -124,8 +140,8 @@ const Header = () => {
                 )}
               </div>
             </div>
+            <button className="button">AZ</button>
           </div>
-          <button className="btn btn-danger">AZ</button>
         </div>
       </div>
     </nav>

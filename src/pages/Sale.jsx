@@ -32,22 +32,26 @@ const Sale = () => {
             </div>
           </div>
         </div>
-        {/* <div className="sale--section--bottom mt-5">
+        <div className="sale--section--bottom mt-5">
           <div className="row">
-            <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 ">
+            <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 ">
               <div className="sale--section--bottom--left"></div>
             </div>
-            {product.slice(0, 5).map((item) => (
-              <SingleProductSale
-                key={item.id}
-                title={item.title}
-                photo={item.photo}
-                rating={item.rating}
-                price={item.price}
-              />
-            ))}
+            <div className="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+              <div className="row sale--section--right--left ms-1">
+                {product.slice(0, 24).map((item) => (
+                  <SingleProductSale
+                    key={item.id}
+                    title={item.title}
+                    photo={item.photo}
+                    rating={item.rating}
+                    price={item.price}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </>
   );

@@ -61,7 +61,7 @@ function Responsive_categories() {
             <img
               src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-action-d-1.jpg"
               alt=""
-              width={230}
+              width={210}
             />
           </Link>
           <div className="category--section--text">
@@ -73,7 +73,7 @@ function Responsive_categories() {
             <img
               src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-adventure-d-1.jpg"
               alt=""
-              width={230}
+              width={210}
             />
           </Link>
           <div className="category--section--text">
@@ -85,7 +85,7 @@ function Responsive_categories() {
             <img
               src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-casual-d-1.jpg"
               alt=""
-              width={230}
+              width={210}
             />
           </Link>
           <div className="category--section--text">
@@ -97,7 +97,7 @@ function Responsive_categories() {
             <img
               src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-horror-d-1.jpg"
               alt=""
-              width={230}
+              width={210}
             />
           </Link>
           <div className="category--section--text">
@@ -109,7 +109,7 @@ function Responsive_categories() {
             <img
               src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-indie-d-1.jpg"
               alt=""
-              width={230}
+              width={210}
             />
           </Link>
           <div className="category--section--text">
@@ -121,7 +121,7 @@ function Responsive_categories() {
             <img
               src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-racing-d-1.jpg"
               alt=""
-              width={230}
+              width={210}
             />
           </Link>
           <div className="category--section--text">
@@ -133,7 +133,7 @@ function Responsive_categories() {
             <img
               src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-rpg-d-1.jpg"
               alt=""
-              width={230}
+              width={210}
             />
           </Link>
           <div className="category--section--text">
@@ -145,7 +145,7 @@ function Responsive_categories() {
             <img
               src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-simulation-d-1.jpg"
               alt=""
-              width={230}
+              width={210}
             />
           </Link>
           <div className="category--section--text">

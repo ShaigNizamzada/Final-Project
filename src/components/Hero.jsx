@@ -57,7 +57,7 @@ function CustomSlides() {
                 </p>
                 <div className="take--it--now--section d-flex">
                   {" "}
-                  <Link className="take--it--now">
+                  <Link className="take--it--now" to="/sale">
                     <button className="button me-2">Take it Now</button>
                   </Link>
                   <span className="fs-5 pt-2 ps-3">
@@ -103,7 +103,7 @@ function CustomSlides() {
                 </p>
                 <div className="take--it--now--section d-flex">
                   {" "}
-                  <Link className="take--it--now">
+                  <Link className="take--it--now" to="/sale">
                     <button className="button me-2">Take it Now</button>
                   </Link>
                   <span className="fs-5 pt-2 ps-3">
@@ -149,7 +149,7 @@ function CustomSlides() {
                 </p>
                 <div className="take--it--now--section d-flex">
                   {" "}
-                  <Link className="take--it--now">
+                  <Link className="take--it--now" to="/sale">
                     <button className="button me-2">Take it Now</button>
                   </Link>
                   <span className="fs-5 pt-2 ps-3">

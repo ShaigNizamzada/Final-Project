@@ -1,17 +1,53 @@
-import React, { useContext } from "react";
-
+import React, { useContext, useState } from "react";
 import Responsive_categories from "../components/Responsive_categories";
 import Responsive_TopSellers from "../components/Responsive_TopSellers";
 import Responsive_Hero from "../components/Responsive_Hero";
-import Responsive4 from "../components/Responsive4";
 import Hero from "../components/Hero";
 import { ProductContext } from "../context/ProductContext";
 import SingleProduct2 from "../components/SingleProduct2";
 import StarWars from "../components/StarWars";
 import DiscoverAll from "../components/DiscoverAll";
+import SingleProduct from "../components/SingleProduct";
+import Slider from "react-slick";
 
 const Home = () => {
+  var settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 2,
+    initialSlide: 0,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   const [product] = useContext(ProductContext);
+  const [category, setCategory] = useState("Action");
+
+  const filteredData = product.filter((item) => item.category === category);
   return (
     <>
       <div className="row">
@@ -44,24 +80,38 @@ const Home = () => {
           <div className="popular--by--category--section ms-3 p-3">
             <h3>Popular By Category</h3>
             <ul>
-              <li>Action</li>
-              <li>Adventure</li>
-              <li>Casual</li>
-              <li>Horror</li>
-              <li>Indie</li>
-              <li>Racing</li>
-              <li>RPG</li>
+              <li onClick={() => setCategory("Action")}>Action</li>
+              <li onClick={() => setCategory("Adventure")}>Adventure</li>
+              <li onClick={() => setCategory("Casual")}>Casual</li>
+              <li onClick={() => setCategory("Horror")}>Horror</li>
+              <li onClick={() => setCategory("Indie")}>Indie</li>
+              <li onClick={() => setCategory("Racing")}>Racing</li>
+              <li onClick={() => setCategory("RPG")}>RPG</li>
             </ul>
           </div>
         </div>
-        <div className="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
-          <div className="store--section me-3">
-            <Responsive4 />
+        <div className="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12 mb-5">
+          <div className="store--section ms-3">
+            <div className="slider-container">
+              {
+                <Slider {...settings}>
+                  {filteredData.map((item) => (
+                    <SingleProduct
+                      key={item.id}
+                      title={item.title}
+                      photo={item.photo}
+                      rating={item.rating}
+                      price={item.price}
+                    />
+                  ))}
+                </Slider>
+              }
+            </div>
           </div>
         </div>
-        <StarWars />
-        <DiscoverAll />
       </div>
+      <StarWars />
+      <DiscoverAll />
     </>
   );
 };

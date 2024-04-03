@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -19,6 +19,8 @@ import ChangePassword from "./pages/ChangePassword";
 import ForgotPassword from "./pages/ForgotPassword";
 import FAQs from "./pages/FAQs";
 import Wishlist from "./pages/Wishlist";
+import ProductDetails from "./pages/ProductDetails";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const App = () => {
   const [mode] = useContext(ModeContext);
@@ -43,6 +45,8 @@ const App = () => {
             <Route path="/account" element={<Account />}></Route>
             <Route path="/changepassword" element={<ChangePassword />}></Route>
             <Route path="/forgotpassword" element={<ForgotPassword />}></Route>
+            <Route path="/sale/:url" element={<ProductDetails />}></Route>
+            <Route path="/privacypolicy" element={<PrivacyPolicy />}></Route>
           </Routes>
           <Description />
           <Footer />

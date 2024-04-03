@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const SingleProduct2 = ({ title, photo, rating, price }) => {
+import slug from "react-slugify";
+const SingleProduct2 = ({ title, photo, rating, price, id }) => {
   return (
     <>
       <div className="single--product-2 d-flex p-3">
@@ -8,7 +9,7 @@ const SingleProduct2 = ({ title, photo, rating, price }) => {
           <img src={photo} alt="" width={55} />
         </div>
         <div className="description--section">
-          <Link to="/sale" className="product--title">
+          <Link to={`/sale/${slug(title)}`} className="product--title">
             <h6>{title}</h6>
           </Link>
           <span className="product--rating">{rating}</span>

@@ -1,6 +1,7 @@
 const products = [
   // ---------------------------------------ACTION GAMES-------------------------------
   {
+    id: 1,
     title: "Dead Island 2",
     category: "Action",
     photo:
@@ -22,6 +23,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 2,
     title: "Redfall",
     category: "Action",
     photo:
@@ -43,6 +45,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 3,
     title: "Returnal",
     category: "Action",
     photo:
@@ -64,6 +67,7 @@ const products = [
     rating: "4",
   },
   {
+    id: 4,
     title: "Crime Boss: Rockay City",
     category: "Action",
     photo:
@@ -85,6 +89,7 @@ const products = [
     rating: "5",
   },
   {
+    id: 5,
     title: "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
     category: "Action",
     photo:
@@ -105,6 +110,7 @@ const products = [
     rating: "5",
   },
   {
+    id: 6,
     title: "Metroid Prime Remastered",
     category: "Action",
     photo:
@@ -127,6 +133,7 @@ const products = [
   },
   // ----------------------------------------ADVENTURE GAMES--------------------------------
   {
+    id: 7,
     title: "Red Dead Redemption 2",
     category: "Adventure",
     photo:
@@ -148,6 +155,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 8,
     title: "The Legend of Zelda: Tears of the Kingdom",
     category: "Adventure",
     photo:
@@ -169,6 +177,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 9,
     title: "STAR WARS Jedi: Survivor",
     category: "Adventure",
     photo:
@@ -190,6 +199,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 10,
     title: "Hogwarts Legacy",
     category: "Adventure",
     photo:
@@ -211,6 +221,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 11,
     title: "A Plague Tale: Requiem",
     category: "Adventure",
     photo:
@@ -232,6 +243,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 12,
     title: "God of War Ragnarök",
     category: "Adventure",
     photo:
@@ -254,6 +266,7 @@ const products = [
   },
   //  ---------------------------------------------CASUAL GAMES-----------------------------------------------
   {
+    id: 13,
     title: "Life of Delta",
     category: "Casual",
     photo:
@@ -275,6 +288,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 14,
     title: "Screaming Chicken: Ultimate Showdown",
     category: "Casual",
     photo:
@@ -296,6 +310,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 15,
     title: "Party Animals",
     category: "Casual",
     photo:
@@ -317,6 +332,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 16,
     title: "Garden In!",
     category: "Casual",
     photo:
@@ -338,6 +354,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 17,
     title: "Voltaire: The Vegan Vampire",
     category: "Casual",
     photo:
@@ -359,6 +376,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 18,
     title: "SEASON: A letter to the future",
     category: "Casual",
     photo:
@@ -381,6 +399,7 @@ const products = [
   },
   //  ------------------------------------------HORROR GAMES----------------------------------------------
   {
+    id: 19,
     title: "Ikai",
     category: "Horror",
     photo:
@@ -402,6 +421,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 20,
     title: "The Dark Pictures Anthology: The Devil in Me",
     category: "Horror",
     photo:
@@ -423,6 +443,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 21,
     title: "Martha Is Dead",
     category: "Horror",
     photo:
@@ -444,6 +465,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 22,
     title: "Layers of Fear",
     category: "Horror",
     photo:
@@ -465,6 +487,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 23,
     title: "Banishers: Ghosts of New Eden",
     category: "Horror",
     photo:
@@ -486,6 +509,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 24,
     title: "The Mortuary Assistant",
     category: "Horror",
     photo:
@@ -508,6 +532,7 @@ const products = [
   },
   //  ----------------------------------------INDIE GAMES-----------------------------------------------
   {
+    id: 25,
     title: "Figment 2: Creed Valley",
     category: "Indie",
     photo:
@@ -529,6 +554,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 26,
     title: "Elderand",
     category: "Indie",
     photo:
@@ -550,6 +576,7 @@ const products = [
     rating: "4.2",
   },
   {
+    id: 27,
     title: "The Pale Beyond",
     category: "Indie",
     photo:
@@ -571,6 +598,7 @@ const products = [
     rating: "4",
   },
   {
+    id: 28,
     title: "Sun Haven",
     category: "Indie",
     photo:
@@ -592,6 +620,7 @@ const products = [
     rating: "4.6",
   },
   {
+    id: 29,
     title: "Roots of Pacha",
     category: "Indie",
     photo:
@@ -613,6 +642,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 30,
     title: "Have a Nice Death",
     category: "Indie",
     photo:
@@ -635,6 +665,7 @@ const products = [
   },
   //  --------------------------------------------RACING GAMES---------------------------------------
   {
+    id: 31,
     title: "Wreckfest",
     category: "Racing",
     photo:
@@ -656,6 +687,7 @@ const products = [
     rating: "4.1",
   },
   {
+    id: 32,
     title: "The Crew 2",
     category: "Racing",
     photo:
@@ -677,6 +709,7 @@ const products = [
     rating: "4.7",
   },
   {
+    id: 33,
     title: "Need for Speed Heat",
     category: "Racing",
     photo:
@@ -698,6 +731,7 @@ const products = [
     rating: "4.7",
   },
   {
+    id: 34,
     title: "MX vs ATV Legends",
     category: "Racing",
     photo:
@@ -719,6 +753,7 @@ const products = [
     rating: "4.4",
   },
   {
+    id: 35,
     title: "Dakar Desert Rally",
     category: "Racing",
     photo:
@@ -740,6 +775,7 @@ const products = [
     rating: "4.1",
   },
   {
+    id: 36,
     title: "Gran Turismo 7",
     category: "Racing",
     photo:
@@ -762,6 +798,7 @@ const products = [
   },
   //  ------------------------------------------ RPG GAMES------------------------------------------------
   {
+    id: 37,
     title: "Starfield",
     category: "RPG",
     photo:
@@ -783,6 +820,7 @@ const products = [
     rating: "5",
   },
   {
+    id: 38,
     title: "Tiny Tina’s Wonderlands",
     category: "RPG",
     photo:
@@ -804,6 +842,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 39,
     title: "Elden Ring",
     category: "RPG",
     photo:
@@ -825,6 +864,7 @@ const products = [
     rating: "4.3",
   },
   {
+    id: 40,
     title: "The Lord of the Rings: Gollum",
     category: "RPG",
     photo:
@@ -846,6 +886,7 @@ const products = [
     rating: "4.1",
   },
   {
+    id: 41,
     title: "Tyrant’s Blessing",
     category: "RPG",
     photo:
@@ -867,6 +908,7 @@ const products = [
     rating: "4.5",
   },
   {
+    id: 42,
     title: "Asterigos: Curse of the Stars",
     category: "RPG",
     photo:
@@ -888,4 +930,4 @@ const products = [
     rating: "4.1",
   },
 ];
-// https://mocki.io/v1/5e79d2b7-383b-4c5d-99b7-20eb8b98fe68
+// https://mocki.io/v1/75bea82f-e5c6-48aa-a92f-d8ac74f55342

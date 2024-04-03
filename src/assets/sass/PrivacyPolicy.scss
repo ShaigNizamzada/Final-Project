@@ -1,0 +1,27 @@
+.privacy--policy--section {
+  .privacy--policy--top--section {
+    width: 50%;
+    margin: 0 auto;
+    .link:hover {
+      color: rgb(109, 78, 236);
+    }
+    .link {
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+  }
+  .privacy--policy--bottom--section {
+    .title {
+      font-weight: bold;
+      font-size: 22px;
+    }
+    .title--number {
+      color: rgb(109, 78, 236);
+      font-size: 22px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+  }
+}
