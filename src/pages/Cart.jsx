@@ -113,7 +113,7 @@ const Cart = () => {
                       </td>
                       <td>
                         <div className="item-subtotal product--price">
-                          £{item.price * item.quantity}
+                          £ {Math.round(item.price * item.quantity)}
                         </div>
                       </td>
                     </tr>
@@ -130,7 +130,7 @@ const Cart = () => {
               <h3 className="fw-bold">Cart Totals</h3>
               <div className="subtotal--section d-flex pt-3 justify-content-between align-items-center">
                 <h6>Subtotal</h6>
-                <p className="discounted--price">£{cartTotal}</p>
+                <p className="discounted--price">£{Math.floor(cartTotal)}</p>
               </div>
               <hr />
               <div className="shipping--section d-flex pt-3 justify-content-between align-items-center">
@@ -140,7 +140,9 @@ const Cart = () => {
               <hr />
               <div className="total--section d-flex pt-3 justify-content-between align-items-center">
                 <h6>Total</h6>
-                <p className="product--price fs-4 fw-bold">£{cartTotal}</p>
+                <p className="product--price fs-4 fw-bold">
+                  £{Math.floor(cartTotal)}
+                </p>
               </div>
               <div className="proceed--to--checkout--section">
                 <Link to="/">

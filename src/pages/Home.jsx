@@ -77,7 +77,7 @@ const Home = () => {
       <Responsive_Hero />
       <div className="row category--store--games mt-5">
         <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
-          <div className="popular--by--category--section ms-3 p-3">
+          <div className="popular--by--category--section ms-3 p-3 mb-2">
             <h3>Popular By Category</h3>
             <ul>
               <li onClick={() => setCategory("Action")}>Action</li>

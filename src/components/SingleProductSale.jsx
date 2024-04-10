@@ -5,23 +5,25 @@ const SingleProductSale = ({ title, photo, rating, price, id }) => {
   return (
     <>
       <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 single--product--sale g-2">
-        <div className="card me-3">
-          <img
-            src={photo}
-            style={{ objectFit: "contain" }}
-            className="card-img-top"
-            alt="tech"
-          />
-          <span className="hot">HOT</span>
-          <div className="add--to--cart--section d-flex flex-column">
-            <Link to={`/sale/${slug(title)}`}>
-              <i class="fa-solid fa-magnifying-glass fs-5 pb-4 text-light"></i>
-            </Link>
-            <Link to="/sale">
-              <i class="fa-regular fa-heart fs-5 text-light"></i>
-            </Link>
+        <Link to={`/sale/${slug(title)}`}>
+          <div className="card me-3">
+            <img
+              src={photo}
+              style={{ objectFit: "contain" }}
+              className="card-img-top"
+              alt="tech"
+            />
+            <span className="hot">HOT</span>
+            <div className="add--to--cart--section d-flex flex-column">
+              <Link to={`/sale/${slug(title)}`}>
+                <i class="fa-solid fa-magnifying-glass fs-5 pb-4 text-light"></i>
+              </Link>
+              <Link to="/sale">
+                <i class="fa-regular fa-heart fs-5 text-light"></i>
+              </Link>
+            </div>
           </div>
-        </div>
+        </Link>
         <div className="card-bottom">
           <div className="card--bottom--title d-flex justify-content-between me-3 mt-2">
             <Link className="product--title" to={`/sale/${slug(title)}`}>

@@ -91,6 +91,9 @@
   .cart--is--empty {
     filter: invert(0.899);
   }
+  .fa-eye {
+    color: var(--header-text-light);
+  }
 }
 
 // LIGHT MODE COLORS

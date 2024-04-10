@@ -1,7 +1,23 @@
 import Link from "antd/es/typography/Link";
-import React from "react";
-
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm("service_o9gwr1g", "template_31c99er", form.current, {
+        publicKey: "l196bMncVHDktiWLl",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
   return (
     <>
       <div className="container-fluid mt-2 contact--section">
@@ -14,7 +30,7 @@ const Contact = () => {
                   The online store of equipment and electronics is one of the
                   leading online stores.
                 </p>
-                <form>
+                <form ref={form} onSubmit={sendEmail}>
                   <div className="row">
                     <div className="col-lg-6 col-md-6 col-12">
                       <div className="name-input mb-3">
@@ -22,7 +38,7 @@ const Contact = () => {
                           required
                           placeholder="First name"
                           type="text"
-                          name=""
+                          name="name"
                         />
                       </div>
                     </div>
@@ -32,7 +48,7 @@ const Contact = () => {
                           required
                           placeholder="Last name"
                           type="text"
-                          name=""
+                          name="surname"
                         />
                       </div>
                     </div>
@@ -44,7 +60,7 @@ const Contact = () => {
                           required
                           placeholder="Email"
                           type="email"
-                          name=""
+                          name="email"
                         />
                       </div>
                     </div>
@@ -56,13 +72,14 @@ const Contact = () => {
                       className="text-area"
                       cols="30"
                       rows="10"
+                      name="message"
                     ></textarea>
                   </div>
                   {/* <input type="email" name="" id="" /> */}
+                  <button type="submit" className="button mt-2 mb-5">
+                    Send Message
+                  </button>
                 </form>
-                <button type="submit" className="button mt-2 mb-5">
-                  Send Message
-                </button>
               </div>
             </div>
             <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">

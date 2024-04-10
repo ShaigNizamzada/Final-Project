@@ -1,16 +1,24 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { ModeContext } from "../context/ModeContext";
 import { useCart } from "react-use-cart";
-import { LuShoppingCart } from "react-icons/lu";
+import { ProductContext } from "../context/ProductContext";
+import slug from "react-slugify";
+import Modal from "react-bootstrap/Modal";
+import ListGroup from "react-bootstrap/ListGroup";
 const Header = () => {
+  const { totalItems } = useCart();
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
   const [mode, setMode] = useContext(ModeContext);
-  const { totalItems } = useCart();
+  const [query, setQuery] = useState("");
+  const [product] = useContext(ProductContext);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <nav className="navbar navbar-expand-lg py-4">
       <div className="container-fluid">
@@ -83,19 +91,72 @@ const Header = () => {
                 </span>
               </Link>
               <Link to="https://discord.com/" target="_blank">
-                <span className="social-media-icon discord me-5">
+                <span className="social-media-icon discord me-3">
                   <i class="fa-brands fa-discord"></i>
                 </span>
               </Link>
             </div>
-            <form role="search" className="search-section me-5">
-              <input
-                className="form-control mt-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-            </form>
+
+            <div>
+              <div className="search--icon--section">
+                <form className="search-bar me-4">
+                  <div onClick={handleShow}>
+                    <input type="text" placeholder="Search for products..." />
+                    <button className="search--button">
+                      {" "}
+                      <i class="fa-solid fa-magnifying-glass search--product text-light"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Search Area</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <div className="input-group mb-3">
+                    <input
+                      onChange={(e) => setQuery(e.target.value)}
+                      type="text"
+                      className="form-control"
+                      placeholder="Product Name"
+                    />
+                    <button className="button" type="button" id="button-addon2">
+                      Search
+                    </button>
+                  </div>
+                  <ListGroup>
+                    {!query
+                      ? ""
+                      : product
+                          .filter((p) =>
+                            p.title.toLocaleLowerCase().includes(query)
+                          )
+                          .map((item) => (
+                            <Link
+                              to={`/sale/${slug(item.title)}`}
+                              onClick={() => handleClose()}
+                            >
+                              <ListGroup.Item>
+                                {" "}
+                                <img
+                                  src={item.photo}
+                                  width={40}
+                                  alt="product"
+                                  className="me-2"
+                                />{" "}
+                                <span className="item--list--name">
+                                  {item.title}
+                                </span>
+                              </ListGroup.Item>
+                            </Link>
+                          ))}
+                  </ListGroup>
+                </Modal.Body>
+              </Modal>
+            </div>
+
             <div className="header-user-section mt-2 ">
               {localStorage.getItem("login") === "true" ? (
                 <div>

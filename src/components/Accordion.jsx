@@ -27,8 +27,6 @@ const App = () => {
   const onChange = (key) => {
     console.log(key);
   };
-  return (
-    <Collapse items={items} defaultActiveKey={["1"]} onChange={onChange} />
-  );
+  return <Collapse items={items} onChange={onChange} />;
 };
 export default App;

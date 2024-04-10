@@ -57,7 +57,7 @@ function Responsive_categories() {
     <div className="slider-container my-5 ms-2">
       <Slider {...settings}>
         <div className="action--section category--section">
-          <Link>
+          <Link to="/sale">
             <img
               src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-action-d-1.jpg"
               alt=""
@@ -69,7 +69,7 @@ function Responsive_categories() {
           </div>
         </div>
         <div className="adventure--section category--section">
-          <Link>
+          <Link to="/sale">
             <img
               src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-adventure-d-1.jpg"
               alt=""
@@ -81,7 +81,7 @@ function Responsive_categories() {
           </div>
         </div>
         <div className="casual--section category--section">
-          <Link>
+          <Link to="/sale">
             <img
               src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-casual-d-1.jpg"
               alt=""
@@ -93,7 +93,7 @@ function Responsive_categories() {
           </div>
         </div>
         <div className="horror--section category--section">
-          <Link>
+          <Link to="/sale">
             <img
               src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-horror-d-1.jpg"
               alt=""
@@ -105,7 +105,7 @@ function Responsive_categories() {
           </div>
         </div>
         <div className="indie--section category--section">
-          <Link>
+          <Link to="/sale">
             <img
               src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-indie-d-1.jpg"
               alt=""
@@ -117,7 +117,7 @@ function Responsive_categories() {
           </div>
         </div>
         <div className="racing--section category--section">
-          <Link>
+          <Link to="/sale">
             <img
               src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-racing-d-1.jpg"
               alt=""
@@ -129,7 +129,7 @@ function Responsive_categories() {
           </div>
         </div>
         <div className="rpg--section category--section">
-          <Link>
+          <Link to="/sale">
             <img
               src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-rpg-d-1.jpg"
               alt=""
@@ -141,7 +141,7 @@ function Responsive_categories() {
           </div>
         </div>
         <div className="simulation--section category--section">
-          <Link>
+          <Link to="/sale">
             <img
               src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-simulation-d-1.jpg"
               alt=""

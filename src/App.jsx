@@ -21,6 +21,10 @@ import FAQs from "./pages/FAQs";
 import Wishlist from "./pages/Wishlist";
 import ProductDetails from "./pages/ProductDetails";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import AccountDetails from "./pages/AccountDetails";
+import Dashboard from "./pages/admin/Dashboard";
+import AddBlog from "./pages/admin/update/AddBlog";
+import BlogDetails from "./pages/BlogDetails";
 
 const App = () => {
   const [mode] = useContext(ModeContext);
@@ -47,6 +51,10 @@ const App = () => {
             <Route path="/forgotpassword" element={<ForgotPassword />}></Route>
             <Route path="/sale/:url" element={<ProductDetails />}></Route>
             <Route path="/privacypolicy" element={<PrivacyPolicy />}></Route>
+            <Route path="/accountdetails" element={<AccountDetails />}></Route>
+            <Route path="/dashboard" element={<Dashboard />}></Route>
+            <Route path="/dashboard/add" element={<AddBlog />}></Route>
+            <Route path="/blog/:slug" element={<BlogDetails />}></Route>
           </Routes>
           <Description />
           <Footer />

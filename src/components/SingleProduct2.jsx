@@ -5,9 +5,11 @@ const SingleProduct2 = ({ title, photo, rating, price, id }) => {
   return (
     <>
       <div className="single--product-2 d-flex p-3">
-        <div className="photo--section me-1">
-          <img src={photo} alt="" width={55} />
-        </div>
+        <Link to={`/sale/${slug(title)}`}>
+          <div className="photo--section me-1">
+            <img src={photo} alt="" width={55} />
+          </div>
+        </Link>
         <div className="description--section">
           <Link to={`/sale/${slug(title)}`} className="product--title">
             <h6>{title}</h6>

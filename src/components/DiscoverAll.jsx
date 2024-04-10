@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import SingleProduct2 from "./SingleProduct2";
 import { ProductContext } from "../context/ProductContext";
+import { Link } from "react-router-dom";
 
 const DiscoverAll = () => {
   const [product] = useContext(ProductContext);
@@ -11,7 +12,9 @@ const DiscoverAll = () => {
           <div className="discover--all-first mt-3">
             <div className="top-side d-flex justify-content-between  align-items-center">
               <h4>New Releases</h4>
-              <button className="button">Discover All</button>
+              <Link to="/sale">
+                <button className="button">Discover All</button>
+              </Link>
             </div>
             <div className="me-2 mt-3">
               {product.slice(0, 5).map((item) => (
@@ -31,7 +34,9 @@ const DiscoverAll = () => {
           <div className="discover--all-second mt-3">
             <div className="top-side d-flex justify-content-between align-items-center">
               <h4>Upcoming</h4>
-              <button className="button">Discover All</button>
+              <Link to="/sale">
+                <button className="button">Discover All</button>
+              </Link>
             </div>
             <div className="me-2 mt-3">
               {product.slice(30, 35).map((item) => (
@@ -51,7 +56,9 @@ const DiscoverAll = () => {
           <div className="discover--all-third mt-3">
             <div className="top-side d-flex justify-content-between align-items-center">
               <h4>Playstation 5</h4>
-              <button className="button">Discover All</button>
+              <Link to="/sale">
+                <button className="button">Discover All</button>
+              </Link>
             </div>
             <div className="me-2 mt-3">
               {product.slice(6, 11).map((item) => (
@@ -71,7 +78,9 @@ const DiscoverAll = () => {
           <div className="discover--all-fourth mt-3">
             <div className="top-side d-flex justify-content-between align-items-center">
               <h4>Nintendo Switch</h4>
-              <button className="button">Discover All</button>
+              <Link to="/sale">
+                <button className="button">Discover All</button>
+              </Link>
             </div>
             <div className="me-2 mt-3">
               {product.slice(21, 26).map((item) => (

@@ -75,7 +75,7 @@ function CustomSlides() {
               <div className="custom--slides mt-5 ms-5">
                 <div className="custom--slides--logo">
                   <img
-                    src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-slide-di-2-logo.png.webp"
+                    src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-slide-sf-logo.png.webp"
                     alt=""
                     className=""
                   />
@@ -98,8 +98,8 @@ function CustomSlides() {
                   />
                 </div>
                 <p className="fs-6 mt-3">
-                  Explore iconic, gore-drenched Los Angeles and <br /> evolve to
-                  become the ultimate Zombie Slayer.
+                  In this next generation role-playing game set <br /> amongst
+                  the stars, create any character you freedom.
                 </p>
                 <div className="take--it--now--section d-flex">
                   {" "}
@@ -121,7 +121,7 @@ function CustomSlides() {
               <div className="custom--slides mt-5 ms-5">
                 <div className="custom--slides--logo">
                   <img
-                    src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-slide-di-2-logo.png.webp"
+                    src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-slide-st-2-logo.png"
                     alt=""
                     className=""
                   />
@@ -144,8 +144,8 @@ function CustomSlides() {
                   />
                 </div>
                 <p className="fs-6 mt-3">
-                  Explore iconic, gore-drenched Los Angeles and <br /> evolve to
-                  become the ultimate Zombie Slayer.
+                  Multiplayer mode is coming soon after the release <br /> date
+                  as a free update for the game universe.
                 </p>
                 <div className="take--it--now--section d-flex">
                   {" "}
