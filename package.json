@@ -1,5 +1,5 @@
-~{
-  "name": "FinalProject",
+{
+  "name": "Woodmart",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
