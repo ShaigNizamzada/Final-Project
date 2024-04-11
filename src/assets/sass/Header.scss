@@ -38,14 +38,13 @@
     }
   }
   .search--icon--section {
-    width: 100%;
+    // width: 100%;
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     .search-bar {
-      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -69,7 +68,7 @@
         border-radius: 50%;
         background-color: rgb(109, 78, 236);
         cursor: pointer;
-        padding: 8px;
+        padding: 6px;
         i {
           font-size: 18px;
           display: flex;

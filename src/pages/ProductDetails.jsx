@@ -5,6 +5,7 @@ import { ProductContext } from "../context/ProductContext";
 import { useCart } from "react-use-cart";
 import SingleProductSale from "../components/SingleProductSale";
 
+import "react-toastify/dist/ReactToastify.css";
 const ProductDetails = () => {
   const [product] = useContext(ProductContext);
   const { addItem } = useCart();

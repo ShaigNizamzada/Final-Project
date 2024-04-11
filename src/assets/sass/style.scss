@@ -32,6 +32,7 @@
 @import url(Campaign.scss);
 @import url(Blog.scss);
 @import url(BlogDetails.scss);
+@import url(Wishlist.scss);
 :root {
   --header-background-dark: #212121;
   --header-background-light: #e0dede;
@@ -99,6 +100,10 @@
   .fa-eye {
     color: var(--header-text-light);
   }
+  .add--to--cart--section {
+    background-color: var(--header-text-light);
+    color: var(--header-text-dark);
+  }
 }
 
 // LIGHT MODE COLORS
@@ -156,6 +161,10 @@
     filter: invert(1);
   }
   .read--more--button {
+    color: var(--header-text-light);
+  }
+  .add--to--cart--section {
+    background-color: var(--icon-background-color-light);
     color: var(--header-text-light);
   }
 }

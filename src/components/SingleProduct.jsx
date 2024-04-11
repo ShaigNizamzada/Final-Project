@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import slug from "react-slugify";
-const SingleProduct = ({ title, photo, rating, price, id }) => {
+import WishBtn from "./WishBtn/WishBtn";
+const SingleProduct = ({ title, photo, rating, price, id, alldata }) => {
   return (
     <>
       <div className="card--section">
@@ -16,11 +17,9 @@ const SingleProduct = ({ title, photo, rating, price, id }) => {
             <span className="hot">HOT</span>
             <div className="add--to--cart--section d-flex flex-column">
               <Link to={`/sale/${slug(title)}`}>
-                <i class="fa-solid fa-magnifying-glass fs-5 pb-4 text-light"></i>
+                <i class="fa-solid fa-magnifying-glass fs-5 pb-4"></i>
               </Link>
-              <Link to="/sale">
-                <i class="fa-regular fa-heart fs-5 text-light"></i>
-              </Link>
+              <WishBtn product={alldata} />
             </div>
           </div>
         </Link>

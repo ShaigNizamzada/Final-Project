@@ -67,6 +67,7 @@ const Home = () => {
                 photo={item.photo}
                 rating={item.rating}
                 price={item.price}
+                alldata={item}
               />
             ))}
           </div>
@@ -102,6 +103,7 @@ const Home = () => {
                       photo={item.photo}
                       rating={item.rating}
                       price={item.price}
+                      alldata={item}
                     />
                   ))}
                 </Slider>

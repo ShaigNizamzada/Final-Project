@@ -12,6 +12,7 @@ import { CartProvider } from "react-use-cart";
 import { addBlog } from "./tools/action/blogAction";
 import configureStore from "./tools/store/ConfigureStore";
 import { Provider } from "react-redux";
+import { WishlistProvider } from "react-use-wishlist";
 
 // REDUX START
 const store = configureStore();
@@ -81,11 +82,13 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ProductProvider>
     <ModeProvider>
-      <CartProvider>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </CartProvider>
+      <WishlistProvider>
+        <CartProvider>
+          <Provider store={store}>
+            <App />
+          </Provider>
+        </CartProvider>
+      </WishlistProvider>
     </ModeProvider>
   </ProductProvider>
 );

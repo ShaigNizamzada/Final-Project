@@ -98,8 +98,8 @@ const Header = () => {
             </div>
 
             <div>
-              <div className="search--icon--section">
-                <form className="search-bar me-4">
+              <div className="search--icon--section pe-2">
+                <form className="search-bar">
                   <div onClick={handleShow}>
                     <input type="text" placeholder="Search for products..." />
                     <button className="search--button">

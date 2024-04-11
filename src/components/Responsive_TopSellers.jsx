@@ -55,6 +55,7 @@ function Responsive_TopSellers() {
               photo={item.photo}
               rating={item.rating}
               price={item.price}
+              alldata={item}
             />
           ))}
         </Slider>
