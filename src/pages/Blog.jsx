@@ -6,21 +6,46 @@ const Blog = () => {
   const blogs = useSelector((p) => p);
   return (
     <>
-      <div className="container">
+      <h1 className="py-3 blog--top--title fw-bold ps-3">Blog</h1>
+      <div className="container-fluid">
         <div className="row">
           {blogs.map((item) => (
-            <div className="col-12 col-sm-12 col-md-4">
-              <div className="card">
-                <img src={item.img} className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">{item.title}</h5>
-                  <p className="card-text">{item.desc.slice(0, 200)}...</p>
+            <div className="col-xl-4 col-lg-6 col-12 col-md-6 col-sm-12  g-3">
+              <div className="blog--section">
+                <Link to={`/blog/${slugify(item.title)}`}>
+                  <div className="blog--image--section">
+                    <img className="blog--image" src={item.img} alt="" />
+                  </div>
+                </Link>
+                <div className="blog--top--section text-dark d-flex flex-column">
+                  <span className="text-center">{item.date_day}</span>
+                  <span className="text-center">{item.date_month}</span>
+                </div>
+                <div className="blog--body--section">
+                  <h6 className="text-center blog--text text-light">Blog</h6>
                   <Link
+                    className="blog--item--title"
                     to={`/blog/${slugify(item.title)}`}
-                    className="btn btn-primary"
                   >
-                    Read More
+                    <h5 className="text-light text-center fw-bold blog--title">
+                      {item.title}
+                    </h5>
                   </Link>
+                </div>
+                <div className="blog--bottom--section">
+                  <div className="d-flex justify-content-center align-items-center">
+                    <span className="text-light me-2">By</span>
+                    <img
+                      src="https://woodmart.xtemos.com/wp-content/uploads/2018/10/avatar-home.jpg.webp"
+                      alt=""
+                      height={18}
+                      width={18}
+                    />
+                    <span className="text-light mx-2">Mr.Mackay</span>
+                    <Link to={`/blog/${slugify(item.title)}`}>
+                      <i class="fa-regular fa-comment text-light"></i>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

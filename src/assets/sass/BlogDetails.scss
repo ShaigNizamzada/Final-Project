@@ -1,0 +1,53 @@
+.blog--details--section {
+  .link {
+    text-decoration: none;
+  }
+  .link:hover {
+    text-decoration: underline;
+  }
+  .blog--text {
+    background-color: rgb(109, 78, 236);
+    width: 80px;
+    margin: 10px auto;
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+  .blog--details--body--section {
+    .author--img {
+      border-radius: 50%;
+    }
+    .blog--image--section {
+      position: relative;
+      img {
+        width: 100%;
+        overflow: hidden;
+        height: auto;
+      }
+      .blog--day--section {
+        position: absolute;
+        top: 1%;
+        left: 1%;
+        background-color: #fff !important;
+        padding: 6px 12px;
+        border-radius: 6px;
+      }
+    }
+    .blog--description--section {
+      line-height: 1.8;
+      .desc--img {
+        width: 50%;
+        margin-right: 10px;
+      }
+    }
+    .blog--testimonial--section {
+      margin-top: 96px;
+      .about {
+        position: relative;
+        img {
+          border-radius: 50%;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
