@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useWishlist } from "react-use-wishlist";
 
-const WishBtn = (product) => {
+const WishBtn = ({ product }) => {
   const { addWishlistItem, removeWishlistItem, inWishlist } = useWishlist();
   const toggleWish = (myProduct) => {
     if (inWishlist(myProduct.id)) {

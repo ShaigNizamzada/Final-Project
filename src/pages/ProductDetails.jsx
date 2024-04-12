@@ -6,6 +6,7 @@ import { useCart } from "react-use-cart";
 import SingleProductSale from "../components/SingleProductSale";
 
 import "react-toastify/dist/ReactToastify.css";
+import WishBtn from "../components/WishBtn/WishBtn";
 const ProductDetails = () => {
   const [product] = useContext(ProductContext);
   const { addItem } = useCart();
@@ -165,10 +166,8 @@ const ProductDetails = () => {
                     </div>
                     <div className="share--section mt-5 d-flex justify-content-between">
                       <div className="share--left--section">
-                        <i class="fa-regular fa-heart"></i>
-                        <Link to="/wishlist" className="link">
-                          Add to wishlist
-                        </Link>
+                        <WishBtn product={detailProduct[0]} />
+                        <span className="fs-5 ms-2">Add to wishlist</span>
                       </div>
                       <div className="share--right--section d-flex justify-content-center">
                         <p>Share:</p>
@@ -261,6 +260,7 @@ const ProductDetails = () => {
                       photo={item.photo}
                       rating={item.rating}
                       price={item.price}
+                      alldata={item}
                     />
                   ))}
                 </div>

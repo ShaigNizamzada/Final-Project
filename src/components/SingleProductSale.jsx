@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import slug from "react-slugify";
+import WishBtn from "./WishBtn/WishBtn";
 const SingleProductSale = ({ title, photo, rating, price, id, alldata }) => {
   return (
     <>
@@ -18,9 +19,7 @@ const SingleProductSale = ({ title, photo, rating, price, id, alldata }) => {
               <Link to={`/sale/${slug(title)}`}>
                 <i class="fa-solid fa-magnifying-glass fs-5 pb-4 "></i>
               </Link>
-              <Link to="/sale">
-                <i class="fa-regular fa-heart fs-5"></i>
-              </Link>
+              <WishBtn product={alldata} />
             </div>
           </div>
         </Link>

@@ -172,6 +172,7 @@ const Cart = () => {
                 photo={item.photo}
                 rating={item.rating}
                 price={item.price}
+                alldata={item}
               />
             ))}
           </div>
