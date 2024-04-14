@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import { ModeContext } from "./context/ModeContext";
 import About from "./pages/About";
-import Campaign from "./pages/Campaign";
 import Contact from "./pages/Contact";
 import Sale from "./pages/Sale";
 import Blog from "./pages/Blog";
@@ -25,6 +24,7 @@ import AccountDetails from "./pages/AccountDetails";
 import Dashboard from "./pages/admin/Dashboard";
 import AddBlog from "./pages/admin/update/AddBlog";
 import BlogDetails from "./pages/BlogDetails";
+import TopToBtn from "./components/TopToScroll/TopToBtn";
 
 const App = () => {
   const [mode] = useContext(ModeContext);
@@ -32,12 +32,12 @@ const App = () => {
     <>
       <BrowserRouter>
         <div className={mode}>
+          <TopToBtn />
           <Header />
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="*" element={<NotFound />}></Route>
             <Route path="/about" element={<About />}></Route>
-            <Route path="/campaign" element={<Campaign />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/blog" element={<Blog />}></Route>
             <Route path="/cart" element={<Cart />}></Route>

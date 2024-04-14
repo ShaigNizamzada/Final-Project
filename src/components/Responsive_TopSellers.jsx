@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Slider from "react-slick";
 import { ProductContext } from "../context/ProductContext";
 import SingleProduct from "./SingleProduct";
@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 function Responsive_TopSellers() {
   const [product] = useContext(ProductContext);
+  const randomNumber = Math.floor(Math.random() * 36);
   var settings = {
     infinite: false,
     speed: 500,
@@ -42,13 +43,14 @@ function Responsive_TopSellers() {
     <div className="slider-container mt-5 mx-3 ">
       <div className="slider-container-header-section d-flex justify-content-between my-4">
         <h3 className="ms-2">Top Sellers</h3>
+
         <Link to="/sale" className="shop--all--button">
           <button className="btn btn-dark">Shop All</button>
         </Link>
       </div>
       {
         <Slider {...settings}>
-          {product.slice(25, 31).map((item) => (
+          {product.slice(randomNumber, randomNumber + 6).map((item) => (
             <SingleProduct
               key={item.id}
               title={item.title}

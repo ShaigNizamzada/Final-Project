@@ -67,11 +67,6 @@ const Header = () => {
                 Blog
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/campaign">
-                Campaign
-              </NavLink>
-            </li>
           </ul>
           <div className="header-end-section ms-auto d-flex">
             <div className="social-media mt-1">
@@ -100,7 +95,10 @@ const Header = () => {
             <div>
               <div className="search--icon--section pe-2">
                 <form className="search-bar">
-                  <div onClick={handleShow}>
+                  <div
+                    onClick={handleShow}
+                    className="d-flex justify-content-between align-items-center search--bar--section"
+                  >
                     <input type="text" placeholder="Search for products..." />
                     <button className="search--button">
                       {" "}

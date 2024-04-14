@@ -70,7 +70,8 @@
   .cart--section,
   .blog--top--title,
   .blog--details--top--section,
-  .about-text {
+  .about-text,
+  .sale--section--bottom--left {
     background-color: var(--header-background-dark) !important;
     color: var(--header-text-dark);
   }
@@ -94,7 +95,8 @@
   .read--more--button {
     color: var(--header-text-dark);
   }
-  .cart--is--empty {
+  .cart--is--empty,
+  .profile--icon {
     filter: invert(0.899);
   }
   .fa-eye {
@@ -119,7 +121,8 @@
   .cart--section,
   .blog--top--title,
   .blog--details--top--section,
-  .about-text {
+  .about-text,
+  .sale--section--bottom--left {
     background-color: var(--footer-background-light) !important;
     color: var(--header-text-light);
   }
@@ -222,4 +225,14 @@ body {
 }
 .button:hover {
   background-color: rgb(97, 62, 235);
+}
+// Top To Scroll button
+.top--to--scroll:hover {
+  background-color: #ffffff !important;
+}
+.top--to--scroll--icon {
+  color: #ffffff !important;
+}
+.top--to--scroll:hover .top--to--scroll--icon {
+  color: rgb(97, 62, 235) !important;
 }

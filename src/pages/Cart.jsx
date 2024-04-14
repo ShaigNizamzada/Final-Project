@@ -15,6 +15,7 @@ const Cart = () => {
     cartTotal,
     emptyCart,
   } = useCart();
+  const randomNumber = Math.floor(Math.random() * 37);
   return isEmpty ? (
     <>
       <h1 className="text-center mt-5">Your Cart is empty</h1>
@@ -165,7 +166,7 @@ const Cart = () => {
         <h2 className="fw-bold">They buy with these goods</h2>
         <div className="col-lg-5 ms-2 pb-5">
           <div className="row">
-            {product.slice(33, 37).map((item) => (
+            {product.slice(randomNumber, randomNumber + 4).map((item) => (
               <SingleProductSale
                 key={item.id}
                 title={item.title}

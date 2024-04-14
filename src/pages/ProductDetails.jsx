@@ -15,6 +15,7 @@ const ProductDetails = () => {
   const detailProduct = product.filter(
     (item) => slug(item.title.toString()) === url
   );
+  const randomNumber = Math.floor(Math.random() * 34);
   return (
     <>
       {product.length === 0 ? (
@@ -253,7 +254,7 @@ const ProductDetails = () => {
               <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                 <h4>Another Games</h4>
                 <div className="row mt-5 ms-1">
-                  {product.slice(33, 41).map((item) => (
+                  {product.slice(randomNumber, randomNumber + 8).map((item) => (
                     <SingleProductSale
                       key={item.id}
                       title={item.title}
