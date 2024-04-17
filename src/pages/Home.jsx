@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Responsive_categories from "../components/Responsive_categories";
 import Responsive_TopSellers from "../components/Responsive_TopSellers";
 import Responsive_Hero from "../components/Responsive_Hero";
@@ -9,8 +9,12 @@ import StarWars from "../components/StarWars";
 import DiscoverAll from "../components/DiscoverAll";
 import SingleProduct from "../components/SingleProduct";
 import Slider from "react-slick";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Home = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   var settings = {
     infinite: true,
     speed: 500,
@@ -51,10 +55,13 @@ const Home = () => {
   return (
     <>
       <div className="row">
-        <div className="col-lg-12 col-xl-9 col-md-12 col-sm-12 col-12">
+        <div
+          className="col-lg-12 col-xl-9 col-md-12 col-sm-12 col-12"
+          data-aos="fade-right"
+        >
           <Hero />
         </div>
-        <div className="col-xl-3 discounted-games mt-4">
+        <div className="col-xl-3 discounted-games mt-4" data-aos="fade-left">
           <span className="me-3 fs-5">
             <i class="fa-solid fa-percent"></i>
           </span>
@@ -73,12 +80,20 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Responsive_categories />
+      <div className="responsive--categories--section" data-aos="flip-up">
+        <Responsive_categories />
+      </div>
       <Responsive_TopSellers />
-      <Responsive_Hero />
+      <div className="responsive--hero--section" data-aos="zoom-in-down">
+        <Responsive_Hero />
+      </div>
+
       <div className="row category--store--games mt-5">
         <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
-          <div className="popular--by--category--section ms-3 p-3 mb-2">
+          <div
+            className="popular--by--category--section ms-3 p-3 mb-2"
+            data-aos="fade-right"
+          >
             <h3>Popular By Category</h3>
             <ul>
               <li onClick={() => setCategory("Action")}>Action</li>
@@ -92,7 +107,7 @@ const Home = () => {
           </div>
         </div>
         <div className="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12 mb-5">
-          <div className="store--section ms-3">
+          <div className="store--section ms-3" data-aos="fade-left">
             <div className="slider-container">
               {
                 <Slider {...settings}>

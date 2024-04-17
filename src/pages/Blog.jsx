@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import slugify from "react-slugify";
+import Aos from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 const Blog = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   const blogs = useSelector((p) => p);
   return (
     <>
       <h1 className="py-3 blog--top--title fw-bold ps-3">Blog</h1>
-      <div className="container-fluid">
+      <div className="container-fluid" data-aos="zoom-in-up">
         <div className="row">
           {blogs.map((item) => (
-            <div className="col-xl-4 col-lg-6 col-12 col-md-6 col-sm-12  g-3">
+            <div className="col-xl-4 col-lg-6 col-12 col-md-6 col-sm-12 g-3">
               <div className="blog--section">
                 <Link to={`/blog/${slugify(item.title)}`}>
                   <div className="blog--image--section">

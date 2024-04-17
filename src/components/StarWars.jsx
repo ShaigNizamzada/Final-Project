@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 const StarWars = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <>
       <div className="starwars--section my-5">
         <div className="row">
           <div className="col-xl-6 col-lg-6 col-12">
-            <div className="starwars--left--section">
+            <div className="starwars--left--section" data-aos="zoom-in-right">
               {/* <img
                 src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-sw-j-d.jpg?id=6973"
                 alt="starwars"
@@ -15,7 +19,7 @@ const StarWars = () => {
             </div>
           </div>
           <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
-            <div className="starwars--right--section">
+            <div className="starwars--right--section" data-aos="zoom-in-left">
               <div className="starwars--right--section--top">
                 <img
                   src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-sw-j-logo-d.jpg.webp"

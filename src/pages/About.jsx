@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Responsive_AboutUs from "../components/Responsive_AboutUs";
 import Accordion from "../components/Accordion";
+import Aos from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 const About = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <>
       <div className="about--section">
-        <div className="header--text--section">
+        <div className="header--text--section" data-aos="zoom-in">
           <h1 className="text-center my-5 header--text">
             About our store and the history of its opening.
           </h1>
@@ -28,12 +33,12 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="carousel--section">
+        <div className="carousel--section" data-aos="fade-up">
           <Responsive_AboutUs></Responsive_AboutUs>
         </div>
         <div className="row my-5 bottom--section">
           <div className="col-xl-5 col-lg-5 col-sm-12 col-12">
-            <div className="first-section ms-3">
+            <div className="first-section ms-3" data-aos="fade-right">
               <h1 className="fw-bold mb-3">
                 Some of your questions <br /> answered here
               </h1>
@@ -47,7 +52,7 @@ const About = () => {
             </div>
           </div>{" "}
           <div className="col-xl-7 col-lg-7 col-sm-12 col-12">
-            <div className="accordion--section">
+            <div className="accordion--section" data-aos="fade-left">
               <Accordion />
             </div>
           </div>

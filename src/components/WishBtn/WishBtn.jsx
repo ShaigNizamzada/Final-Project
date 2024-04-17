@@ -14,7 +14,7 @@ const WishBtn = ({ product }) => {
   return (
     <Link key={product.id} onClick={() => toggleWish(product)}>
       {inWishlist(product.id) ? (
-        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-heart fs-5"></i>
       ) : (
         <i class="fa-regular fa-heart fs-5"></i>
       )}

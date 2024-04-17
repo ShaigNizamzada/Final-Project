@@ -1,16 +1,20 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import SingleProduct2 from "./SingleProduct2";
 import { ProductContext } from "../context/ProductContext";
 import { Link } from "react-router-dom";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 const DiscoverAll = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   const [product] = useContext(ProductContext);
   return (
     <div className="container-fluid discover--all--section mt-5 px-4">
       <div className="row">
         <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-          <div className="discover--all-first mt-3">
-            <div className="top-side d-flex justify-content-between  align-items-center">
+          <div className="discover--all-first mt-3" data-aos="flip-left">
+            <div className="top-side d-flex justify-content-between align-items-center">
               <h4>New Releases</h4>
               <Link to="/sale">
                 <button className="button">Discover All</button>
@@ -31,7 +35,7 @@ const DiscoverAll = () => {
         </div>
         <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
           {" "}
-          <div className="discover--all-second mt-3">
+          <div className="discover--all-second mt-3" data-aos="flip-right">
             <div className="top-side d-flex justify-content-between align-items-center">
               <h4>Upcoming</h4>
               <Link to="/sale">
@@ -53,7 +57,7 @@ const DiscoverAll = () => {
         </div>
         <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
           {" "}
-          <div className="discover--all-third mt-3">
+          <div className="discover--all-third mt-3" data-aos="flip-left">
             <div className="top-side d-flex justify-content-between align-items-center">
               <h4>Playstation 5</h4>
               <Link to="/sale">
@@ -75,7 +79,7 @@ const DiscoverAll = () => {
         </div>
         <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
           {" "}
-          <div className="discover--all-fourth mt-3">
+          <div className="discover--all-fourth mt-3" data-aos="flip-right">
             <div className="top-side d-flex justify-content-between align-items-center">
               <h4>Nintendo Switch</h4>
               <Link to="/sale">

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -25,7 +25,6 @@ import Dashboard from "./pages/admin/Dashboard";
 import AddBlog from "./pages/admin/update/AddBlog";
 import BlogDetails from "./pages/BlogDetails";
 import TopToBtn from "./components/TopToScroll/TopToBtn";
-
 const App = () => {
   const [mode] = useContext(ModeContext);
   return (

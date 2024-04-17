@@ -1,7 +1,12 @@
 import Link from "antd/es/typography/Link";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import Aos from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 const Contact = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -24,7 +29,10 @@ const Contact = () => {
         <div className="contact--section--top">
           <div className="row">
             <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-              <div className="contact--section--top--left ms-2">
+              <div
+                className="contact--section--top--left ms-2"
+                data-aos="fade-right"
+              >
                 <h1 className="fw-bold">Contact Us</h1>
                 <p>
                   The online store of equipment and electronics is one of the
@@ -83,7 +91,10 @@ const Contact = () => {
               </div>
             </div>
             <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-              <div className="contact--section--top--right mt-5">
+              <div
+                className="contact--section--top--right mt-5"
+                data-aos="fade-left"
+              >
                 <img
                   src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/06/wd-vgs-contact-us.png"
                   alt="headphone"
@@ -92,7 +103,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="contact--section--bottom mt-5">
+        <div className="contact--section--bottom mt-5" data-aos="fade-down">
           <div className="row">
             <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
               <div className="bottom--first--section bottom--section text-center text-light mb-2">

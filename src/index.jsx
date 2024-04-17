@@ -77,7 +77,6 @@ store.dispatch(
     date_month: "MAR",
   })
 );
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ProductProvider>

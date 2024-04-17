@@ -1,13 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import slug from "react-slugify";
 import { ProductContext } from "../context/ProductContext";
 import { useCart } from "react-use-cart";
 import SingleProductSale from "../components/SingleProductSale";
-
 import "react-toastify/dist/ReactToastify.css";
 import WishBtn from "../components/WishBtn/WishBtn";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const ProductDetails = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   const [product] = useContext(ProductContext);
   const { addItem } = useCart();
   const { url } = useParams();
@@ -24,7 +28,10 @@ const ProductDetails = () => {
         <div className="container-fluid product--details">
           <div className="row product--details--section pt-5">
             <div className="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
-              <div className="product--details--left--section">
+              <div
+                className="product--details--left--section"
+                data-aos="fade-right"
+              >
                 <img
                   src={detailProduct[0].photo}
                   alt=""
@@ -35,7 +42,10 @@ const ProductDetails = () => {
             <div className="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12">
               <div className="row">
                 <div className="col-md-7 col-sm-12 col-12">
-                  <div className="product--details--middle--section ms-1">
+                  <div
+                    className="product--details--middle--section ms-1"
+                    data-aos="fade-right"
+                  >
                     <div className="link--to--pages mb-4">
                       <Link to="/" className="link">
                         Home
@@ -132,7 +142,7 @@ const ProductDetails = () => {
                   </div>
                 </div>
                 <div className="col-md-5 col-sm-12 col-12">
-                  <div className="product--details--right--section mt-5">
+                  <div className="product--details--right--section mt-5" data-aos="fade-left">
                     <h4 className="product--price mb-3">
                       £{detailProduct[0].price}
                     </h4>
@@ -185,7 +195,7 @@ const ProductDetails = () => {
               </div>
             </div>
           </div>
-          <div className="long--description--section mt-5">
+          <div className="long--description--section mt-5" data-aos="fade-up">
             <h1>Description</h1>
             <div className="row">
               <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -207,7 +217,7 @@ const ProductDetails = () => {
           </div>
           <div className="specification--section p-3 mt-5">
             <div className="row">
-              <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+              <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" data-aos="fade-right">
                 <h4>Specification</h4>
                 <div className="overview--title d-flex mt-5 mb-3">
                   <img
@@ -251,7 +261,7 @@ const ProductDetails = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+              <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" data-aos="fade-left">
                 <h4>Another Games</h4>
                 <div className="row mt-5 ms-1">
                   {product.slice(randomNumber, randomNumber + 8).map((item) => (
