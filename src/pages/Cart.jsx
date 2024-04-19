@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import slug from "react-slugify";
 import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
@@ -6,6 +6,13 @@ import { ProductContext } from "../context/ProductContext";
 import SingleProductSale from "../components/SingleProductSale";
 
 const Cart = () => {
+  const [coupon, setCoupon] = useState("");
+  const formSubmit = (e) => {
+    e.preventDefault();
+    console.log(coupon);
+    setCoupon("20");
+  };
+
   const [product] = useContext(ProductContext);
   const {
     items,
@@ -15,7 +22,7 @@ const Cart = () => {
     cartTotal,
     emptyCart,
   } = useCart();
-  const randomNumber = Math.floor(Math.random() * 37);
+  const randomNumber = Math.floor(Math.random() * 39);
   return isEmpty ? (
     <>
       <h1 className="text-center mt-5">Your Cart is empty</h1>
@@ -121,7 +128,7 @@ const Cart = () => {
                   ))}
                 </tbody>
               </table>
-              <button onClick={() => emptyCart()} className="button mt-4\">
+              <button onClick={() => emptyCart()} className="button mt-4">
                 Remove Cart
               </button>
             </div>
@@ -131,7 +138,13 @@ const Cart = () => {
               <h3 className="fw-bold">Cart Totals</h3>
               <div className="subtotal--section d-flex pt-3 justify-content-between align-items-center">
                 <h6>Subtotal</h6>
-                <p className="discounted--price">£{Math.floor(cartTotal)}</p>
+                <p className="discounted--price">
+                  {" "}
+                  £
+                  {coupon === "20"
+                    ? Math.floor(cartTotal) / 1.2
+                    : Math.floor(cartTotal)}
+                </p>
               </div>
               <hr />
               <div className="shipping--section d-flex pt-3 justify-content-between align-items-center">
@@ -142,7 +155,10 @@ const Cart = () => {
               <div className="total--section d-flex pt-3 justify-content-between align-items-center">
                 <h6>Total</h6>
                 <p className="product--price fs-4 fw-bold">
-                  £{Math.floor(cartTotal)}
+                  £
+                  {coupon === "20"
+                    ? Math.floor(cartTotal) / 1.2
+                    : Math.floor(cartTotal)}
                 </p>
               </div>
               <div className="proceed--to--checkout--section">
@@ -156,12 +172,17 @@ const Cart = () => {
           </div>
         </div>
         <div className="coupon--section d-flex align-items-center mt-4 pb-5">
-          <input
-            type="text"
-            className="input--coupon"
-            placeholder="Coupon code"
-          />
-          <button className="button ms-3">Apply Coupon</button>
+          <form onSubmit={formSubmit} className="d-flex">
+            <input
+              type="text"
+              className="input--coupon"
+              placeholder="Coupon code"
+              // onChange={(e) => setCoupon(e.target.value)}
+            />
+            <button type="submit" className="button ms-3">
+              Apply Coupon
+            </button>
+          </form>
         </div>
         <h2 className="fw-bold">They buy with these goods</h2>
         <div className="col-lg-5 ms-2 pb-5">
@@ -174,6 +195,7 @@ const Cart = () => {
                 rating={item.rating}
                 price={item.price}
                 alldata={item}
+                id={item.id}
               />
             ))}
           </div>

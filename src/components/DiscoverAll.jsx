@@ -28,6 +28,7 @@ const DiscoverAll = () => {
                   photo={item.photo}
                   rating={item.rating}
                   price={item.price}
+                  id={item.id}
                 />
               ))}
             </div>
@@ -50,6 +51,7 @@ const DiscoverAll = () => {
                   photo={item.photo}
                   rating={item.rating}
                   price={item.price}
+                  id={item.id}
                 />
               ))}
             </div>
@@ -72,6 +74,7 @@ const DiscoverAll = () => {
                   photo={item.photo}
                   rating={item.rating}
                   price={item.price}
+                  id={item.id}
                 />
               ))}
             </div>
@@ -94,6 +97,7 @@ const DiscoverAll = () => {
                   photo={item.photo}
                   rating={item.rating}
                   price={item.price}
+                  id={item.id}
                 />
               ))}
             </div>

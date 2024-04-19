@@ -1,8 +1,8 @@
 .navbar {
-  .hamburger-menu{
+  .hamburger-menu {
     font-size: 36px;
-    border: none!important;
-    outline: none!important;
+    border: none !important;
+    outline: none !important;
   }
   .header-end-section {
     .social-media {
@@ -39,6 +39,9 @@
       }
       .mode--change {
         cursor: pointer;
+      }
+      .wishlist--icon {
+        margin: -4px 4px !important;
       }
     }
   }
@@ -100,6 +103,8 @@
   height: 400px;
 }
 .modal {
+  height: 100vh !important;
+
   a {
     text-decoration: none !important;
   }

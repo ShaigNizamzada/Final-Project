@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import slug from "react-slugify";
 import WishBtn from "./WishBtn/WishBtn";
 import { useCart } from "react-use-cart";
-import { MdOutlineShoppingCart } from "react-icons/md";
+import CardBtn from "./CardBtn/CardBtn";
 const SingleProductSale = ({ title, photo, rating, price, id, alldata }) => {
   const navigate = useNavigate();
   const { addItem } = useCart();
@@ -19,14 +19,7 @@ const SingleProductSale = ({ title, photo, rating, price, id, alldata }) => {
           />
           <span className="hot">HOT</span>
           <div className="add--to--cart--section d-flex flex-column align-items-center  justify-content-center">
-            <MdOutlineShoppingCart
-              className="fs-4 mb-3"
-              onClick={() => {
-                localStorage.getItem("login") === "true"
-                  ? addItem(alldata)
-                  : navigate("/login");
-              }}
-            />
+            <CardBtn product={alldata} />
             <WishBtn product={alldata} />
           </div>
         </div>

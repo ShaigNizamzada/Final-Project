@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import slug from "react-slugify";
 import WishBtn from "./WishBtn/WishBtn";
 import { useCart } from "react-use-cart";
 import { MdOutlineShoppingCart } from "react-icons/md";
-
+import { ProductContext } from "../context/ProductContext";
+import CardBtn from "./CardBtn/CardBtn";
 const SingleProduct = ({ title, photo, rating, price, id, alldata }) => {
+  const [product] = useContext(ProductContext);
   const navigate = useNavigate();
-  const { addItem } = useCart();
+  const { addItem, inCart } = useCart();
   return (
     <>
       <div className="card--section">
@@ -20,14 +22,21 @@ const SingleProduct = ({ title, photo, rating, price, id, alldata }) => {
           />
           <span className="hot">HOT</span>
           <div className="add--to--cart--section d-flex flex-column align-items-center  justify-content-center">
-            <MdOutlineShoppingCart className="fs-4 mb-3"
+            {/* <div
               onClick={() => {
                 localStorage.getItem("login") === "true"
                   ? addItem(alldata)
                   : navigate("/login");
               }}
-            />
-
+              className="div"
+            >
+              {inCart(id) ? (
+                <i class="bi bi-bag-check-fill fs-4 mb-2"></i>
+              ) : (
+                <i class="bi bi-bag-check fs-4 mb-2"></i>
+              )}
+            </div> */}
+            <CardBtn product={alldata} />
             <WishBtn product={alldata} />
           </div>
         </div>

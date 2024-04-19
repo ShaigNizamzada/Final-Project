@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function Responsive_TopSellers() {
   const [product] = useContext(ProductContext);
-  const randomNumber = Math.floor(Math.random() * 36);
+  const randomNumber = Math.floor(Math.random() * 37);
   var settings = {
     infinite: false,
     speed: 500,
@@ -58,6 +58,7 @@ function Responsive_TopSellers() {
               rating={item.rating}
               price={item.price}
               alldata={item}
+              id={item.id}
             />
           ))}
         </Slider>

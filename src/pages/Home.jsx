@@ -75,6 +75,7 @@ const Home = () => {
                 rating={item.rating}
                 price={item.price}
                 alldata={item}
+                id={item.id}
               />
             ))}
           </div>
@@ -119,6 +120,7 @@ const Home = () => {
                       rating={item.rating}
                       price={item.price}
                       alldata={item}
+                      id={item.id}
                     />
                   ))}
                 </Slider>

@@ -13,7 +13,7 @@ import { addBlog } from "./tools/action/blogAction";
 import configureStore from "./tools/store/ConfigureStore";
 import { Provider } from "react-redux";
 import { WishlistProvider } from "react-use-wishlist";
-
+import "bootstrap-icons/font/bootstrap-icons.css";
 // REDUX START
 const store = configureStore();
 store.subscribe(() => {

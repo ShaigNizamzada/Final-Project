@@ -60,9 +60,9 @@ const Sale = () => {
         </div>
         <div className="sale--section--bottom mt-5">
           <div className="row">
-            <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 ">
+            <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 ">
               <div
-                className="sale--section--bottom--left mt-3 p-4"
+                className="sale--section--bottom--left mt-4 p-4"
                 data-aos="fade-right"
               >
                 <div className="price-slider">
@@ -89,20 +89,20 @@ const Sale = () => {
                 <hr className="mx-3" />
                 <h4>Categories</h4>
                 <ul className="d-flex flex-column flex-wrap gap-2">
-                  <li onClick={() => setCategory("")}>All</li>
-                  <li onClick={() => setCategory("Action")}>Action</li>
-                  <li onClick={() => setCategory("Adventure")}>Adventure</li>
-                  <li onClick={() => setCategory("Casual")}>Casual</li>
-                  <li onClick={() => setCategory("Horror")}>Horror</li>
-                  <li onClick={() => setCategory("Indie")}>Indie</li>
-                  <li onClick={() => setCategory("Racing")}>Racing</li>
-                  <li onClick={() => setCategory("RPG")}>RPG</li>
+                  <li className="fs-4" onClick={() => setCategory("")}>All</li>
+                  <li className="fs-4" onClick={() => setCategory("Action")}>Action</li>
+                  <li className="fs-4" onClick={() => setCategory("Adventure")}>Adventure</li>
+                  <li className="fs-4" onClick={() => setCategory("Casual")}>Casual</li>
+                  <li className="fs-4" onClick={() => setCategory("Horror")}>Horror</li>
+                  <li className="fs-4" onClick={() => setCategory("Indie")}>Indie</li>
+                  <li className="fs-4" onClick={() => setCategory("Racing")}>Racing</li>
+                  <li className="fs-4" onClick={() => setCategory("RPG")}>RPG</li>
                 </ul>
               </div>
             </div>
-            <div className="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+            <div className="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
               <div
-                className="row sale--section--right--left ms-1 mt-3"
+                className="row sale--section--right--left ms-1 mt-4"
                 data-aos="fade-left"
               >
                 {/* <SingleProductSaleList /> */}

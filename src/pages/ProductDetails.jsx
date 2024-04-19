@@ -19,7 +19,7 @@ const ProductDetails = () => {
   const detailProduct = product.filter(
     (item) => slug(item.title.toString()) === url
   );
-  const randomNumber = Math.floor(Math.random() * 34);
+  const randomNumber = Math.floor(Math.random() * 35);
   return (
     <>
       {product.length === 0 ? (
@@ -142,7 +142,10 @@ const ProductDetails = () => {
                   </div>
                 </div>
                 <div className="col-md-5 col-sm-12 col-12">
-                  <div className="product--details--right--section mt-5" data-aos="fade-left">
+                  <div
+                    className="product--details--right--section mt-5"
+                    data-aos="fade-left"
+                  >
                     <h4 className="product--price mb-3">
                       £{detailProduct[0].price}
                     </h4>
@@ -163,25 +166,15 @@ const ProductDetails = () => {
                         }}
                       >
                         Add to cart
-                      </button>{" "}
-                      <button
-                        className="button--buy--now btn-lg px-4 me-md-2 mt-5"
-                        onClick={() => {
-                          localStorage.getItem("login") === "true"
-                            ? addItem(detailProduct[0])
-                            : navigate("/login");
-                        }}
-                      >
-                        Buy Now
-                      </button>{" "}
+                      </button>
                     </div>
-                    <div className="share--section mt-5 d-flex justify-content-between">
+                    <div className="share--section mt-2 d-flex justify-content-between align-items-center">
                       <div className="share--left--section">
                         <WishBtn product={detailProduct[0]} />
                         <span className="fs-5 ms-2">Add to wishlist</span>
                       </div>
-                      <div className="share--right--section d-flex justify-content-center">
-                        <p>Share:</p>
+                      <div className="share--right--section d-flex justify-content-center align-items-center">
+                        <p className="mt-3">Share:</p>
                         <div className="social--media--icons ms-2">
                           <i class="fa-brands fa-facebook-f me-2"></i>
                           <i class="fa-brands fa-x-twitter me-2"></i>
@@ -217,7 +210,10 @@ const ProductDetails = () => {
           </div>
           <div className="specification--section p-3 mt-5">
             <div className="row">
-              <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" data-aos="fade-right">
+              <div
+                className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12"
+                data-aos="fade-right"
+              >
                 <h4>Specification</h4>
                 <div className="overview--title d-flex mt-5 mb-3">
                   <img
@@ -261,7 +257,10 @@ const ProductDetails = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" data-aos="fade-left">
+              <div
+                className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12"
+                data-aos="fade-left"
+              >
                 <h4>Another Games</h4>
                 <div className="row mt-5 ms-1">
                   {product.slice(randomNumber, randomNumber + 8).map((item) => (
@@ -272,6 +271,7 @@ const ProductDetails = () => {
                       rating={item.rating}
                       price={item.price}
                       alldata={item}
+                      id={item.id}
                     />
                   ))}
                 </div>

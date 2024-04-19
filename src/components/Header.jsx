@@ -6,8 +6,10 @@ import { ProductContext } from "../context/ProductContext";
 import slug from "react-slugify";
 import Modal from "react-bootstrap/Modal";
 import ListGroup from "react-bootstrap/ListGroup";
+import { useWishlist } from "react-use-wishlist";
 const Header = () => {
   const { totalItems } = useCart();
+  const { totalWishlistItems } = useWishlist();
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -38,7 +40,7 @@ const Header = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-      <i class="fa-solid fa-bars hamburger-menu"></i>
+          <i class="fa-solid fa-bars hamburger-menu"></i>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-3 mb-2 mb-lg-0">
@@ -68,6 +70,7 @@ const Header = () => {
               </NavLink>
             </li>
           </ul>
+
           <div className="header-end-section ms-auto d-flex">
             <div className="social-media mt-1">
               <Link to="https://www.instagram.com/" target="_blank">
@@ -108,7 +111,7 @@ const Header = () => {
                 </form>
               </div>
 
-              <Modal show={show} onHide={handleClose}>
+              <Modal size="xl" show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                   <Modal.Title>Search Area</Modal.Title>
                 </Modal.Header>
@@ -140,11 +143,11 @@ const Header = () => {
                                 {" "}
                                 <img
                                   src={item.photo}
-                                  width={40}
+                                  width={100}
                                   alt="product"
                                   className="me-2"
                                 />{" "}
-                                <span className="item--list--name">
+                                <span className="item--list--name fs-4 fw-bold ms-2">
                                   {item.title}
                                 </span>
                               </ListGroup.Item>
@@ -168,23 +171,31 @@ const Header = () => {
                   <i class="fa-regular fa-user"></i>
                 </NavLink>
               )}
-              <NavLink className="favorite ms-3 me-1" to="/wishlist">
-                <i class="fa-regular fa-heart"></i>
+              <NavLink
+                className="favorite mx-2 position-relative"
+                to="/wishlist"
+              >
+                <i class="fa-regular fa-heart fs-5"></i>
+                <span className="position-absolute translate-middle badge rounded-pill bg-danger wishlist--icon">
+                  {localStorage.getItem("login") === "true"
+                    ? totalWishlistItems
+                    : 0}
+                </span>
               </NavLink>
               <Link
                 to={
                   localStorage.getItem("login") === "true" ? "/cart" : "/login"
                 }
                 type="button"
-                className="btn position-relative shopping-cart"
+                className="btn position-relative shopping-cart p-0 ms-2"
               >
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                <i class="bi bi-cart3 fs-5"></i>
+                <span className="position-absolute translate-middle badge rounded-pill bg-danger">
                   {localStorage.getItem("login") === "true" ? totalItems : 0}
                 </span>
               </Link>
               <div
-                className="mx-4 mode"
+                className="ms-3 me-2 mode"
                 onClick={() => {
                   mode === "light" ? setMode("dark") : setMode("light");
                   mode === "light"
