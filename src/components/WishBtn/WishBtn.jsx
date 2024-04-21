@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useWishlist } from "react-use-wishlist";
-
+import swal from "sweetalert";
 const WishBtn = ({ product }) => {
   const { addWishlistItem, removeWishlistItem, inWishlist } = useWishlist();
   const toggleWish = (myProduct) => {
     if (inWishlist(myProduct.id)) {
       removeWishlistItem(myProduct.id);
+      swal("", "Product Removed", "success");
     } else {
       addWishlistItem(myProduct);
+      swal("", "Product Added", "success");
     }
   };
   return (

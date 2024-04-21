@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import swal from "sweetalert";
 const Register = () => {
   const [fullname, setFullname] = useState("");
   const [tel, setTel] = useState("");
@@ -13,16 +13,19 @@ const Register = () => {
     e.preventDefault();
 
     if (!fullname || !tel || !email || !password || !againPassword) {
-      alert("Please fill input");
+      swal("", "Please fill the inputs", "error");
     } else {
       if (password === againPassword) {
         localStorage.setItem("fullname", fullname);
         localStorage.setItem("email", email);
         localStorage.setItem("tel", tel);
         localStorage.setItem("password", password);
-        window.location.assign("/login");
+        setTimeout(() => {
+          window.location.assign("/login");
+        }, 2000);
+        swal("", "You have been registered", "success");
       } else {
-        alert("Passwords are different");
+        swal("", "Passwords are different", "error");
       }
     }
   };
@@ -42,7 +45,6 @@ const Register = () => {
               onChange={(e) => setFullname(e.target.value)}
               type="text"
               className="form-control"
-              required
             />
           </div>
           <div className="mb-4">
@@ -53,7 +55,6 @@ const Register = () => {
               onChange={(e) => setTel(e.target.value)}
               type="tel"
               className="form-control"
-              required
             />
           </div>
           <div className="mb-4">
@@ -64,7 +65,6 @@ const Register = () => {
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               className="form-control"
-              required
             />
           </div>
           <div className="mb-3">

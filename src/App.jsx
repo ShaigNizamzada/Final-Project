@@ -25,6 +25,7 @@ import Dashboard from "./pages/admin/Dashboard";
 import AddBlog from "./pages/admin/update/AddBlog";
 import BlogDetails from "./pages/BlogDetails";
 import TopToBtn from "./components/TopToScroll/TopToBtn";
+import Checkout from "./pages/Checkout";
 const App = () => {
   const [mode] = useContext(ModeContext);
   return (
@@ -54,6 +55,7 @@ const App = () => {
             <Route path="/dashboard" element={<Dashboard />}></Route>
             <Route path="/dashboard/add" element={<AddBlog />}></Route>
             <Route path="/blog/:slug" element={<BlogDetails />}></Route>
+            <Route path="/checkout" element={<Checkout />}></Route>
           </Routes>
           <Description />
           <Footer />

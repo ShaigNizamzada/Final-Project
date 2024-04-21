@@ -41,47 +41,46 @@ function Responsive() {
           <div className="card card-1">
             <h4>Safe Payments</h4>
             <p>
-              Make secure payments and settlements, we will protect your funds{" "}
+              Make secure payments and settlements, we will protect your funds.
             </p>
           </div>
         </div>
         <div>
           <div className="card card-2">
-            <h4>Safe Payments</h4>
+            <h4>Support</h4>
             <p>
-              Make secure payments and settlements, we will protect your funds{" "}
+              Need help or have a wish for our store? Contact our 24/7 support.
             </p>
           </div>
         </div>
         <div>
           <div className="card card-3">
-            <h4>Safe Payments</h4>
+            <h4>From Games</h4>
             <p>
-              Make secure payments and settlements, we will protect your funds{" "}
+              Special selections of offers are available for you and your
+              friends.
             </p>
           </div>
         </div>
         <div>
           <div className="card card-4">
-            <h4>Safe Payments</h4>
-            <p>
-              Make secure payments and settlements, we will protect your funds{" "}
-            </p>
+            <h4>Our Stores</h4>
+            <p>6 modern stores with a wide range of offers just for you.</p>
           </div>
         </div>
         <div>
           <div className="card card-5">
-            <h4>Safe Payments</h4>
+            <h4>Customers</h4>
             <p>
-              Make secure payments and settlements, we will protect your funds{" "}
+              More than 5,000 customers satisfied with our services per year.
             </p>
           </div>
         </div>
         <div>
           <div className="card card-6">
-            <h4>Safe Payments</h4>
+            <h4>Experience</h4>
             <p>
-              Make secure payments and settlements, we will protect your funds{" "}
+              Our company has been working in this field for more than 8 years.
             </p>
           </div>
         </div>

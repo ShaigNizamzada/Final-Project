@@ -6,14 +6,17 @@ import { useCart } from "react-use-cart";
 import SingleProductSale from "../components/SingleProductSale";
 import "react-toastify/dist/ReactToastify.css";
 import WishBtn from "../components/WishBtn/WishBtn";
+import swal from "sweetalert";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useWishlist } from "react-use-wishlist";
 const ProductDetails = () => {
   useEffect(() => {
     Aos.init();
   }, []);
   const [product] = useContext(ProductContext);
   const { addItem } = useCart();
+  const { inWishlist } = useWishlist();
   const { url } = useParams();
   const navigate = useNavigate();
   const detailProduct = product.filter(
@@ -163,6 +166,7 @@ const ProductDetails = () => {
                           localStorage.getItem("login") === "true"
                             ? addItem(detailProduct[0])
                             : navigate("/login");
+                          swal("", "Product Added", "success");
                         }}
                       >
                         Add to cart
@@ -171,7 +175,11 @@ const ProductDetails = () => {
                     <div className="share--section mt-2 d-flex justify-content-between align-items-center">
                       <div className="share--left--section">
                         <WishBtn product={detailProduct[0]} />
-                        <span className="fs-5 ms-2">Add to wishlist</span>
+                        <span className="fs-5 ms-2">
+                          {inWishlist(detailProduct[0])
+                            ? "Added to wishlist"
+                            : "Add to wishlist"}
+                        </span>
                       </div>
                       <div className="share--right--section d-flex justify-content-center align-items-center">
                         <p className="mt-3">Share:</p>

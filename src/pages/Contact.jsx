@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Aos from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import swal from "sweetalert";
 const Contact = () => {
   useEffect(() => {
     Aos.init();
@@ -17,6 +18,7 @@ const Contact = () => {
       .then(
         () => {
           console.log("SUCCESS!");
+          swal("", "Your Message has been sent", "success");
         },
         (error) => {
           console.log("FAILED...", error.text);

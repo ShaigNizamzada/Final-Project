@@ -33,6 +33,7 @@
 @import url(Blog.scss);
 @import url(BlogDetails.scss);
 @import url(Wishlist.scss);
+@import url(Checkout.scss);
 :root {
   --header-background-dark: #212121;
   --header-background-light: #e0dede;
@@ -71,7 +72,9 @@
   .blog--top--title,
   .blog--details--top--section,
   .about-text,
-  .sale--section--bottom--left {
+  .sale--section--bottom--left,
+  .checkout--top--section,
+  .checkout--bottom--right--section {
     background-color: var(--header-background-dark) !important;
     color: var(--header-text-dark);
   }
@@ -122,7 +125,9 @@
   .blog--top--title,
   .blog--details--top--section,
   .about-text,
-  .sale--section--bottom--left {
+  .sale--section--bottom--left,
+  .checkout--top--section,
+  .checkout--bottom--right--section {
     background-color: var(--footer-background-light) !important;
     color: var(--header-text-light);
   }

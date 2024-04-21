@@ -1,0 +1,90 @@
+.checkout--section {
+  .checkout--top--section {
+    .link {
+      text-decoration: none;
+    }
+    .link:hover {
+      text-decoration: underline;
+    }
+  }
+  .checkout--bottom--left--section {
+    span {
+      color: rgb(109, 78, 236);
+    }
+    .input--form {
+      input {
+        width: 100%;
+        border-radius: 24px;
+        padding: 12px;
+        border: 1px solid rgb(226, 222, 222);
+      }
+    }
+    textarea {
+      width: 100%;
+      border-radius: 24px;
+      padding: 12px;
+      border: 1px solid rgb(226, 222, 222);
+      resize: none;
+    }
+  }
+  .checkout--bottom--right--section {
+    border-radius: 12px;
+    width: 100%;
+    .product--section{
+
+    .quantity {
+      // margin-top: 36px;
+      display: inline-flex;
+      vertical-align: top;
+      // white-space: nowrap;
+      .minus {
+        border: 1px solid rgb(206, 203, 203);
+        padding: 0 5px;
+        min-width: 25px;
+        min-height: unset;
+        height: 42px;
+        background-color: #ffffff !important;
+        border-radius: 15px 0 0 15px !important;
+        transition: 0.4s ease;
+      }
+      .plus {
+        padding: 0 5px;
+        min-width: 25px;
+        min-height: unset;
+        height: 42px;
+        border: 1px solid rgb(206, 203, 203);
+        background-color: #ffffff !important;
+        border-radius: 0 15px 15px 0 !important;
+        transition: 0.4s ease;
+      }
+      .minus:hover,
+      .plus:hover {
+        background-color: rgb(109, 78, 236) !important;
+        color: #ffffff;
+      }
+    }
+    .item--quantity {
+      border: 1px solid rgb(206, 203, 203);
+      width: 25px;
+      border-radius: 0;
+      border-right: none;
+      border-left: none;
+      display: inline-block;
+      text-align: center;
+    }
+    .item-remove {
+      cursor: pointer;
+      // margin-top: 15px !important;
+    }
+    .item-subtotal{
+      // margin-left: 220%!important;
+    }
+  }
+  }
+}
+.country--section {
+  width: 100%;
+  border-radius: 24px !important;
+  padding: 12px !important;
+  border: 1px solid rgb(226, 222, 222);
+}

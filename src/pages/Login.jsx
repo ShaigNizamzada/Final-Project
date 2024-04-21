@@ -1,25 +1,26 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import swal from "sweetalert";
 const Login = () => {
   const [showPassword, setshowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
   const loginSubmit = (e) => {
     e.preventDefault();
     if (!email || !password) {
-      alert("Please, fill the input");
+      swal("", "Please fill the inputs", "error");
     } else {
       if (
         email === localStorage.getItem("email") &&
         password === localStorage.getItem("password")
       ) {
         localStorage.setItem("login", "true");
-        navigate("/products");
-        window.location.assign("/");
+        swal("", "You have  successfully been logged in", "success");
+        setTimeout(() => {
+          window.location.assign("/");
+        }, 2000);
       } else {
-        alert("email or password is wrong");
+        swal("", "Email or password is wrong", "error");
       }
     }
   };
