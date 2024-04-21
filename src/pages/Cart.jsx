@@ -45,8 +45,21 @@ const Cart = () => {
     </>
   ) : (
     <>
-      <div className="container-fluid cart--section pt-5">
-        <h2 className="text-center pb-5">Shopping List</h2>
+      <div className="container-fluid cart--section">
+        <div className="cart--top--section">
+          <div className="link--to--pages--section d-flex p-4 align-items-center gap-2 fs-5">
+            <Link to="/cart" className="link">
+              Shopping Cart
+            </Link>
+            <i class="fa-solid fa-arrow-right mx-2"></i>
+            <Link to="/checkout" className="link link--checkout">
+              Checkout
+            </Link>
+            <i class="fa-solid fa-arrow-right mx-2"></i>
+            <span>Order Complete</span>
+          </div>
+        </div>
+        <h2 className="text-center my-4">Shopping List</h2>
         <div className="row">
           <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
             <div className="cart--left--section" data-aos="fade-right">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Countries from "../components/CountrySelect";
 import { useCart } from "react-use-cart";
 // import { ProductContext } from "../context/ProductContext";
-import slugify from "react-slugify";
+import slug from "react-slugify";
 import swal from "sweetalert";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -25,7 +25,7 @@ const Checkout = () => {
     if ((!name, !lastName, !phone, !email, !city, !street, !post)) {
       swal("", "Please fill the inputs", "error");
     } else {
-      swal("", "Your shopping has been done", "success");
+      swal("", "Your shopping has been successfully done", "success");
     }
   };
   return (
@@ -33,18 +33,18 @@ const Checkout = () => {
       <div className="checkout--section">
         <div className="checkout--top--section">
           <div className="link--to--pages--section d-flex p-4 align-items-center gap-2 fs-5">
-            <Link to="/cart" className="link">
+            <Link to="/cart" className="link--shoppingcart link">
               Shopping Cart
             </Link>
             <i class="fa-solid fa-arrow-right mx-2"></i>
-            <Link to="/checkout" className="link">
+            <Link to="/checkout" className="link--checkout link">
               Checkout
             </Link>
             <i class="fa-solid fa-arrow-right mx-2"></i>
             <span>Order Complete</span>
           </div>
         </div>
-        <div className="checkout--bottom--section mt-2">
+        <div className="checkout--bottom--section mt-3">
           <div className="row">
             <div className="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
               <form onSubmit={formSubmit}>
@@ -160,69 +160,88 @@ const Checkout = () => {
             </div>
             <div className="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
               <div
-                className="checkout--bottom--right--section p-3 mt-4 me-2"
+                className="checkout--bottom--right--section p-3 mt-5"
                 data-aos="fade-left"
               >
                 <h5>Your Order</h5>
                 <br />
-                <div className="d-flex align-items center justify-content-between p-2">
+                <div className="d-flex align-items-center justify-content-between p-2">
                   <h6>Product</h6>
                   <h6>Subtotal</h6>
                 </div>
                 <div className="product--section">
-                  {items.map((item, c) => (
-                    <div
-                      key={c}
-                      className="d-flex  justify-content-around align-items-center"
-                    >
-                      <div className="item-remove me-3">
-                        <i
-                          onClick={() => {
-                            removeItem(item.id);
-                            swal("", "Product Removed", "success");
-                          }}
-                          class="fa-solid fa-xmark d-flex justify-content-center"
-                        ></i>
-                      </div>
-                      <div className="item-photo mb-4">
-                        <img className="" width={100} src={item.photo} alt="" />
-                      </div>
-                      <div className="item-title">
-                        <Link
-                          className="product--title"
-                          to={`/sale/${slugify(item.title)}`}
-                        >
-                          {item.title.slice(0, 20)}...{" "}
-                        </Link>
-                      </div>
-                      <div className="quantity">
-                        <input
-                          type="button"
-                          className="minus"
-                          onClick={() =>
-                            updateItemQuantity(item.id, item.quantity - 1)
-                          }
-                          value="-"
-                        />
-                        <input
-                          type="text"
-                          className="item--quantity"
-                          value={item.quantity}
-                        />
-                        <input
-                          type="button"
-                          className="plus"
-                          onClick={() =>
-                            updateItemQuantity(item.id, item.quantity + 1)
-                          }
-                          value="+"
-                        />
-                      </div>
-                      <div className="item-subtotal discounted--price">
-                        £ {Math.round(item.price * item.quantity)}
-                      </div>
-                    </div>
-                  ))}
+                  <table>
+                    <tbody>
+                      {items.map((item, c) => (
+                        <tr key={c}>
+                          <td>
+                            <div className="item-remove me-2">
+                              <i
+                                onClick={() => {
+                                  removeItem(item.id);
+                                  swal("", "Product Removed", "success");
+                                }}
+                                class="fa-solid fa-xmark d-flex justify-content-center"
+                              ></i>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="item-photo mb-4">
+                              <img
+                                className=""
+                                width={100}
+                                src={item.photo}
+                                alt=""
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <div className="item-title">
+                              <Link
+                                className="product--title"
+                                to={`/sale/${slug(item.title)}`}
+                              >
+                                {item.title}{" "}
+                              </Link>
+                            </div>
+                          </td>
+                          <td>
+                            <div className="quantity me-2">
+                              <input
+                                type="button"
+                                className="minus"
+                                onClick={() =>
+                                  updateItemQuantity(item.id, item.quantity - 1)
+                                }
+                                value="-"
+                              />
+                              <input
+                                type="text"
+                                className="item--quantity"
+                                value={item.quantity}
+                              />
+                              <input
+                                type="button"
+                                className="plus"
+                                onClick={() =>
+                                  updateItemQuantity(item.id, item.quantity + 1)
+                                }
+                                value="+"
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <div className="item-subtotal product--price d-flex">
+                              <span>£&nbsp;</span>
+                              <span>
+                                {Math.round(item.price * item.quantity)}
+                              </span>
+                            </div>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                   <hr />
                 </div>
                 <div className="subtotal--section d-flex align-items-center justify-content-between">

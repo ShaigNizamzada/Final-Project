@@ -1,4 +1,7 @@
 .cart--section {
+  .link--checkout{
+    text-decoration: none;
+  }
   .table--shopping--list {
     width: 100%;
     .quantity {
@@ -50,6 +53,9 @@
     .button {
       width: 100%;
     }
+  }
+  .cart--right--section{
+    border-radius: 24px;
   }
 }
 .coupon--section {
