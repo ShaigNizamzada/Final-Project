@@ -250,3 +250,25 @@ body {
     height: 100vh;
   }
 }
+// Swal-button config.
+.swal-button {
+  background-color: rgb(109, 78, 236);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  padding: 10px 32px;
+  border-radius: 35px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  text-shadow: none;
+  line-height: 2;
+  transition: 0.2s ease;
+}
+.swal-button:hover {
+  background-color: rgb(97, 62, 235) !important;
+}

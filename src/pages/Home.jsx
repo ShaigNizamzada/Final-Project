@@ -12,7 +12,11 @@ import Slider from "react-slick";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Blog from "./Blog";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import slugify from "react-slugify";
 const Home = () => {
+  const blogs = useSelector((p) => p);
   useEffect(() => {
     Aos.init();
   }, []);
@@ -132,6 +136,52 @@ const Home = () => {
       </div>
       <StarWars />
       <DiscoverAll />
+      <div className="blog--section container-fluid">
+        <div className="row">
+          <h3 className="p-4 mt-3">Our Latest Articles</h3>
+          {blogs.slice(0, 3).map((item) => (
+            <div className="col-xl-4 col-lg-6 col-12 col-md-6 col-sm-12 g-3">
+              <div className="blog--section">
+                <Link to={`/blog/${slugify(item.title)}`}>
+                  <div className="blog--image--section">
+                    <img className="blog--image" src={item.img} alt="" />
+                  </div>
+                </Link>
+                <div className="blog--top--section text-dark d-flex flex-column">
+                  <span className="text-center">{item.date_day}</span>
+                  <span className="text-center">{item.date_month}</span>
+                </div>
+                <div className="blog--body--section">
+                  <h6 className="text-center blog--text text-light">Blog</h6>
+                  <Link
+                    className="blog--item--title"
+                    to={`/blog/${slugify(item.title)}`}
+                  >
+                    <h5 className="text-light text-center fw-bold blog--title">
+                      {item.title}
+                    </h5>
+                  </Link>
+                </div>
+                <div className="blog--bottom--section">
+                  <div className="d-flex justify-content-center align-items-center">
+                    <span className="text-light me-2">By</span>
+                    <img
+                      src="https://woodmart.xtemos.com/wp-content/uploads/2018/10/avatar-home.jpg.webp"
+                      alt=""
+                      height={18}
+                      width={18}
+                    />
+                    <span className="text-light mx-2">Mr.Mackay</span>
+                    <Link to={`/blog/${slugify(item.title)}`}>
+                      <i class="fa-regular fa-comment text-light"></i>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 };
