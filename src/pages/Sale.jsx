@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import SingleProductSaleList from "../components/SingleProductSaleList";
 import { ProductContext } from "../context/ProductContext";
 import SingleProductSale from "../components/SingleProductSale";
 import { Slider } from "antd";
@@ -89,14 +88,30 @@ const Sale = () => {
                 <hr className="mx-3" />
                 <h4>Categories</h4>
                 <ul className="d-flex flex-column flex-wrap gap-2">
-                  <li className="fs-4" onClick={() => setCategory("")}>All</li>
-                  <li className="fs-4" onClick={() => setCategory("Action")}>Action</li>
-                  <li className="fs-4" onClick={() => setCategory("Adventure")}>Adventure</li>
-                  <li className="fs-4" onClick={() => setCategory("Casual")}>Casual</li>
-                  <li className="fs-4" onClick={() => setCategory("Horror")}>Horror</li>
-                  <li className="fs-4" onClick={() => setCategory("Indie")}>Indie</li>
-                  <li className="fs-4" onClick={() => setCategory("Racing")}>Racing</li>
-                  <li className="fs-4" onClick={() => setCategory("RPG")}>RPG</li>
+                  <li className="fs-4" onClick={() => setCategory("")}>
+                    All
+                  </li>
+                  <li className="fs-4" onClick={() => setCategory("Action")}>
+                    Action
+                  </li>
+                  <li className="fs-4" onClick={() => setCategory("Adventure")}>
+                    Adventure
+                  </li>
+                  <li className="fs-4" onClick={() => setCategory("Casual")}>
+                    Casual
+                  </li>
+                  <li className="fs-4" onClick={() => setCategory("Horror")}>
+                    Horror
+                  </li>
+                  <li className="fs-4" onClick={() => setCategory("Indie")}>
+                    Indie
+                  </li>
+                  <li className="fs-4" onClick={() => setCategory("Racing")}>
+                    Racing
+                  </li>
+                  <li className="fs-4" onClick={() => setCategory("RPG")}>
+                    RPG
+                  </li>
                 </ul>
               </div>
             </div>

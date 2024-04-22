@@ -98,6 +98,11 @@
     display: none;
   }
 }
+@media screen and (max-width:530px){
+  .search--section{
+    display: none;
+  }
+}
 .img-header {
   width: 750px;
   height: 400px;

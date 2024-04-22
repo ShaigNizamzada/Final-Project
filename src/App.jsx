@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -26,41 +26,62 @@ import AddBlog from "./pages/admin/update/AddBlog";
 import BlogDetails from "./pages/BlogDetails";
 import TopToBtn from "./components/TopToScroll/TopToBtn";
 import Checkout from "./pages/Checkout";
+import PreLoader from "./components/PreLoader";
 const App = () => {
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
   const [mode] = useContext(ModeContext);
   return (
     <>
-      <BrowserRouter>
-        <div className={mode}>
-          <TopToBtn />
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="*" element={<NotFound />}></Route>
-            <Route path="/about" element={<About />}></Route>
-            <Route path="/contact" element={<Contact />}></Route>
-            <Route path="/blog" element={<Blog />}></Route>
-            <Route path="/cart" element={<Cart />}></Route>
-            <Route path="/wishlist" element={<Wishlist />}></Route>
-            <Route path="/sale" element={<Sale />}></Route>
-            <Route path="/faqs" element={<FAQs />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/register" element={<Register />}></Route>
-            <Route path="/account" element={<Account />}></Route>
-            <Route path="/changepassword" element={<ChangePassword />}></Route>
-            <Route path="/forgotpassword" element={<ForgotPassword />}></Route>
-            <Route path="/sale/:url" element={<ProductDetails />}></Route>
-            <Route path="/privacypolicy" element={<PrivacyPolicy />}></Route>
-            <Route path="/accountdetails" element={<AccountDetails />}></Route>
-            <Route path="/dashboard" element={<Dashboard />}></Route>
-            <Route path="/dashboard/add" element={<AddBlog />}></Route>
-            <Route path="/blog/:slug" element={<BlogDetails />}></Route>
-            <Route path="/checkout" element={<Checkout />}></Route>
-          </Routes>
-          <Description />
-          <Footer />
-        </div>
-      </BrowserRouter>
+      {loading ? (
+        <PreLoader />
+      ) : (
+        <BrowserRouter>
+          <div className={mode}>
+            <TopToBtn />
+            <Header />
+            <Routes>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="*" element={<NotFound />}></Route>
+              <Route path="/about" element={<About />}></Route>
+              <Route path="/contact" element={<Contact />}></Route>
+              <Route path="/blog" element={<Blog />}></Route>
+              <Route path="/cart" element={<Cart />}></Route>
+              <Route path="/wishlist" element={<Wishlist />}></Route>
+              <Route path="/sale" element={<Sale />}></Route>
+              <Route path="/faqs" element={<FAQs />}></Route>
+              <Route path="/login" element={<Login />}></Route>
+              <Route path="/register" element={<Register />}></Route>
+              <Route path="/account" element={<Account />}></Route>
+              <Route
+                path="/changepassword"
+                element={<ChangePassword />}
+              ></Route>
+              <Route
+                path="/forgotpassword"
+                element={<ForgotPassword />}
+              ></Route>
+              <Route path="/sale/:url" element={<ProductDetails />}></Route>
+              <Route path="/privacypolicy" element={<PrivacyPolicy />}></Route>
+              <Route
+                path="/accountdetails"
+                element={<AccountDetails />}
+              ></Route>
+              <Route path="/dashboard" element={<Dashboard />}></Route>
+              <Route path="/dashboard/add" element={<AddBlog />}></Route>
+              <Route path="/blog/:slug" element={<BlogDetails />}></Route>
+              <Route path="/checkout" element={<Checkout />}></Route>
+            </Routes>
+            <Description />
+            <Footer />
+          </div>
+        </BrowserRouter>
+      )}
     </>
   );
 };

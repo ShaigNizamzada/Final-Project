@@ -31,7 +31,7 @@
     border-radius: 24px;
     width: 100%;
     .product--section {
-      table{
+      table {
         width: 100%;
       }
       .quantity {
@@ -81,6 +81,20 @@
       .item-subtotal {
         //
       }
+    }
+    .input--coupon {
+      outline: none;
+      border: 1px solid rgb(114, 110, 110);
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      padding: 9px 22px;
+      border-radius: 35px;
+      outline: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none !important;
     }
   }
 }

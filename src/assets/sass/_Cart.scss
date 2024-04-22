@@ -1,5 +1,5 @@
 .cart--section {
-  .link--checkout{
+  .link--checkout {
     text-decoration: none;
   }
   .table--shopping--list {
@@ -54,23 +54,7 @@
       width: 100%;
     }
   }
-  .cart--right--section{
+  .cart--right--section {
     border-radius: 24px;
-  }
-}
-.coupon--section {
-  .input--coupon {
-    outline: none;
-    border: 1px solid rgb(114, 110, 110);
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    padding: 9px 22px;
-    border-radius: 35px;
-    outline: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none !important;
   }
 }

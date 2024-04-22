@@ -29,7 +29,7 @@ const ProductDetails = () => {
         <h1>Loading</h1>
       ) : (
         <div className="container-fluid product--details">
-          <div className="row product--details--section pt-5">
+          <div className="row product--details--section pt-3">
             <div className="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
               <div
                 className="product--details--left--section"

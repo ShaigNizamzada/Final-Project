@@ -7,7 +7,14 @@ import slug from "react-slugify";
 import Modal from "react-bootstrap/Modal";
 import ListGroup from "react-bootstrap/ListGroup";
 import { useWishlist } from "react-use-wishlist";
+import { Select } from "antd";
+import i18n from "../i18n/i18next";
+import { useTranslation } from "react-i18next";
 const Header = () => {
+  const toggleLang = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+  const { t } = useTranslation();
   const { totalItems } = useCart();
   const { totalWishlistItems } = useWishlist();
   const { pathname } = useLocation();
@@ -46,33 +53,33 @@ const Header = () => {
           <ul className="navbar-nav ms-3 mb-2 mb-lg-0">
             <li className="nav-item">
               <NavLink className="nav-link" to="/">
-                Home
+                {t("navbar.0")}
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/sale">
-                Sale
+                {t("navbar.1")}
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/about">
-                About
+                {t("navbar.2")}
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/contact">
-                Contact
+                {t("navbar.3")}
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/blog">
-                Blog
+                {t("navbar.4")}
               </NavLink>
             </li>
           </ul>
 
-          <div className="header-end-section ms-auto d-flex">
-            <div className="social-media mt-1">
+          <div className="header-end-section ms-auto d-flex align-items-center">
+            <div className="social-media">
               <Link to="https://www.instagram.com/" target="_blank">
                 <span className="social-media-icon instagram me-2">
                   <i class="fa-brands fa-instagram"></i>
@@ -95,14 +102,14 @@ const Header = () => {
               </Link>
             </div>
 
-            <div>
+            <div className="search--section">
               <div className="search--icon--section pe-2">
                 <form className="search-bar">
                   <div
                     onClick={handleShow}
                     className="d-flex justify-content-between align-items-center search--bar--section"
                   >
-                    <input type="text" placeholder="Search for products..." />
+                    <input type="text" placeholder={t("navbar.5")} />
                     <button className="search--button">
                       {" "}
                       <i class="fa-solid fa-magnifying-glass search--product text-light"></i>
@@ -158,7 +165,7 @@ const Header = () => {
               </Modal>
             </div>
 
-            <div className="header-user-section mt-2 ">
+            <div className="header-user-section">
               {localStorage.getItem("login") === "true" ? (
                 <div>
                   <NavLink to="/account" className="my-profile">
@@ -195,7 +202,7 @@ const Header = () => {
                 </span>
               </Link>
               <div
-                className="ms-3 me-2 mode"
+                className="ms-3 me-3 mode"
                 onClick={() => {
                   mode === "light" ? setMode("dark") : setMode("light");
                   mode === "light"
@@ -210,7 +217,23 @@ const Header = () => {
                 )}
               </div>
             </div>
-            <button className="button">AZ</button>
+            <Select
+              defaultValue="en"
+              style={{
+                width: 60,
+              }}
+              onChange={toggleLang}
+              options={[
+                {
+                  value: "en",
+                  label: "En",
+                },
+                {
+                  value: "az",
+                  label: "Az",
+                },
+              ]}
+            />
           </div>
         </div>
       </div>

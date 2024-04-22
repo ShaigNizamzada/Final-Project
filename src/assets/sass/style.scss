@@ -3,37 +3,37 @@
   display: block;
   margin-top: 0; /* remove the gap so it doesn't close */
 }
-@import url(Header.scss);
-@import url(Footer.scss);
-@import url(Home.scss);
-@import url(Responsive_categories.scss);
-@import url(Responsive_TopSellers.scss);
-@import url(Responsive_Hero.scss);
-@import url(Hero.scss);
-@import url(Description.scss);
-@import url(SingleProduct.scss);
-@import url(SingleProduct2.scss);
-@import url(About.scss);
-@import url(Responsive_AboutUs.scss);
-@import url(Contact.scss);
-@import url(Sale.scss);
-@import url(StarWars.scss);
-@import url(Accordion.scss);
-@import url(DiscoverAll.scss);
-@import url(Login.scss);
-@import url(Register.scss);
-@import url(Account.scss);
-@import url(ForgotPassword.scss);
-@import url(FAQs.scss);
-@import url(ProductDetails.scss);
-@import url(SingleProductSale.scss);
-@import url(PrivacyPolicy.scss);
-@import url(Cart.scss);
-@import url(Campaign.scss);
-@import url(Blog.scss);
-@import url(BlogDetails.scss);
-@import url(Wishlist.scss);
-@import url(Checkout.scss);
+@import "Header";
+@import "Footer";
+@import "Home";
+@import "Responsive_categories";
+@import "Responsive_TopSellers";
+@import "Responsive_Hero";
+@import "Hero";
+@import "Description";
+@import "SingleProduct";
+@import "SingleProduct2";
+@import "About";
+@import "Responsive_AboutUs";
+@import "Contact";
+@import "Sale";
+@import "StarWars";
+@import "Accordion";
+@import "DiscoverAll";
+@import "Login";
+@import "Register";
+@import "Account";
+@import "ForgotPassword";
+@import "FAQs";
+@import "ProductDetails";
+@import "SingleProductSale";
+@import "PrivacyPolicy";
+@import "Cart";
+@import "Campaign";
+@import "Blog";
+@import "BlogDetails";
+@import "Wishlist";
+@import "Checkout";
 :root {
   --header-background-dark: #212121;
   --header-background-light: #e0dede;
@@ -242,4 +242,11 @@ body {
 }
 .top--to--scroll:hover .top--to--scroll--icon {
   color: rgb(97, 62, 235) !important;
+}
+
+// PACMAN LOADER
+.pacman-loader {
+  .pacman {
+    height: 100vh;
+  }
 }

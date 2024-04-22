@@ -67,17 +67,6 @@ const AccountDetails = () => {
               </Link>
             </div>
           </form>
-          <div className="logout-section d-flex justify-content-center align-items-center mt-3">
-            <button
-              className="btn btn-outline-danger my-4 px-5"
-              onClick={() => {
-                localStorage.removeItem("login");
-                window.location.assign("/login");
-              }}
-            >
-              Logout
-            </button>{" "}
-          </div>
         </div>
       </div>
     </>

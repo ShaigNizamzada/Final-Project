@@ -8,6 +8,12 @@ import swal from "sweetalert";
 import Aos from "aos";
 import "aos/dist/aos.css";
 const Checkout = () => {
+  const [couponValue, setCouponValue] = useState(0);
+  const [coupon, setCoupon] = useState("");
+  const formCoupon = (e) => {
+    e.preventDefault();
+    setCoupon(couponValue);
+  };
   useEffect(() => {
     Aos.init();
   }, []);
@@ -47,9 +53,10 @@ const Checkout = () => {
         <div className="checkout--bottom--section mt-3">
           <div className="row">
             <div className="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+              <div className="coupon--section d-flex align-items-center mt-4 pb-5"></div>
               <form onSubmit={formSubmit}>
                 <div
-                  className="checkout--bottom--left--section ms-4"
+                  className="checkout--bottom--left--section mx-3"
                   data-aos="fade-right"
                 >
                   <h3>
@@ -247,7 +254,10 @@ const Checkout = () => {
                 <div className="subtotal--section d-flex align-items-center justify-content-between">
                   <h6>SubTotal</h6>
                   <span className="product--price fs-5 fw-bold">
-                    £ {Math.round(cartTotal)}
+                    £{" "}
+                    {coupon === "20"
+                      ? Math.round(cartTotal) * 0.8
+                      : Math.round(cartTotal)}
                   </span>
                 </div>
                 <hr />{" "}
@@ -274,9 +284,24 @@ const Checkout = () => {
                 <div className="total--section d-flex justify-content-between align-items-center">
                   <h6>Total</h6>
                   <span className="product--price fs-4 fw-bold">
-                    £ {Math.round(cartTotal)}
+                    £{" "}
+                    {coupon === "20"
+                      ? Math.round(cartTotal) * 0.8
+                      : Math.round(cartTotal)}
                   </span>
                 </div>
+                <h6 className="my-3 ms-1">Do you have any coupon?</h6>
+                <form onSubmit={formCoupon} className="d-flex">
+                  <input
+                    type="text"
+                    className="input--coupon"
+                    placeholder="Coupon code"
+                    onChange={(e) => setCouponValue(e.target.value)}
+                  />
+                  <button type="submit" className="button ms-3">
+                    Apply Coupon
+                  </button>
+                </form>
               </div>
             </div>
           </div>

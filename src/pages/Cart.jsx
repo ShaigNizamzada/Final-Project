@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import slug from "react-slugify";
 import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
@@ -11,12 +11,6 @@ const Cart = () => {
   useEffect(() => {
     Aos.init();
   }, []);
-  const [couponValue, setCouponValue] = useState(0);
-  const [coupon, setCoupon] = useState("");
-  const formSubmit = (e) => {
-    e.preventDefault();
-    setCoupon(couponValue);
-  };
   const [product] = useContext(ProductContext);
   const {
     items,
@@ -147,7 +141,7 @@ const Cart = () => {
                   ))}
                 </tbody>
               </table>
-              <button onClick={() => emptyCart()} className="button mt-4">
+              <button onClick={() => emptyCart()} className="button my-4">
                 Remove Cart
               </button>
             </div>
@@ -157,13 +151,7 @@ const Cart = () => {
               <h3 className="fw-bold">Cart Totals</h3>
               <div className="subtotal--section d-flex pt-3 justify-content-between align-items-center">
                 <h6>Subtotal</h6>
-                <p className="discounted--price">
-                  {" "}
-                  £
-                  {coupon === "20"
-                    ? Math.round(cartTotal) * 0.8
-                    : Math.round(cartTotal)}
-                </p>
+                <p className="discounted--price"> £ {Math.round(cartTotal)}</p>
               </div>
               <hr />
               <div className="shipping--section d-flex pt-3 justify-content-between align-items-center">
@@ -174,10 +162,7 @@ const Cart = () => {
               <div className="total--section d-flex pt-3 justify-content-between align-items-center">
                 <h6>Total</h6>
                 <p className="product--price fs-4 fw-bold">
-                  £
-                  {coupon === "20"
-                    ? Math.round(cartTotal) * 0.8
-                    : Math.round(cartTotal)}
+                  £ {Math.round(cartTotal)}
                 </p>
               </div>
               <div className="proceed--to--checkout--section">
@@ -189,19 +174,6 @@ const Cart = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="coupon--section d-flex align-items-center mt-4 pb-5">
-          <form onSubmit={formSubmit} className="d-flex">
-            <input
-              type="text"
-              className="input--coupon"
-              placeholder="Coupon code"
-              onChange={(e) => setCouponValue(e.target.value)}
-            />
-            <button type="submit" className="button ms-3">
-              Apply Coupon
-            </button>
-          </form>
         </div>
         <h2 className="fw-bold">They buy with these goods</h2>
         <div className="col-lg-5 ms-2 pb-5">
