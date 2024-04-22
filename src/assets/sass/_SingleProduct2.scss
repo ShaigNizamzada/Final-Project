@@ -5,9 +5,9 @@
     .product--rating {
       font-size: 16px;
     }
-    .fa-star {
+    .fa-star,
+    .fa-star-half-stroke {
       font-size: 16px;
-      color: #e3c043;
     }
     .product--title {
       text-decoration: none;
@@ -25,9 +25,9 @@
     }
   }
 }
-.single--product-2:nth-child(1) {
-  border-radius: 12px 12px 0 0;
-}
-.single--product-2:last-child {
-  border-radius: 0 0 12px 12px;
-}
+// .single--product-2:nth-child(1) {
+//   border-radius: 12px 12px 0 0;
+// }
+// .single--product-2:last-child {
+//   border-radius: 0 0 12px 12px;
+// }

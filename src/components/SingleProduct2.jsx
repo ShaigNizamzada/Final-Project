@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import slug from "react-slugify";
+import Rating from "./Rating";
 const SingleProduct2 = ({ title, photo, rating, price, id }) => {
   return (
     <>
@@ -14,9 +15,9 @@ const SingleProduct2 = ({ title, photo, rating, price, id }) => {
           <Link to={`/sale/${slug(title)}`} className="product--title">
             <h6>{title}</h6>
           </Link>
-          <span className="product--rating">{rating}</span>
-          <i class="fa-solid fa-star ms-1"></i>
-          <br />
+          {/* <span className="product--rating">{rating}</span> */}
+          <Rating value={rating} color={"#fcc419"} />
+          {/* <br /> */}
           <span className="discounted--price price me-1">
             £{Math.floor(price * 1.2)}
           </span>

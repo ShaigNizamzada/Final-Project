@@ -11,6 +11,7 @@ import SingleProduct from "../components/SingleProduct";
 import Slider from "react-slick";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Blog from "./Blog";
 const Home = () => {
   useEffect(() => {
     Aos.init();
@@ -67,7 +68,7 @@ const Home = () => {
           </span>
           <span className="fs-5 fw-bolder">Discounted Games</span>
           <div className="me-2 mt-3">
-            {product.slice(0, 5).map((item) => (
+            {product.slice(22, 27).map((item) => (
               <SingleProduct2
                 key={item.id}
                 title={item.title}

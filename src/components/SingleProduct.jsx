@@ -4,6 +4,7 @@ import slug from "react-slugify";
 import WishBtn from "./WishBtn/WishBtn";
 import { ProductContext } from "../context/ProductContext";
 import CardBtn from "./CardBtn/CardBtn";
+import Rating from "./Rating";
 
 const SingleProduct = ({ title, photo, rating, price, id, alldata }) => {
   const [product] = useContext(ProductContext);
@@ -27,11 +28,11 @@ const SingleProduct = ({ title, photo, rating, price, id, alldata }) => {
         <div className="card-bottom">
           <div className="card--bottom--title d-flex justify-content-between me-3 mt-2">
             <Link className="product--title" to={`/sale/${slug(title)}`}>
-              <span>{title.slice(0, 20)}</span>
+              <span>{title.slice(0, 14)}...</span>
             </Link>
             <div className="rating--section">
-              <span>{rating}</span>
-              <i class="fa-solid fa-star ms-1"></i>
+              {/* <span>{rating}</span> */}
+              <Rating value={rating} color={"#fcc419"} />
             </div>
           </div>
           <div className="card--bottom--price mt-1">

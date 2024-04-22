@@ -176,7 +176,7 @@ const ProductDetails = () => {
                       <div className="share--left--section">
                         <WishBtn product={detailProduct[0]} />
                         <span className="fs-5 ms-2">
-                          {inWishlist(detailProduct[0])
+                          {inWishlist(detailProduct[0].id)
                             ? "Added to wishlist"
                             : "Add to wishlist"}
                         </span>

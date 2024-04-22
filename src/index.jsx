@@ -18,7 +18,7 @@ import "./i18n/i18next";
 // REDUX START
 const store = configureStore();
 store.subscribe(() => {
-  console.log(store.getState());
+  // console.log(store.getState());
 });
 store.dispatch(
   addBlog({
