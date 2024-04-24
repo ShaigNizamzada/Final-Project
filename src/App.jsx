@@ -33,7 +33,7 @@ const App = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2000);
   }, []);
   const [mode] = useContext(ModeContext);
   return (

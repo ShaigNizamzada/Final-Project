@@ -13,7 +13,12 @@ const Register = () => {
     e.preventDefault();
 
     if (!fullname || !tel || !email || !password || !againPassword) {
-      swal("", "Please fill the inputs", "error");
+      swal({
+        title: "",
+        text: "Please fill the inputs",
+        icon: "error",
+        timer: 1500,
+      });
     } else {
       if (password === againPassword) {
         localStorage.setItem("fullname", fullname);
@@ -23,9 +28,19 @@ const Register = () => {
         setTimeout(() => {
           window.location.assign("/login");
         }, 2000);
-        swal("", "You have been registered", "success");
+        swal({
+          title: "",
+          text: "You have been registered",
+          icon: "success",
+          timer: 1500,
+        });
       } else {
-        swal("", "Passwords are different", "error");
+        swal({
+          title: "",
+          text: "Passwords are different",
+          icon: "error",
+          timer: 1500,
+        });
       }
     }
   };

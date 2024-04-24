@@ -14,9 +14,16 @@ const Account = () => {
         <Link to="/accountdetails">
           <button className="button mb-3">Details</button>
         </Link>
-        <Link to="/dashboard">
+        {localStorage.getItem("email") === "admin@admin.com" ? (
+          <Link to="/dashboard">
+            <button className="button">Dashboard</button>
+          </Link>
+        ) : (
+          ""
+        )}
+        {/* <Link to="/dashboard">
           <button className="button">Dashboard</button>
-        </Link>
+        </Link> */}
       </div>
       <div className="logout-section d-flex justify-content-center align-items-center">
         <button

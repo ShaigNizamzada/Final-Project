@@ -22,7 +22,7 @@ const Blog = () => {
                     <img className="blog--image" src={item.img} alt="" />
                   </div>
                 </Link>
-                <div className="blog--top--section text-dark d-flex flex-column">
+                <div className="blog--top--section d-flex flex-column">
                   <span className="text-center">{item.date_day}</span>
                   <span className="text-center">{item.date_month}</span>
                 </div>

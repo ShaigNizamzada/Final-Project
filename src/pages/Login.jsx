@@ -8,19 +8,34 @@ const Login = () => {
   const loginSubmit = (e) => {
     e.preventDefault();
     if (!email || !password) {
-      swal("", "Please fill the inputs", "error");
+      swal({
+        title: "",
+        text: "Please fill the inputs",
+        icon: "error",
+        timer: 1500,
+      });
     } else {
       if (
         email === localStorage.getItem("email") &&
         password === localStorage.getItem("password")
       ) {
         localStorage.setItem("login", "true");
-        swal("", "You have  successfully been logged in", "success");
+        swal({
+          title: "",
+          text: "You have successfully been logged in",
+          icon: "success",
+          timer: 1500,
+        });
         setTimeout(() => {
           window.location.assign("/");
         }, 2000);
       } else {
-        swal("", "Email or password is wrong", "error");
+        swal({
+          title: "",
+          text: "Email or password is wrong",
+          icon: "error",
+          timer: 1500,
+        });
       }
     }
   };

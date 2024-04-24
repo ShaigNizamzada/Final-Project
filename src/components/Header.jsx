@@ -174,13 +174,17 @@ const Header = () => {
                   </NavLink>
                 </div>
               ) : (
-                <NavLink className="login" to="/login">
+                <NavLink className="login mx-1" to="/login">
                   <i class="fa-regular fa-user"></i>
                 </NavLink>
               )}
               <NavLink
-                className="favorite mx-2 position-relative"
-                to="/wishlist"
+                className="favorite mx-3 position-relative"
+                to={
+                  localStorage.getItem("login") === "true"
+                    ? "/wishlist"
+                    : "/login"
+                }
               >
                 <i class="fa-regular fa-heart fs-5"></i>
                 <span className="position-absolute translate-middle badge rounded-pill bg-danger wishlist--icon">
@@ -194,7 +198,7 @@ const Header = () => {
                   localStorage.getItem("login") === "true" ? "/cart" : "/login"
                 }
                 type="button"
-                className="btn position-relative shopping-cart p-0 ms-2"
+                className="btn position-relative shopping-cart p-0 mx-2"
               >
                 <i class="bi bi-cart3 fs-5"></i>
                 <span className="position-absolute translate-middle badge rounded-pill bg-danger">

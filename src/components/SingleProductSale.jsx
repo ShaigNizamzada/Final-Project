@@ -1,13 +1,13 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, /* useNavigate */ } from "react-router-dom";
 import slug from "react-slugify";
 import WishBtn from "./WishBtn/WishBtn";
-import { useCart } from "react-use-cart";
+// import { useCart } from "react-use-cart";
 import CardBtn from "./CardBtn/CardBtn";
 import Rating from "./Rating";
 const SingleProductSale = ({ title, photo, rating, price, id, alldata }) => {
-  const navigate = useNavigate();
-  const { addItem } = useCart();
+  // const navigate = useNavigate();
+  // const { addItem } = useCart();
   return (
     <>
       <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 single--product--sale g-2">

@@ -45,7 +45,7 @@ function Responsive_TopSellers() {
         <h3 className="ms-2">Top Sellers</h3>
 
         <Link to="/sale" className="shop--all--button">
-          <button className="btn btn-dark">Shop All</button>
+          <button className="btn btn-dark rounded-4">Shop All</button>
         </Link>
       </div>
       {

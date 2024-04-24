@@ -138,7 +138,12 @@ const Home = () => {
       <DiscoverAll />
       <div className="blog--section container-fluid">
         <div className="row">
-          <h3 className="p-4 mt-3">Our Latest Articles</h3>
+          <div className="d-flex justify-content-between p-4 mt-3">
+            <h3 className="">Our Latest Articles</h3>
+            <Link to="/blog" className="more--articles--button">
+              <button className="btn btn-dark rounded-4">More Articles</button>
+            </Link>
+          </div>
           {blogs.slice(0, 3).map((item) => (
             <div className="col-xl-4 col-lg-6 col-12 col-md-6 col-sm-12 g-3">
               <div className="blog--section">
@@ -147,7 +152,7 @@ const Home = () => {
                     <img className="blog--image" src={item.img} alt="" />
                   </div>
                 </Link>
-                <div className="blog--top--section text-dark d-flex flex-column">
+                <div className="blog--top--section d-flex flex-column">
                   <span className="text-center">{item.date_day}</span>
                   <span className="text-center">{item.date_month}</span>
                 </div>

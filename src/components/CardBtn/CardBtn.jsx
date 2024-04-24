@@ -5,17 +5,38 @@ import swal from "sweetalert";
 
 const CardBtn = ({ product }) => {
   const { addItem, removeItem, inCart } = useCart();
-  const toggleWish = (myProduct) => {
+  const toggleCart = (myProduct) => {
     if (inCart(myProduct.id)) {
       removeItem(myProduct.id);
-      swal("", "Product Removed", "success");
+      if (localStorage.getItem("login") === "true") {
+        swal({
+          title: "",
+          text: "Product Removed",
+          icon: "success",
+          timer: 1500,
+        });
+      }
     } else {
       addItem(myProduct);
-      swal("", "Product Added", "success");
+      if (localStorage.getItem("login") === "true") {
+        swal({
+          title: "",
+          text: "Product Added",
+          icon: "success",
+          timer: 1500,
+        });
+      }
     }
   };
   return (
-    <Link key={product.id} onClick={() => toggleWish(product)}>
+    <Link
+      key={product.id}
+      onClick={() => {
+        if (localStorage.getItem("login") === "true") {
+          toggleCart(product);
+        }
+      }}
+    >
       {inCart(product.id) ? (
         <>
           <i class="bi bi-bag-check-fill fs-4"></i>

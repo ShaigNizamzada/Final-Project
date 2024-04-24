@@ -29,9 +29,19 @@ const Checkout = () => {
   const formSubmit = (e) => {
     e.preventDefault();
     if ((!name, !lastName, !phone, !email, !city, !street, !post)) {
-      swal("", "Please fill the inputs", "error");
+      swal({
+        title: "",
+        text: "Please fill the inputs",
+        icon: "error",
+        timer: 1500,
+      });
     } else {
-      swal("", "Your shopping has been successfully done", "success");
+      swal({
+        title: "",
+        text: "Your shopping has been successfully done",
+        icon: "success",
+        timer: 1500,
+      });
     }
   };
   return (
@@ -186,7 +196,12 @@ const Checkout = () => {
                               <i
                                 onClick={() => {
                                   removeItem(item.id);
-                                  swal("", "Product Removed", "success");
+                                  swal({
+                                    title: "",
+                                    text: "Product Removed",
+                                    icon: "success",
+                                    timer: 1500,
+                                  });
                                 }}
                                 class="fa-solid fa-xmark d-flex justify-content-center"
                               ></i>

@@ -92,7 +92,8 @@
     color: var(--hero-text-color);
   }
   .hot,
-  .ant-collapse-content-box {
+  .ant-collapse-content-box,
+  .blog--top--section {
     background-color: var(--body-background-dark);
     color: var(--header-text-dark);
   }
@@ -161,7 +162,8 @@
     color: var(--hero-text-color);
   }
   .hot,
-  .ant-collapse-content-box {
+  .ant-collapse-content-box,
+  .blog--top--section {
     background-color: var(--body-background-light);
     color: var(--header-text-light);
   }

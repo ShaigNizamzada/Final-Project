@@ -7,10 +7,10 @@
   }
   .sale--section--middle {
     background-image: url("https://woodmart.xtemos.com/games/wp-content/uploads/sites/14/2023/05/wd-vgs-discount-b.jpg.webp");
-    background-position: unset;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100% !important;
+    max-width: 100% !important;
     margin: 0 auto;
     height: 60vh;
     .text--section {

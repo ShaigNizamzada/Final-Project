@@ -163,10 +163,17 @@ const ProductDetails = () => {
                       <button
                         className="button btn-lg px-4 me-md-2 mt-5"
                         onClick={() => {
-                          localStorage.getItem("login") === "true"
-                            ? addItem(detailProduct[0])
-                            : navigate("/login");
-                          swal("", "Product Added", "success");
+                          if (localStorage.getItem("login") === "true") {
+                            addItem(detailProduct[0]);
+                            swal({
+                              title: "",
+                              text: "Product Added",
+                              icon: "success",
+                              timer: 1500,
+                            });
+                          } else {
+                            navigate("/login");
+                          }
                         }}
                       >
                         Add to cart

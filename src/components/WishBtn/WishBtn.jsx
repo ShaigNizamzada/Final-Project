@@ -7,14 +7,35 @@ const WishBtn = ({ product }) => {
   const toggleWish = (myProduct) => {
     if (inWishlist(myProduct.id)) {
       removeWishlistItem(myProduct.id);
-      swal("", "Product Removed", "success");
+      if (localStorage.getItem("login") === "true") {
+        swal({
+          title: "",
+          text: "Product Removed",
+          icon: "success",
+          timer: 1500,
+        });
+      }
     } else {
       addWishlistItem(myProduct);
-      swal("", "Product Added", "success");
+      if (localStorage.getItem("login") === "true") {
+        swal({
+          title: "",
+          text: "Product Added",
+          icon: "success",
+          timer: 1500,
+        });
+      }
     }
   };
   return (
-    <Link key={product.id} onClick={() => toggleWish(product)}>
+    <Link
+      key={product.id}
+      onClick={() => {
+        if (localStorage.getItem("login") === "true") {
+          toggleWish(product);
+        }
+      }}
+    >
       {inWishlist(product.id) ? (
         <i class="fa-solid fa-heart fs-5 mt-2"></i>
       ) : (

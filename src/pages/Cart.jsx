@@ -76,7 +76,12 @@ const Cart = () => {
                           <i
                             onClick={() => {
                               removeItem(item.id);
-                              swal("", "Product Removed", "success");
+                              swal({
+                                title: "",
+                                text: "Product Removed",
+                                icon: "success",
+                                timer: 1500,
+                              });
                             }}
                             class="fa-solid fa-xmark d-flex justify-content-center"
                           ></i>
@@ -141,7 +146,18 @@ const Cart = () => {
                   ))}
                 </tbody>
               </table>
-              <button onClick={() => emptyCart()} className="button my-4">
+              <button
+                onClick={() => {
+                  emptyCart();
+                  swal({
+                    title: "",
+                    text: "Cart has been updated",
+                    icon: "success",
+                    timer: 1500,
+                  });
+                }}
+                className="button my-4"
+              >
                 Remove Cart
               </button>
             </div>
@@ -176,12 +192,12 @@ const Cart = () => {
           </div>
         </div>
         <h2 className="fw-bold">They buy with these goods</h2>
-        <div className="col-lg-5 ms-2 pb-5">
+        <div className="col-lg-7 ms-2 pb-5">
           <div className="row" data-aos="fade-up">
             {product.slice(10, 14).map((item) => (
               <SingleProductSale
                 key={item.id}
-                title={item.title}
+                title={item.title.slice(0, 13)}
                 photo={item.photo}
                 rating={item.rating}
                 price={item.price}

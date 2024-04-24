@@ -18,7 +18,12 @@ const Contact = () => {
       .then(
         () => {
           console.log("SUCCESS!");
-          swal("", "Your Message has been sent", "success");
+          swal({
+            title: "",
+            text: "Your Message has been sent",
+            icon: "success",
+            timer: 1500,
+          });
         },
         (error) => {
           console.log("FAILED...", error.text);
