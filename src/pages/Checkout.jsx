@@ -13,6 +13,21 @@ const Checkout = () => {
   const formCoupon = (e) => {
     e.preventDefault();
     setCoupon(couponValue);
+    if (couponValue === "Hello20") {
+      swal({
+        title: "",
+        text: "Coupon has been applied",
+        icon: "success",
+        timer: 1500,
+      });
+    } else {
+      swal({
+        title: "",
+        text: "Coupon has been retired",
+        icon: "error",
+        timer: 1500,
+      });
+    }
   };
   useEffect(() => {
     Aos.init();
@@ -269,7 +284,7 @@ const Checkout = () => {
                 <div className="subtotal--section d-flex align-items-center justify-content-between">
                   <h6>SubTotal</h6>
                   <span className="product--price fs-5 fw-bold">
-                    £{" "}
+                    £
                     {coupon === "Hello20"
                       ? Math.round(cartTotal) * 0.8
                       : Math.round(cartTotal)}

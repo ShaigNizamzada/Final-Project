@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 function CustomSlide(props) {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   const { index, ...otherProps } = props;
   return (
     <div {...otherProps}>
@@ -26,7 +30,7 @@ function CustomSlides() {
           className="custom--slide custom--slide--1"
           index={
             <>
-              <div className="custom--slides mt-5 ms-5">
+              <div className="custom--slides mt-5 ms-5" data-aos="fade-up">
                 <div className="custom--slides--logo">
                   <img
                     src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-slide-di-2-logo.png.webp"
@@ -72,7 +76,7 @@ function CustomSlides() {
           className="custom--slide custom--slide--2"
           index={
             <>
-              <div className="custom--slides mt-5 ms-5">
+              <div className="custom--slides mt-5 ms-5" data-aos="fade-up">
                 <div className="custom--slides--logo">
                   <img
                     src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-slide-sf-logo.png.webp"
@@ -118,7 +122,7 @@ function CustomSlides() {
           className="custom--slide custom--slide--3"
           index={
             <>
-              <div className="custom--slides mt-5 ms-5">
+              <div className="custom--slides mt-5 ms-5" data-aos="fade-up" >
                 <div className="custom--slides--logo">
                   <img
                     src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-slide-st-2-logo.png"

@@ -34,6 +34,8 @@ const CardBtn = ({ product }) => {
       onClick={() => {
         if (localStorage.getItem("login") === "true") {
           toggleCart(product);
+        } else {
+          window.location.assign("/login");
         }
       }}
     >

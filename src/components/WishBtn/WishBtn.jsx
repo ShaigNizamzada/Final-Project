@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useWishlist } from "react-use-wishlist";
 import swal from "sweetalert";
 const WishBtn = ({ product }) => {
+  const navigate = useNavigate();
   const { addWishlistItem, removeWishlistItem, inWishlist } = useWishlist();
   const toggleWish = (myProduct) => {
     if (inWishlist(myProduct.id)) {
@@ -33,6 +34,8 @@ const WishBtn = ({ product }) => {
       onClick={() => {
         if (localStorage.getItem("login") === "true") {
           toggleWish(product);
+        } else {
+          window.location.assign("/login");
         }
       }}
     >

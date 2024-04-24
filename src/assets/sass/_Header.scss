@@ -98,9 +98,27 @@
     display: none;
   }
 }
-@media screen and (max-width:530px){
-  .search--section{
-    display: none;
+@media screen and (max-width: 991px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-end-section {
+    position: relative;
+    margin-top: 15%;
+    margin-left: 10%;
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .search--section {
+    position: absolute;
+    top: -190%;
+    left: 0;
+    width: 100%;
   }
 }
 .img-header {
