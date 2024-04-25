@@ -18,9 +18,9 @@ const Header = () => {
   const { totalItems } = useCart();
   const { totalWishlistItems } = useWishlist();
   const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [pathname]);
   const [mode, setMode] = useContext(ModeContext);
   const [query, setQuery] = useState("");
   const [product] = useContext(ProductContext);

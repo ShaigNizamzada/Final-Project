@@ -1,14 +1,100 @@
 {
-    "navbar": {
-      "0": "Ana Səhifə",
-      "1": "Məhsullar",
-      "2": "Haqqımızda",
-      "3": "Əlaqə",
-      "4": "Bloq",
-      "5": "Məhsulları axtarın..."
-    },
-    "home": {
-      "0": "başlıq"
-    }
+  "navbar": {
+    "0": "Ana Səhifə",
+    "1": "Məhsullar",
+    "2": "Haqqımızda",
+    "3": "Əlaqə",
+    "4": "Bloq",
+    "5": "Məhsulları axtarın..."
+  },
+  "footer": {
+    "0": "Ödəmə metodları : ",
+    "1": "Ödəniş valyutası",
+    "2": "Avadanlıq və elektronika onlayn mağazası aparıcı onlayn mağazalardan biridir. Qrup 25 cilddə buraxıldı.",
+    "3": "Faydalı Linklər",
+    "4": "Haqqımızda",
+    "5": "Əlaqə",
+    "6": "Məhsullar",
+    "7": "Bloq",
+    "8": "Tez-tez verilən suallar",
+    "9": "Oyunlar",
+    "10": "Sosial şəbəkələr",
+    "11": "WoodMart teması 2024 WooCommerce Temalarına əsaslanır.",
+    "12": "Xidmət Şərtləri",
+    "13": "Gizlilik Siyasəti",
+    "14": "Geri Ödəniş Siyasəti"
+  },
+  "hero": {
+    "0": "Mövcuddur :",
+    "1": "İkonik, qanlı Los-Ancelesi kəşf edin və son Zombie Slayer olmaq üçün təkamül edin.",
+    "2": "Indi əldə edin",
+    "3": " <strong>69.99+ dollardan</strong> başlayan qiymətlərlə",
+    "4": "Ulduzlar arasında qurulan bu növbəti nəsil rol oyununda azad olduğunuz istənilən personajı yaradın.",
+    "5": "Multiplayer rejimi oyun kainatı üçün pulsuz yeniləmə olaraq buraxılış tarixindən tezliklə gələcək."
+  },
+  "home": {
+    "0": "Endirimli Oyunlar",
+    "1": "Kateqoriyaya Görə",
+    "2": "Aksiyon",
+    "3": "Macəra",
+    "4": "Gündəlik",
+    "5": "Qorxu",
+    "6": "İndie",
+    "7": "Yarış",
+    "8": "RPG",
+    "9": "Bizim Son Məqalələrimiz",
+    "10": "Daha çox Məqalələr"
+  },
+  "sale": {
+    "0": "Ana Səhifə",
+    "1": "Bütün Oyunlar",
+    "2": "-75%-ə qədər endirimlər",
+    "3": "Super Həftə Endirimi",
+    "4": "Bahar ən gözəl fəsildir. Bu, görünən və bütün Qış qarını avtomobil yolunuzdan təmizləyən, papağını sizə tərəf yönəldən və uzaqlaşan biridir. Sonra bütün ayıları və dələləri qış yuxusundan oyadır və bütün dərələri gurultulu su ilə doldurur.",
+    "5": "Qiymət",
+    "6": "Kateqoriyalar",
+    "7": "Hamısı",
+    "8": "Aksiyon",
+    "9": "Macəra",
+    "10": "Gündəlik",
+    "11": "Qorxu",
+    "12": "Indie",
+    "13": "Yarış",
+    "14": "RPG"
+  },
+  "about": {
+    "0": "Mağazamız və açılış tarixi haqqında.",
+    "1": "Avadanlıq və elektronika onlayn mağazası aparıcı onlayn mağazalardan biridir. Qrup 25 cilddə buraxıldı. Bu müddət ərzində komandamız 228 cypemapket göndərdi və güclü sürətli işləyən onlayn mağaza yaratmağı bacardı. Onlayn təchizat məntəqələrinin çeşidi böyükdür və mağazalar üçün mövcud olan bütün şirkət kateqoriyalarını əhatə edir. 2019-cu ildə biz bütün aspektləri əhatə edən yeni sərhəd siyasəti strategiyasını təqdim etdik.",
+    "2": "Avadanlıq və elektronika onlayn mağazası aparıcı onlayn mağazalardan biridir. Qrup 25 cilddə buraxıldı. Bu müddət ərzində komandamız 228 cypemapket göndərdi və güclü, sürətli işləyən onlayn mağaza yaratmağı bacardı.",
+    "3": "Suallarınızın bəziləri burada cavablandırılıb",
+    "4": "Kursumuzla bağlı çoxlu suallar alırıq. İstənilən cavabı buradan qısa zamanda ala bilərsiniz.",
+    "5": "Əlaqə"
+  },
+  "contact": {
+    "0": "Bizimlə Əlaqə",
+    "1": "Avadanlıq və elektronika onlayn mağazası aparıcı onlayn mağazalardan biridir.",
+    "2": "Ad",
+    "3": "Soyad",
+    "4": "Email",
+    "5": "Mesajınız...",
+    "6": "Göndər",
+    "7": "Discord-da bizə qoşulun",
+    "8": "Rəsmi Woodmart sövdələşmələri serverinə gəlin və digər istifadəçilərlə söhbət edin.",
+    "9": "Bizim İzləyin",
+    "10": "Ən yaxşı sövdələşmələrdən xəbərdar olun! Facebook, Twitter və Steam-də bizə qoşulun.",
+    "11": "Xüsusiyyətlərə səs verin",
+    "12": "Woodmart-ı necə təkmilləşdirəcəyimizi bizə deyin. Xüsusiyyət sorğularına səs vermək və şərh vermək üçün səhifəmizə keçin.",
+    "13": "Rəyiniz",
+    "14": "Woodmart-ın ən yaxşı versiyasını yaratmağa kömək edin. Bizim səhifəmizə keçin və fikirlərinizi təklif edin.",
+    "15": "Rəy paylaşın"
+  },
+  "description": {
+    "0": "Onlayn video oyun mağazası",
+    "1": "Avadanlıq və elektronika onlayn mağazası aparıcı onlayn mağazalardan biridir. Qrup 25 cilddə buraxıldı. Bu müddət ərzində komandamız 228 cypemapket göndərdi və güclü, sürətli işləyən onlayn mağaza yaratmağı bacardı. Onlayn təchizat məntəqələrinin çeşidi böyükdür və mağazalar üçün mövcud olan bütün şirkət kateqoriyalarını əhatə edir. 2019-cu ildə biz şirkətin fəaliyyətinin bütün aspektlərini – korporativ üslub, çatdırılma və məsləhətçi işini əhatə edən yeni sərhəd siyasəti strategiyasını təqdim etdik.",
+    "2": "Həqiqətən onlayn alış-veriş çox rahatdır",
+    "3": "Avtomobil hissələri və avtomobilinizin təmiri və müntəzəm texniki xidməti üçün lazım ola biləcək hər şey rahat və əhatəli kataloqda verilmişdir. Yenilikçi axtarış - ad, məhsul ID və ya OEM nömrəsi ilə avtomobil hissələrini asanlıqla tapmağa kömək edəcək.",
+    "4": "Müxtəlif variantlar arasından sizə ən uyğun olanı seçə bilərsiniz. Hər hansı bir sualınız var? Dəstək xidmətinin mütəxəssisləri hər zaman kömək etmək üçün hazırdır. Avtomobil hissələrini bizimlə seçmək və satın almaq xoş təcrübədir! Ən pis halda müzakirə ən azı saytınızın son məqsədinə doğru işləyir, burada lorem ipsum ilə bağlı suallar cavab vermir. Əgər nüsxə dizaynda diqqəti yayındırırsa, onda siz nəyisə səhv edirsiniz və ya onlar surət dəyişikliklərini müzakirə edirlər. Bu, bir az bezdirici ola bilər, lakin siz onlara bu müzakirənin başqa vaxt üçün ən uyğun olacağını deyə bilərsiniz.",
+    "5": "Zahirən zərif dizayn gözlənilməz məzmunla tez şişməyə və ya faktiki fəaliyyətin ağırlığı altında pozulmağa başlaya bilər. Saxta məlumatlar gözəl görünüşlü tərtibatı təmin edə bilər, lakin bu, canlı, nəfəs alan tətbiqin nəyə dözməli olduğunu əks etdirmir. Real data edir.",
+    "6": "Daha çox oxu"
   }
-  
+}

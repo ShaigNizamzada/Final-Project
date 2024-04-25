@@ -15,7 +15,9 @@ import Blog from "./Blog";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import slugify from "react-slugify";
+import { useTranslation } from "react-i18next";
 const Home = () => {
+  const { t } = useTranslation();
   const blogs = useSelector((p) => p);
   useEffect(() => {
     Aos.init();
@@ -70,7 +72,7 @@ const Home = () => {
           <span className="me-3 fs-5">
             <i class="fa-solid fa-percent"></i>
           </span>
-          <span className="fs-5 fw-bolder">Discounted Games</span>
+          <span className="fs-5 fw-bolder">{t("home.0")}</span>
           <div className="me-2 mt-3">
             {product.slice(22, 27).map((item) => (
               <SingleProduct2
@@ -100,15 +102,15 @@ const Home = () => {
             className="popular--by--category--section ms-3 p-3 mb-2"
             data-aos="fade-right"
           >
-            <h3>Popular By Category</h3>
+            <h3>{t("home.1")}</h3>
             <ul>
-              <li onClick={() => setCategory("Action")}>Action</li>
-              <li onClick={() => setCategory("Adventure")}>Adventure</li>
-              <li onClick={() => setCategory("Casual")}>Casual</li>
-              <li onClick={() => setCategory("Horror")}>Horror</li>
-              <li onClick={() => setCategory("Indie")}>Indie</li>
-              <li onClick={() => setCategory("Racing")}>Racing</li>
-              <li onClick={() => setCategory("RPG")}>RPG</li>
+              <li onClick={() => setCategory("Action")}>{t("home.2")}</li>
+              <li onClick={() => setCategory("Adventure")}>{t("home.3")}</li>
+              <li onClick={() => setCategory("Casual")}>{t("home.4")}</li>
+              <li onClick={() => setCategory("Horror")}>{t("home.5")}</li>
+              <li onClick={() => setCategory("Indie")}>{t("home.6")}</li>
+              <li onClick={() => setCategory("Racing")}>{t("home.7")}</li>
+              <li onClick={() => setCategory("RPG")}>{t("home.8")}</li>
             </ul>
           </div>
         </div>
@@ -139,9 +141,9 @@ const Home = () => {
       <div className="blog--section container-fluid">
         <div className="row">
           <div className="d-flex justify-content-between p-4 mt-3">
-            <h3 className="">Our Latest Articles</h3>
+            <h3 className="">{t("home.9")}</h3>
             <Link to="/blog" className="more--articles--button">
-              <button className="btn btn-dark rounded-4">More Articles</button>
+              <button className="btn btn-dark rounded-4">{t("home.10")}</button>
             </Link>
           </div>
           {blogs.slice(0, 3).map((item) => (

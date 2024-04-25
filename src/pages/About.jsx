@@ -4,7 +4,9 @@ import Responsive_AboutUs from "../components/Responsive_AboutUs";
 import Accordion from "../components/Accordion";
 import Aos from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import { useTranslation } from "react-i18next";
 const About = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     Aos.init();
   }, []);
@@ -12,24 +14,13 @@ const About = () => {
     <>
       <div className="about--section">
         <div className="header--text--section" data-aos="zoom-in">
-          <h1 className="text-center my-5 header--text">
-            About our store and the history of its opening.
-          </h1>
+          <h1 className="text-center my-5 header--text">{t("about.0")}</h1>
           <div className="paragraph--text--section">
             <p className="text-center">
-              The online store of equipment and electronics is one of the
-              leading online stores. The band was released in 25 volumes. During
-              this time, our team sent 228 cypemapkets and managed to create a
-              powerful, fast-working online store. The range of online supply
-              points is huge and covers all company categories available for
-              convenience stores. In 2019, we presented a new border policy
-              strategy that covers all aspects.
+            {t("about.1")}
             </p>
             <p className="text-center">
-              The online store of equipment and electronics is one of the
-              leading online stores. The band was released in 25 volumes. During
-              this time, our team sent 228 cypemapkets and managed to create a
-              powerful, fast-working online store.
+            {t("about.2")}
             </p>
           </div>
         </div>
@@ -40,14 +31,13 @@ const About = () => {
           <div className="col-xl-5 col-lg-5 col-sm-12 col-12">
             <div className="first-section ms-3" data-aos="fade-right">
               <h1 className="fw-bold mb-3">
-                Some of your questions <br /> answered here
+              {t("about.3")}
               </h1>
               <p>
-                We get a lot of questions about our course. You can get any
-                answers in no time here.
+              {t("about.4")}
               </p>
               <Link to="/contact" className="contact--us--button">
-                <button className="button">Contact Us</button>
+                <button className="button">{t("about.5")}</button>
               </Link>
             </div>
           </div>{" "}

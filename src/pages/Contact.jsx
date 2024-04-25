@@ -4,7 +4,9 @@ import emailjs from "@emailjs/browser";
 import Aos from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import swal from "sweetalert";
+import { useTranslation } from "react-i18next";
 const Contact = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     Aos.init();
   }, []);
@@ -40,18 +42,15 @@ const Contact = () => {
                 className="contact--section--top--left ms-2"
                 data-aos="fade-right"
               >
-                <h1 className="fw-bold">Contact Us</h1>
-                <p>
-                  The online store of equipment and electronics is one of the
-                  leading online stores.
-                </p>
+                <h1 className="fw-bold">{t("contact.0")}</h1>
+                <p>{t("contact.1")}</p>
                 <form ref={form} onSubmit={sendEmail}>
                   <div className="row">
                     <div className="col-lg-6 col-md-6 col-12">
                       <div className="name-input mb-3">
                         <input
                           required
-                          placeholder="First name"
+                          placeholder={t("contact.2")}
                           type="text"
                           name="name"
                         />
@@ -61,7 +60,7 @@ const Contact = () => {
                       <div className="surname-input mb-2">
                         <input
                           required
-                          placeholder="Last name"
+                          placeholder={t("contact.3")}
                           type="text"
                           name="surname"
                         />
@@ -73,7 +72,7 @@ const Contact = () => {
                       <div className="email-input">
                         <input
                           required
-                          placeholder="Email"
+                          placeholder={t("contact.4")}
                           type="email"
                           name="email"
                         />
@@ -83,7 +82,7 @@ const Contact = () => {
                   <div className="textarea mt-4">
                     <textarea
                       required
-                      placeholder="Your Message"
+                      placeholder={t("contact.5")}
                       className="text-area"
                       cols="30"
                       rows="10"
@@ -92,7 +91,7 @@ const Contact = () => {
                   </div>
                   {/* <input type="email" name="" id="" /> */}
                   <button type="submit" className="button mt-2 mb-5">
-                    Send Message
+                    {t("contact.6")}
                   </button>
                 </form>
               </div>
@@ -111,24 +110,18 @@ const Contact = () => {
           </div>
         </div>
         <div className="contact--section--bottom mt-5" data-aos="fade-down">
-          <div className="row">
+          <div className="row g-3">
             <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-              <div className="bottom--first--section bottom--section text-center text-light mb-2">
-                <h4>Join us on Discord</h4>
-                <p>
-                  Come to the officialWoodmart deals server and chat with fellow
-                  users.
-                </p>
+              <div className="bottom--first--section bottom--section text-center text-light">
+                <h4>{t("contact.7")}</h4>
+                <p>{t("contact.8")}</p>
                 <i class="fa-brands fa-discord text-light fs-5"></i>
               </div>
             </div>
             <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-              <div className="bottom--second--section bottom--section text-center text-black mb-2">
-                <h4>Follow Us</h4>
-                <p>
-                  Stay up to date with the best deals! Join us on Facebook,
-                  Twitter and Steam.
-                </p>
+              <div className="bottom--second--section bottom--section text-center text-black ">
+                <h4>{t("contact.9")}</h4>
+                <p>{t("contact.10")}</p>
                 <div className="social--media d-flex align-items-center justify-content-center text-black">
                   <Link href="https://www.facebook.com/" target="_blank">
                     <i class="fa-brands fa-facebook-f fs-5 text-black p-1"></i>
@@ -146,12 +139,9 @@ const Contact = () => {
               </div>
             </div>
             <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-              <div className="bottom--third--section bottom--section text-center mb-2 text-black">
-                <h4>Vote for features</h4>
-                <p>
-                  Tell us how to improve Woodmart. Go to our to vote & comment
-                  on feature requests.
-                </p>
+              <div className="bottom--third--section bottom--section text-center text-black">
+                <h4>{t("contact.11")}</h4>
+                <p>{t("contact.12")}</p>
                 <img
                   src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-logo-black.svg"
                   alt="woodmart logo"
@@ -161,13 +151,12 @@ const Contact = () => {
               </div>
             </div>
             <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-              <div className="bottom--fourth--section bottom--section d-flex justify-content-center align-items-center flex-column text-center mb-2 text-black">
-                <h4>Your feedback</h4>
-                <p>
-                  Help us create the best version of Woodmart. Go to our &
-                  suggest your ideas.
-                </p>
-                <button className="button">Share Feedback</button>
+              <div className="bottom--fourth--section bottom--section text-center  text-black">
+                <h4>{t("contact.13")}</h4>
+                <p>{t("contact.14")}</p>
+                <div className="d-flex justify-content-center align-items-center flex-column">
+                  <button className="button ">{t("contact.15")}</button>
+                </div>
               </div>
             </div>
           </div>

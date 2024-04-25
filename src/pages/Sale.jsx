@@ -5,7 +5,9 @@ import SingleProductSale from "../components/SingleProductSale";
 import { Slider } from "antd";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 const Sale = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     Aos.init();
   }, []);
@@ -35,23 +37,19 @@ const Sale = () => {
       <div className="sale--section">
         <div className="sale--section--top p-3">
           <Link className="sale--button" to="/">
-            <span>Home </span>
+            <span>{t("sale.0")}</span>
           </Link>
-          <span>/ </span>
-          <span>All Games</span>
+          <span> / </span>
+          <span>{t("sale.1")}</span>
         </div>
         <div className="sale--section--middle" data-aos="fade-up">
           <div className="row">
-            <div className="col-lg-7 col-md-10 col-sm-12 col-12">
+            <div className="col-lg-5 col-md-6 col-sm-12 col-12">
               <div className="text--section">
-                <p>Discounts up to -75%</p>
-                <h1 className="text-light">Super Week Sale</h1>
+                <p>{t("sale.2")}</p>
+                <h1 className="text-light">{t("sale.3")}</h1>
                 <p>
-                  Spring is the nicest season. It’s the one that shows up and
-                  shovels all the Winter snow off your driveway, tips its hat at
-                  you, and strolls away. Then it wakes all the bears and
-                  squirrels out of hibernation and fills up all the streams with
-                  babbling water.
+                {t("sale.4")}
                 </p>
               </div>
             </div>
@@ -65,7 +63,7 @@ const Sale = () => {
                 data-aos="fade-right"
               >
                 <div className="price-slider">
-                  <h4>Price</h4>
+                  <h4>{t("sale.5")}</h4>
                   <div className="d-flex justify-content-between">
                     <span>£ {price.minPrice}</span>
                     <span>£ {price.maxPrice}</span>
@@ -78,7 +76,7 @@ const Sale = () => {
                     onChange={handleRange}
                   />
                   <p>
-                    Price: <span className="fw-bold">£0 — £100</span>{" "}
+                  {t("sale.5")}: <span className="fw-bold">£0 — £100</span>{" "}
                   </p>
                 </div>
                 {/* {product.filter(
@@ -86,31 +84,31 @@ const Sale = () => {
                     item.price >= price.minPrice && item.price <= price.maxPrice
                 )} */}
                 <hr className="mx-3" />
-                <h4>Categories</h4>
+                <h4>{t("sale.6")}</h4>
                 <ul className="d-flex flex-column flex-wrap gap-2">
                   <li className="fs-4" onClick={() => setCategory("")}>
-                    All
+                  {t("sale.7")}
                   </li>
                   <li className="fs-4" onClick={() => setCategory("Action")}>
-                    Action
+                  {t("sale.8")}
                   </li>
                   <li className="fs-4" onClick={() => setCategory("Adventure")}>
-                    Adventure
+                  {t("sale.9")}
                   </li>
                   <li className="fs-4" onClick={() => setCategory("Casual")}>
-                    Casual
+                  {t("sale.10")}
                   </li>
                   <li className="fs-4" onClick={() => setCategory("Horror")}>
-                    Horror
+                  {t("sale.11")}
                   </li>
                   <li className="fs-4" onClick={() => setCategory("Indie")}>
-                    Indie
+                  {t("sale.12")}
                   </li>
                   <li className="fs-4" onClick={() => setCategory("Racing")}>
-                    Racing
+                  {t("sale.13")}
                   </li>
                   <li className="fs-4" onClick={() => setCategory("RPG")}>
-                    RPG
+                  {t("sale.14")}
                   </li>
                 </ul>
               </div>

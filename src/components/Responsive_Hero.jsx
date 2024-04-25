@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 function Responsive_Hero() {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   const settings = {
     infinite: true,
     speed: 500,
@@ -24,7 +28,7 @@ function Responsive_Hero() {
     <div className="slider-container mt-5">
       <Slider {...settings}>
         <div className="responsivehero--first--slide responsivehero--slide">
-          <div className="available--on--section mt-3 ">
+          <div className="available--on--section mt-3" data-aos="fade-up">
             <span>Now on Nintendo Switch system</span>
             <h3 className="text-light">Hogwarts Legasy</h3>
             <p>
@@ -37,7 +41,7 @@ function Responsive_Hero() {
           </div>
         </div>
         <div className="responsivehero--second--slide responsivehero--slide">
-          <div className="available--on--section mt-3 ">
+          <div className="available--on--section mt-3" data-aos="fade-up">
             <span>Discount off 20%</span>
             <h3 className="text-light">Need For Speed Unbound</h3>
             <p>
@@ -50,7 +54,7 @@ function Responsive_Hero() {
           </div>
         </div>
         <div className="responsivehero--third--slide responsivehero--slide">
-          <div className="available--on--section mt-3 ">
+          <div className="available--on--section mt-3" data-aos="fade-up">
             <span>Now available</span>
             <h3 className="text-light">
               The Legend of Zelda <br /> Tears of the Kingdom
@@ -62,7 +66,7 @@ function Responsive_Hero() {
           </div>
         </div>
         <div className="responsivehero--fourth--slide responsivehero--slide">
-          <div className="available--on--section mt-3 ">
+          <div className="available--on--section mt-3" data-aos="fade-up">
             <span>Hell welcomes all</span>
             <h3 className="text-light">DIABLO IV</h3>
             <p>
