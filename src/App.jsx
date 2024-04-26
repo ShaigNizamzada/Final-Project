@@ -29,12 +29,12 @@ import Checkout from "./pages/Checkout";
 import PreLoader from "./components/PreLoader";
 const App = () => {
   const [loading, setLoading] = useState(false);
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 2000);
-  // }, []);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
   const [mode] = useContext(ModeContext);
   return (
     <>
