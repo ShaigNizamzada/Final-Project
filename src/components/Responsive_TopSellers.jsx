@@ -3,8 +3,10 @@ import Slider from "react-slick";
 import { ProductContext } from "../context/ProductContext";
 import SingleProduct from "./SingleProduct";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Responsive_TopSellers() {
+  const { t } = useTranslation();
   const [product] = useContext(ProductContext);
   const randomNumber = Math.floor(Math.random() * 37);
   var settings = {
@@ -42,10 +44,10 @@ function Responsive_TopSellers() {
   return (
     <div className="slider-container mt-5 mx-3 ">
       <div className="slider-container-header-section d-flex justify-content-between my-4">
-        <h3 className="ms-2">Top Sellers</h3>
+        <h3 className="ms-2">{t("resTopSel.0")}</h3>
 
         <Link to="/sale" className="shop--all--button">
-          <button className="btn btn-dark rounded-4">Shop All</button>
+          <button className="btn btn-dark rounded-4">{t("resTopSel.1")}</button>
         </Link>
       </div>
       {

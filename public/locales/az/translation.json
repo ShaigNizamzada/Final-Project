@@ -28,9 +28,44 @@
     "0": "Mövcuddur :",
     "1": "İkonik, qanlı Los-Ancelesi kəşf edin və son Zombie Slayer olmaq üçün təkamül edin.",
     "2": "Indi əldə edin",
-    "3": " <strong>69.99+ dollardan</strong> başlayan qiymətlərlə",
+    "3": "69.99+ $-dan başlayan qiymətlərlə",
     "4": "Ulduzlar arasında qurulan bu növbəti nəsil rol oyununda azad olduğunuz istənilən personajı yaradın.",
     "5": "Multiplayer rejimi oyun kainatı üçün pulsuz yeniləmə olaraq buraxılış tarixindən tezliklə gələcək."
+  },
+  "resCat": {
+    "0": "Aksiyon",
+    "1": "Macəra",
+    "2": "Gündəlik",
+    "3": "Qorxu",
+    "4": "Indie",
+    "5": "Yarış",
+    "6": "RPG",
+    "7": "Simulyasiya"
+  },
+  "resTopSel": {
+    "0": "Ən çox Satanlar",
+    "1": "Alış-veriş Edin"
+  },
+  "resHero": {
+    "0": "İndi Nintendo Switch sistemində",
+    "1": "Sehrbazlıq dünyası sizi gözləyir Hoqvartsda, Hoqsmiddə, Qadağan olunmuş Meşədə, Yerüstü ərazidə sərbəst gəzin",
+    "2": "Indi Al",
+    "3": "20% Endirim",
+    "4": "Zamanla yarışın, polisləri üstələyin və The Grand, Lakeshore-un son küçəsinə çatmaq üçün həftəlik seçmə yarışlarına qatılın.",
+    "5": "Artıq mövcuddur",
+    "6": "Cəhənnəm hamını salamlayır",
+    "7": "Qırğın üçün sonsuz şər, idarə etmək üçün saysız-hesabsız bacarıqlar, kabuslu zindanlarla hərəkətli RPG təcrübəsi."
+  },
+  "starWars": {
+    "0": "Qaranlığa Qarşı Durun",
+    "1": "Kal Kestisin hekayəsi STAR WARS Jedi: Survivor™-da davam edir, qalaktikanın qaranlığa düşməkdən qorunması üçün mübarizə aparan Kalanı həmişəkindən daha da irəli aparacaq epik yeni macəra.",
+    "2": "Indi Əldə Edin!",
+    "3": "*İnternet bağlantısı. Bəzi məzmunun kilidini açmaq üçün oyun tələb oluna bilər. Məcburi məzmun yeniləmələri avtomatik endirilə bilər, əlavə yaddaş tələb olunur."
+  },
+  "disAll": {
+    "0": "Yeni Buraxılışlar",
+    "1": "Kəşf Edin",
+    "2": "Yaxınlaşan"
   },
   "home": {
     "0": "Endirimli Oyunlar",

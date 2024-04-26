@@ -28,9 +28,44 @@
     "0": "Available on :",
     "1": "Explore iconic, gore-drenched Los Angeles and evolve to become the ultimate Zombie Slayer.",
     "2": "Take it Now",
-    "3": "Starting at <strong>USD 69.99+</strong>",
+    "3": "Starting at USD 69.99+",
     "4": "In this next generation role-playing game set amongst the stars, create any character you freedom.",
     "5": "Multiplayer mode is coming soon after the release date as a free update for the game universe."
+  },
+  "resCat": {
+    "0": "Action",
+    "1": "Adventure",
+    "2": "Casual",
+    "3": "Horror",
+    "4": "Indie",
+    "5": "Racing",
+    "6": "RPG",
+    "7": "Simulation"
+  },
+  "resTopSel": {
+    "0": "Top Sellers",
+    "1": "Shop All"
+  },
+  "resHero": {
+    "0": "Now on Nintendo Switch system",
+    "1": "The wizarding world awaits you Freely roam Hogwarts, Hogsmade, The Forbidden Forest, Overland Area",
+    "2": "Buy Now",
+    "3": "Discount off 20%",
+    "4": "Race against time, outsmart the cops, and take on weekly qualifiers to reach The Grand, Lakeshore’s ultimate street.",
+    "5": "Now available",
+    "6": "Hell welcomes all",
+    "7": "Action RPG experience with endless evil to slaughter, countless abilities to master, nightmarish dungeons."
+  },
+  "starWars": {
+    "0": "Stand Against the Darkness",
+    "1": "The story of Cal Kestis continues in STAR WARS Jedi: Survivor™, an epic new adventure that will push Cal further than ever as he fights to protect the galaxy from descending into darkness.",
+    "2": "Take It Now!",
+    "3": "*Internet connection. Some content may require gameplay to unlock. Mandatory content updates may be downloaded automatically, require additional storage."
+  },
+  "disAll": {
+    "0": "New Releases",
+    "1": "Discover All",
+    "2": "Upcoming"
   },
   "home": {
     "0": "Discounted Games",

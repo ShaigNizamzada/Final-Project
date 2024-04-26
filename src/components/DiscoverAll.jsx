@@ -4,7 +4,9 @@ import { ProductContext } from "../context/ProductContext";
 import { Link } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 const DiscoverAll = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     Aos.init();
   }, []);
@@ -15,9 +17,9 @@ const DiscoverAll = () => {
         <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
           <div className="discover--all-first mt-3" data-aos="flip-left">
             <div className="top-side d-flex justify-content-between align-items-center">
-              <h4>New Releases</h4>
+              <h4>{t("disAll.0")}</h4>
               <Link to="/sale">
-                <button className="button">Discover All</button>
+                <button className="button">{t("disAll.1")}</button>
               </Link>
             </div>
             <div className="me-2 mt-3">
@@ -38,9 +40,9 @@ const DiscoverAll = () => {
           {" "}
           <div className="discover--all-second mt-3" data-aos="flip-right">
             <div className="top-side d-flex justify-content-between align-items-center">
-              <h4>Upcoming</h4>
+              <h4>{t("disAll.2")}</h4>
               <Link to="/sale">
-                <button className="button">Discover All</button>
+                <button className="button">{t("disAll.1")}</button>
               </Link>
             </div>
             <div className="me-2 mt-3">
@@ -63,7 +65,7 @@ const DiscoverAll = () => {
             <div className="top-side d-flex justify-content-between align-items-center">
               <h4>Playstation 5</h4>
               <Link to="/sale">
-                <button className="button">Discover All</button>
+                <button className="button">{t("disAll.1")}</button>
               </Link>
             </div>
             <div className="me-2 mt-3">
@@ -86,7 +88,7 @@ const DiscoverAll = () => {
             <div className="top-side d-flex justify-content-between align-items-center">
               <h4>Nintendo Switch</h4>
               <Link to="/sale">
-                <button className="button">Discover All</button>
+                <button className="button">{t("disAll.1")}</button>
               </Link>
             </div>
             <div className="me-2 mt-3">

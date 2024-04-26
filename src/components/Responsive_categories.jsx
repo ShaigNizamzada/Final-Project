@@ -3,7 +3,9 @@ import Slider from "react-slick";
 import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 function Responsive_categories() {
+  const { t } = useTranslation();
   const settings = {
     infinite: true,
     speed: 500,
@@ -65,7 +67,7 @@ function Responsive_categories() {
             />
           </Link>
           <div className="category--section--text">
-            <h4 className="text-light">Action</h4>
+            <h4 className="text-light">{t("resCat.0")}</h4>
           </div>
         </div>
         <div className="adventure--section category--section">
@@ -77,7 +79,7 @@ function Responsive_categories() {
             />
           </Link>
           <div className="category--section--text">
-            <h4 className="text-light">Adventure</h4>
+            <h4 className="text-light">{t("resCat.1")}</h4>
           </div>
         </div>
         <div className="casual--section category--section">
@@ -89,7 +91,7 @@ function Responsive_categories() {
             />
           </Link>
           <div className="category--section--text">
-            <h4 className="text-light">Casual</h4>
+            <h4 className="text-light">{t("resCat.2")}</h4>
           </div>
         </div>
         <div className="horror--section category--section">
@@ -101,7 +103,7 @@ function Responsive_categories() {
             />
           </Link>
           <div className="category--section--text">
-            <h4 className="text-light">Horror</h4>
+            <h4 className="text-light">{t("resCat.3")}</h4>
           </div>
         </div>
         <div className="indie--section category--section">
@@ -113,7 +115,7 @@ function Responsive_categories() {
             />
           </Link>
           <div className="category--section--text">
-            <h4 className="text-light">Indie</h4>
+            <h4 className="text-light">{t("resCat.4")}</h4>
           </div>
         </div>
         <div className="racing--section category--section">
@@ -125,7 +127,7 @@ function Responsive_categories() {
             />
           </Link>
           <div className="category--section--text">
-            <h4 className="text-light">Racing</h4>
+            <h4 className="text-light">{t("resCat.5")}</h4>
           </div>
         </div>
         <div className="rpg--section category--section">
@@ -137,7 +139,7 @@ function Responsive_categories() {
             />
           </Link>
           <div className="category--section--text">
-            <h4 className="text-light">RPG</h4>
+            <h4 className="text-light">{t("resCat.6")}</h4>
           </div>
         </div>
         <div className="simulation--section category--section">
@@ -149,7 +151,7 @@ function Responsive_categories() {
             />
           </Link>
           <div className="category--section--text">
-            <h4 className="text-light">Simulation</h4>
+            <h4 className="text-light">{t("resCat.7")}</h4>
           </div>
         </div>
       </Slider>

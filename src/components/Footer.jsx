@@ -20,7 +20,7 @@ const Footer = () => {
 
         <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 border-top py-5">
           <div className="col-lg-3 col-md-3 col-sm-6 col-12">
-            <Link>
+            <Link className=" ms-3">
               <img
                 src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-logo-white.svg"
                 alt=""
@@ -28,7 +28,7 @@ const Footer = () => {
                 width={230}
               />
             </Link>
-            <p className="mt-5 col-lg-11 fs-6">{t("footer.2")}</p>
+            <p className="mt-5 col-lg-11 fs-6 ms-3">{t("footer.2")}</p>
           </div>
           <div className="col-lg-3 col-md-3 col-sm-6 col-12">
             <h4 className="mt-2 ps-3 "> {t("footer.3")}</h4>

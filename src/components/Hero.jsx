@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 function CustomSlide(props) {
   useEffect(() => {
     Aos.init();
@@ -16,6 +17,7 @@ function CustomSlide(props) {
 }
 
 function CustomSlides() {
+  const { t } = useTranslation();
   const settings = {
     infinite: true,
     speed: 1000,
@@ -39,7 +41,7 @@ function CustomSlides() {
                   />
                 </div>
                 <div className="available--on--section d-flex mt-3 ">
-                  <span className="fs-6 me-3">Available on : </span>
+                  <span className="fs-6 me-3">{t("hero.0")}</span>
                   <img
                     src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-lable-pc.svg"
                     alt=""
@@ -55,18 +57,17 @@ function CustomSlides() {
                     alt=""
                   />
                 </div>
-                <p className="fs-6 mt-3">
-                  Explore iconic, gore-drenched Los Angeles and <br /> evolve to
-                  become the ultimate Zombie Slayer.
-                </p>
+                <div className="row">
+                  <div className="col-sm-5 col-10">
+                    <p className="fs-6 mt-3">{t("hero.1")}</p>
+                  </div>
+                </div>
                 <div className="take--it--now--section d-flex">
                   {" "}
                   <Link className="take--it--now" to="/sale">
-                    <button className="button me-2">Take it Now</button>
+                    <button className="button me-2">{t("hero.2")}</button>
                   </Link>
-                  <span className="fs-5 pt-2 ps-3">
-                    Starting at <strong>USD 69.99+</strong>
-                  </span>
+                  <span className="fs-5 pt-2 ps-3">{t("hero.3")}</span>
                 </div>
               </div>
             </>
@@ -85,7 +86,7 @@ function CustomSlides() {
                   />
                 </div>
                 <div className="available--on--section d-flex mt-3 ">
-                  <span className="fs-6 me-3">Available on : </span>
+                  <span className="fs-6 me-3">{t("hero.0")}</span>
                   <img
                     src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-lable-pc.svg"
                     alt=""
@@ -101,18 +102,17 @@ function CustomSlides() {
                     alt=""
                   />
                 </div>
-                <p className="fs-6 mt-3">
-                  In this next generation role-playing game set <br /> amongst
-                  the stars, create any character you freedom.
-                </p>
+                <div className="row">
+                  <div className="col-sm-5 col-10">
+                    <p className="fs-6 mt-3">{t("hero.4")}</p>
+                  </div>
+                </div>
                 <div className="take--it--now--section d-flex">
                   {" "}
                   <Link className="take--it--now" to="/sale">
-                    <button className="button me-2">Take it Now</button>
+                    <button className="button me-2">{t("hero.2")}</button>
                   </Link>
-                  <span className="fs-5 pt-2 ps-3">
-                    Starting at <strong>USD 69.99+</strong>
-                  </span>
+                  <span className="fs-5 pt-2 ps-3">{t("hero.3")}</span>
                 </div>
               </div>
             </>
@@ -122,7 +122,7 @@ function CustomSlides() {
           className="custom--slide custom--slide--3"
           index={
             <>
-              <div className="custom--slides mt-5 ms-5" data-aos="fade-up" >
+              <div className="custom--slides mt-5 ms-5" data-aos="fade-up">
                 <div className="custom--slides--logo">
                   <img
                     src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-slide-st-2-logo.png"
@@ -131,7 +131,7 @@ function CustomSlides() {
                   />
                 </div>
                 <div className="available--on--section d-flex mt-3 ">
-                  <span className="fs-6 me-3">Available on : </span>
+                  <span className="fs-6 me-3">{t("hero.0")}</span>
                   <img
                     src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-lable-pc.svg"
                     alt=""
@@ -147,18 +147,18 @@ function CustomSlides() {
                     alt=""
                   />
                 </div>
-                <p className="fs-6 mt-3">
-                  Multiplayer mode is coming soon after the release <br /> date
-                  as a free update for the game universe.
-                </p>
+                <div className="row">
+                  <div className="col-sm-5 col-10">
+                    <p className="fs-6 mt-3">{t("hero.5")}</p>
+                  </div>
+                </div>
+
                 <div className="take--it--now--section d-flex">
                   {" "}
                   <Link className="take--it--now" to="/sale">
-                    <button className="button me-2">Take it Now</button>
+                    <button className="button me-2">{t("hero.2")}</button>
                   </Link>
-                  <span className="fs-5 pt-2 ps-3">
-                    Starting at <strong>USD 69.99+</strong>
-                  </span>
+                  <span className="fs-5 pt-2 ps-3">{t("hero.3")}</span>
                 </div>
               </div>
             </>
