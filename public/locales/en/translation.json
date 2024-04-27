@@ -105,6 +105,28 @@
     "4": "We get a lot of questions about our course. You can get any answers in no time here.",
     "5": "Contact Us"
   },
+  "resAbout": {
+    "0": "Safe Payments",
+    "1": "Make secure payments and settlements, we will protect your funds.",
+    "2": "Support",
+    "3": "Need help or have a wish for our store? Contact our 24/7 support.",
+    "4": "From Games",
+    "5": "Special selections of offers are available for you and your friends.",
+    "6": "Our Stores",
+    "7": "6 modern stores with a wide range of offers just for you.",
+    "8": "Customers",
+    "9": "More than 5,000 customers satisfied with our services per year.",
+    "10": "Experience",
+    "11": "Our company has been working in this field for more than 8 years."
+  },
+  "accordion": {
+    "0": "Why choose organic cotton fabrics and cerified factories?",
+    "1": "How is your product packaged?",
+    "2": "What is the best size to buy for a baby shower gift?",
+    "3": "A seemingly elegant design can quickly begin to bloat with unexpected content or break under the weight of actual activity. Fake data can ensure a nice looking layout but it doesn’t reflect what a living, breathing application must endure. Real data does.",
+    "4": "Websites in professional use templating systems. Commercial publishing platforms and content management systems ensure that you can show different text, different data using the same template. When it’s about controlling hundreds of articles, product pages for web shops.",
+    "5": "If the copy becomes distracting in the design then you are doing something wrong or they are discussing copy changes. It might be a bit annoying but you could tell them that that discussion would be best suited for another time. At worst the discussion is at least working towards the final goal of your site where questions about lorem ipsum don’t."
+  },
   "contact": {
     "0": "Contact Us",
     "1": "The online store of equipment and electronics is one of the leading online stores.",
@@ -133,21 +155,31 @@
     "6": "Read More"
   },
   "faqs": {
-    "0": "",
-    "1": "",
-    "2": "",
-    "3": "",
-    "4": "",
-    "5": "",
-    "6": "",
-    "7": "",
-    "8": "",
-    "9": "",
-    "10": "",
-    "11": "",
-    "12": "",
-    "13": "",
-    "14": "",
-    "15": ""
+    "0": "Woodmart Games Terms of Service",
+    "1": "Effective Date: July 5, 2023",
+    "2": "The terms of this agreement (“ToS”) govern the relationship between you and Woodmart Games and its affiliates (hereinafter “Woodmart Games” or “Us” or “We”) regarding your use of Woodmart Games’ games, websites and related services (the “Service”). In this agreement “Woodmart Games” means Woodmart located at 294 Bay Meadows Ave Bay Shore, NY 11706. “Woodmart Games” also includes affiliates, which shall mean subsidiaries, parent companies, joint ventures and other corporate entities under common ownership. Use of the Service is also governed by Nitro Games’",
+    "3": "It’s unreal, uncanny, makes you wonder if something is wrong, it seems to seek your attention for all the wrong reasons. Usually, we prefer the real thing, wine without sulfur based preservatives, real butter, not margarine, and so we’d like our layouts and designs to be filled with real words, with thoughts that count, information that has value.",
+    "4": "1. License",
+    "5": "The toppings you may chose for that TV dinner pizza slice when you forgot to shop for foods, the paint you may slap on your face to impress the new boss is your business. But what about your daily bread? Design comps, layouts, wireframes—will your clients accept that you go about things the facile way?",
+    "6": "2. Ownership",
+    "7": "Authorities in our business will tell in no uncertain terms that Lorem Ipsum is that huge, huge no no to forswear forever. Not so fast, I’d say, there are some redeeming factors in favor of greeking text, as its use is merely the symptom of a worse problem to take into consideration.",
+    "8": "3. User Content",
+    "9": "You begin with a text, you sculpt information, you chisel away what’s not needed, you come to the point, make things clear, add value, you’re a content person, you like words. Design is no afterthought, far from it, but it comes in a deserved second. Anyway, you still use Lorem Ipsum and rightly so, as it will always have a place in the web workers toolbox, as things happen, not always the way you like it, not always in the preferred order.",
+    "10": "4. Fees and Purchase Terms",
+    "11": "Even if your less into design and more into content strategy you may find some redeeming value with, wait for it, dummy copy, no less. You made all the required mock ups for commissioned layout, got all the approvals, built a tested code base or had them built, you decided on a content management system, got a license for it or adapted open source software for your client’s needs. Then the question arises: where’s the content.",
+    "12": "5. Updates to The Service",
+    "13": "That’s not so bad, there’s dummy copy to the rescue. But worse, what if the fish doesn’t fit in the can, the foot’s to big for the boot? Or to small? To short sentences, to many headings, images too large for the proposed design, or too small, or they fit in but it looks iffy for reasons the folks in the meeting can’t quite tell right now, but they’re unhappy, somehow. A client that’s unhappy for a reason is a problem, a client that’s unhappy though he or her can’t quite put a finger on it is worse.",
+    "14": "6. Disclaimer of Warranties",
+    "15": "Chances are there wasn’t collaboration, communication, and checkpoints, there wasn’t a process agreed upon or specified with the granularity required. It’s content strategy gone awry right from the start. Forswearing the use of Lorem Ipsum wouldn’t have helped, won’t help now. It’s like saying you’re a bad designer, use less bold text, don’t use italics in every other paragraph. True enough, but that’s not all that it takes to get things back on track."
+  },
+  "login": {
+    "0": "My Account",
+    "1": "Home",
+    "2": "LOGIN",
+    "3": "Email address",
+    "4": "Password",
+    "5": "Log In",
+    "6": "Don't have an account? Register Now!",
+    "7": "Forgot Password?"
   }
 }

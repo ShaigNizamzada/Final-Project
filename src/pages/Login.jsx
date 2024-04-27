@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
 const Login = () => {
+  const { t } = useTranslation();
   const [showPassword, setshowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -42,20 +44,21 @@ const Login = () => {
   return (
     <>
       <div className="login--header--section p-2">
-        <h1 className="fw-bold">My Account</h1>
+        <h1 className="fw-bold">{t("login.0")}</h1>
         <Link className="home--button" to="/">
-          <span>Home </span>
+          <span>{t("login.1")}</span>
         </Link>
-        <span>/ </span>
-        <span>My Account</span>
+        <span> / </span>
+        <span>{t("login.0")}</span>
       </div>
       <div className="d-flex flex-column w-100 justify-content-center align-items-center login--section">
-        <div className="col-4">
-          <h3 className="mt-5 fw-bold">LOGIN</h3>
+        <div className="col-lg-5 col-md-6 col-sm-8 col-8">
+          <h3 className="mt-5 fw-bold">{t("login.2")}</h3>
           <form className="mt-4" onSubmit={loginSubmit}>
             <div className="mb-2">
               <label>
-                Username or email address <span className="text-danger">*</span>
+                {t("login.3")}
+                <span className="text-danger">*</span>
               </label>
               <input
                 onChange={(e) => setEmail(e.target.value)}
@@ -65,7 +68,8 @@ const Login = () => {
             </div>
             <div className="mb-3">
               <label>
-                Password <span className="text-danger">*</span>
+                {t("login.4")}
+                <span className="text-danger">*</span>
               </label>
               <div className="password--section">
                 <div className="password--input--section">
@@ -89,18 +93,18 @@ const Login = () => {
             </div>
             <div className="login--button--section">
               <button type="submit" className="button login--button  mx-auto">
-                Log In
+                {t("login.5")}
               </button>
             </div>
             <div className="pt-2 pb-3 d-flex justify-content-between mt-3">
               <Link to="/register" className="have--account">
-                <h6>Don't have an account? Register Now!</h6>
+                <h6>{t("login.6")}</h6>
               </Link>
               <Link
                 to="/forgotpassword"
                 className="have--account forgot-password"
               >
-                <h6>Forgot Password?</h6>
+                <h6>{t("login.7")}</h6>
               </Link>
             </div>
           </form>

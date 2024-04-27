@@ -1,7 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 
 function Responsive() {
+  const { t } = useTranslation();
   var settings = {
     infinite: true,
     speed: 500,
@@ -39,48 +41,47 @@ function Responsive() {
       <Slider {...settings}>
         <div>
           <div className="card card-1">
-            <h4>Safe Payments</h4>
+            <h4>{t("resAbout.0")}</h4>
             <p>
-              Make secure payments and settlements, we will protect your funds.
+              {t("resAbout.1")}
             </p>
           </div>
         </div>
         <div>
           <div className="card card-2">
-            <h4>Support</h4>
+            <h4>{t("resAbout.2")}</h4>
             <p>
-              Need help or have a wish for our store? Contact our 24/7 support.
+             {t("resAbout.3")}
             </p>
           </div>
         </div>
         <div>
           <div className="card card-3">
-            <h4>From Games</h4>
+            <h4>{t("resAbout.4")}</h4>
             <p>
-              Special selections of offers are available for you and your
-              friends.
+              {t("resAbout.5")}
             </p>
           </div>
         </div>
         <div>
           <div className="card card-4">
-            <h4>Our Stores</h4>
-            <p>6 modern stores with a wide range of offers just for you.</p>
+            <h4>{t("resAbout.6")}</h4>
+            <p>{t("resAbout.7")}.</p>
           </div>
         </div>
         <div>
           <div className="card card-5">
-            <h4>Customers</h4>
+            <h4>{t("resAbout.8")}</h4>
             <p>
-              More than 5,000 customers satisfied with our services per year.
+              {t("resAbout.9")}
             </p>
           </div>
         </div>
         <div>
           <div className="card card-6">
-            <h4>Experience</h4>
+            <h4>{t("resAbout.10")}</h4>
             <p>
-              Our company has been working in this field for more than 8 years.
+              {t("resAbout.11")}
             </p>
           </div>
         </div>

@@ -105,6 +105,28 @@
     "4": "Kursumuzla bağlı çoxlu suallar alırıq. İstənilən cavabı buradan qısa zamanda ala bilərsiniz.",
     "5": "Əlaqə"
   },
+  "resAbout": {
+    "0": "Təhlükəsiz Ödənişlər",
+    "1": "Təhlükəsiz ödənişlər və hesablaşmalar edin, biz sizin vəsaitlərinizi qoruyacağıq.",
+    "2": "Dəstək",
+    "3": "Mağazamız üçün köməyə ehtiyacınız var və ya arzunuz var? 24/7 dəstəyimizlə əlaqə saxlayın.",
+    "4": "Oyunlardan",
+    "5": "Siz və dostlarınız üçün xüsusi təkliflər mövcuddur.",
+    "6": "Mağazalarımız",
+    "7": "Yalnız sizin üçün geniş təkliflərlə 6 müasir mağaza.",
+    "8": "Müştərilər",
+    "9": "İl ərzində 5000-dən çox müştəri xidmətlərimizdən razıdır.",
+    "10": "Təcrübə",
+    "11": "Şirkətimiz 8 ildən artıqdır ki, bu sahədə çalışır."
+  },
+  "accordion": {
+    "0": "Nə üçün üzvi pambıq parçaları və sertifikatlı fabrikləri seçməlisiniz?",
+    "1": "Məhsulunuz necə qablaşdırılır?",
+    "2": "Uşaq duşu üçün hədiyyə almaq üçün ən yaxşı ölçü hansıdır?",
+    "3": "Zahirən zərif dizayn gözlənilməz məzmunla tez şişməyə və ya faktiki fəaliyyətin ağırlığı altında pozulmağa başlaya bilər. Saxta məlumatlar gözəl görünüşlü tərtibatı təmin edə bilər, lakin bu, canlı, nəfəs alan tətbiqin nəyə dözməli olduğunu əks etdirmir. Real data edir.",
+    "4": "Peşəkar istifadə şablon sistemlərində veb saytlar. Kommersiya nəşriyyat platformaları və məzmun idarəetmə sistemləri eyni şablondan istifadə edərək fərqli mətnləri, fərqli məlumatları göstərə bilmənizi təmin edir. Söhbət yüzlərlə məqaləyə, veb mağazalar üçün məhsul səhifələrinə nəzarətdən gedir.",
+    "5": "Əgər nüsxə dizaynda diqqəti yayındırırsa, onda siz nəyisə səhv edirsiniz və ya onlar surət dəyişikliklərini müzakirə edirlər. Bu, bir az bezdirici ola bilər, lakin siz onlara bu müzakirənin başqa vaxt üçün ən uyğun olacağını deyə bilərsiniz. Ən pis halda müzakirə ən azı saytınızın son məqsədinə doğru işləyir, burada lorem ipsum ilə bağlı suallar cavab vermir."
+  },
   "contact": {
     "0": "Bizimlə Əlaqə",
     "1": "Avadanlıq və elektronika onlayn mağazası aparıcı onlayn mağazalardan biridir.",
@@ -115,7 +137,7 @@
     "6": "Göndər",
     "7": "Discord-da bizə qoşulun",
     "8": "Rəsmi Woodmart sövdələşmələri serverinə gəlin və digər istifadəçilərlə söhbət edin.",
-    "9": "Bizim İzləyin",
+    "9": "Bizi İzləyin",
     "10": "Ən yaxşı sövdələşmələrdən xəbərdar olun! Facebook, Twitter və Steam-də bizə qoşulun.",
     "11": "Xüsusiyyətlərə səs verin",
     "12": "Woodmart-ı necə təkmilləşdirəcəyimizi bizə deyin. Xüsusiyyət sorğularına səs vermək və şərh vermək üçün səhifəmizə keçin.",
@@ -133,21 +155,31 @@
     "6": "Daha çox oxu"
   },
   "faqs": {
-    "0": "",
-    "1": "",
-    "2": "",
-    "3": "",
-    "4": "",
-    "5": "",
-    "6": "",
-    "7": "",
-    "8": "",
-    "9": "",
-    "10": "",
-    "11": "",
-    "12": "",
-    "13": "",
-    "14": "",
-    "15": ""
+    "0": "Woodmart Games Xidmət Şərtləri",
+    "1": "Qüvvəyə minmə tarixi: 5 iyul 2023-cü il",
+    "2": "Bu müqavilənin şərtləri (“ToS”) sizinlə Woodmart Games və onun filialları (bundan sonra “Woodmart Games” və ya “Bizim” və ya “Biz”) arasında Woodmart Games oyunlarından, vebsaytlarından və əlaqəli xidmətlərdən istifadənizlə bağlı münasibətləri tənzimləyir (xidmət). Bu müqavilədə “Woodmart Games” 294 Bay Meadows Ave Bay Shore, NY 11706 ünvanında yerləşən Woodmart deməkdir. “Woodmart Games” həmçinin törəmə müəssisələri, əsas şirkətləri, birgə müəssisələr və ümumi mülkiyyətdə olan digər korporativ qurumları nəzərdə tutan filialları da əhatə edir. Xidmətdən istifadə həmçinin Nitro Games tərəfindən idarə olunur.",
+    "3": "Bu qeyri-real, qəribədir, bir şeyin səhv olub-olmadığını düşünməyə vadar edir, bütün yanlış səbəblərə görə diqqətinizi cəlb edir. Adətən, biz əsl şeyə, kükürd əsaslı konservantsız şəraba, marqarin yox, əsl yağa üstünlük veririk və buna görə də planlarımızın və dizaynlarımızın real sözlərlə, dəyərli düşüncələrlə, dəyərli məlumatlarla doldurulmasını istərdik.",
+    "4": "1. Lisenziya",
+    "5": "Yemək üçün alış-veriş etməyi unutduğunuz zaman o TV nahar pizza dilimi üçün seçə biləcəyiniz yağlar, yeni müdiri heyran etmək üçün üzünüzə vura biləcəyiniz boya sizin işinizdir. Bəs gündəlik çörəyiniz necə olacaq? Dizayn kompozisiyaları, planlar, tel kafeslər - müştəriləriniz hər şeyi asan yolla getdiyinizi qəbul edəcəklərmi?",
+    "6": "2. Mülkiyyət",
+    "7": "Bizim işimizdəki səlahiyyətlilər heç bir qeyri-müəyyən şəkildə deyəcəklər ki, Lorem Ipsum o qədər böyükdür ki, əbədi olaraq and içmək olmaz. O qədər də sürətli deyil, mən deyərdim ki, yunan mətninin lehinə bəzi əvəzedici amillər var, çünki onun istifadəsi nəzərə alınmalı olan daha pis bir problemin əlamətidir.",
+    "8": "3. İstifadəçi məzmunu",
+    "9": "Siz mətnlə başlayırsınız, məlumatı heykəlləndirirsiniz, lazım olmayanı kəsirsiniz, mətləbə gəlirsiniz, hər şeyi aydınlaşdırırsınız, dəyər əlavə edirsiniz, məzmunlu insansınız, sözləri sevirsiniz. Dizayn sonradan düşünülmür, ondan uzaqdır, lakin layiqli bir saniyədə gəlir. Hər halda, siz hələ də Lorem Ipsum-dan istifadə edirsiniz və haqlı olaraq belədir, çünki o, həmişə veb işçilərinin alətlər qutusunda yer alacaq, hər şey baş verən kimi, həmişə istədiyiniz kimi deyil, həmişə üstünlük verilən qaydada deyil.",
+    "10": "4. Rüsumlar və Satınalma Şərtləri",
+    "11": "Dizaynla daha az məşğul olsanız və məzmun strategiyası ilə daha çox məşğul olsanız belə, bəzi əvəzedici dəyər tapa bilərsiniz, onu gözləyin, dummy surəti, heç də az deyil. İstifadəyə verilmiş tərtibat üçün bütün tələb olunan maketləri etdiniz, bütün təsdiqləri aldınız, sınaqdan keçirilmiş kod bazası yaratdınız və ya onları qurdunuz, məzmunun idarə edilməsi sisteminə qərar verdiniz, bunun üçün lisenziya aldınız və ya müştərinizin ehtiyacları üçün açıq mənbə proqram təminatını uyğunlaşdırdınız. Sonra sual yaranır: məzmun haradadır.",
+    "12": "5. Xidmətə Yeniliklər",
+    "13": "Bu o qədər də pis deyil, xilasetmə üçün dummy surəti var. Ancaq daha da pisi, balıq qutuya sığmırsa, ayağı çəkmə üçün böyükdürsə? Yoxsa kiçik? Qısa cümlələrə, bir çox başlıqlara, təklif olunan dizayn üçün çox böyük və ya çox kiçik şəkillərə və ya onlar uyğun gəlir, lakin yığıncaqdakıların indi tam olaraq deyə bilmədiyi səbəblərdən anlaşılmaz görünür, amma nədənsə bədbəxtdirlər. . Bir səbəbə görə bədbəxt olan müştəri problemdir, ona barmağını qoya bilməsə də bədbəxt olan müştəri daha pisdir.",
+    "14": "6. Zəmanətlərdən imtina",
+    "15": "Çox güman ki, əməkdaşlıq, ünsiyyət və nəzarət məntəqələri yox idi, razılaşdırılmış və ya tələb olunan detallılıqla müəyyən edilmiş proses yox idi. Məzmun strategiyası əvvəldən yanlış getdi. Lorem Ipsum-un istifadəsinə and içmək kömək etməzdi, indi də kömək etməyəcək. Bu, pis dizayner olduğunuzu söyləməyə bənzəyir, daha az qalın mətndən istifadə edin, hər digər abzasda kursivdən istifadə etməyin. Kifayət qədər doğrudur, amma hər şeyi yoluna qoymaq üçün lazım olan hər şey bu deyil."
+  },
+  "login": {
+    "0": "Mənim Hesabım",
+    "1": "Ana Səhifə",
+    "2": "DAXİL OL",
+    "3": "E-poçt ünvanı",
+    "4": "Şifrə",
+    "5": "Daxil ol",
+    "6": "Hesabınız yoxdur? İndi qeydiyyatdan keç!",
+    "7": "Şifrənizi unutmusunuz?"
   }
 }
