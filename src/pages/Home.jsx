@@ -16,6 +16,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import slugify from "react-slugify";
 import { useTranslation } from "react-i18next";
+import VideoNfs from "../components/VideoNfs";
 const Home = () => {
   const { t } = useTranslation();
   const blogs = useSelector((p) => p);
@@ -95,7 +96,9 @@ const Home = () => {
       <div className="responsive--hero--section" data-aos="zoom-in-down">
         <Responsive_Hero />
       </div>
-
+      <div className="videoNfs-section">
+        <VideoNfs />
+      </div>
       <div className="row category--store--games mt-5">
         <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
           <div
