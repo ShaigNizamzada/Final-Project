@@ -1,0 +1,20 @@
+.notebookAdv {
+  .notebookAdv--body {
+    position: relative;
+    img {
+      //   position: relative;
+      width: 100%;
+      height: auto;
+    }
+    .notebookAdv--text--section {
+      position: absolute;
+      top: 10%;
+      right: 0;
+      text-align: end;
+      line-height: 2;
+      .link {
+        text-decoration: none;
+      }
+    }
+  }
+}

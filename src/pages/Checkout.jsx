@@ -7,7 +7,9 @@ import slug from "react-slugify";
 import swal from "sweetalert";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 const Checkout = () => {
+  const { t } = useTranslation();
   const [couponValue, setCouponValue] = useState(0);
   const [coupon, setCoupon] = useState("");
   const formCoupon = (e) => {
@@ -23,7 +25,7 @@ const Checkout = () => {
     } else {
       swal({
         title: "",
-        text: "Coupon has been retired",
+        text: "Coupon has not been found",
         icon: "error",
         timer: 1500,
       });
@@ -65,14 +67,14 @@ const Checkout = () => {
         <div className="checkout--top--section">
           <div className="link--to--pages--section d-flex p-4 align-items-center gap-2 fs-5">
             <Link to="/cart" className="link--shoppingcart link">
-              Shopping Cart
+              {t("checkout.0")}
             </Link>
             <i class="fa-solid fa-arrow-right mx-2"></i>
             <Link to="/checkout" className="link--checkout link">
-              Checkout
+              {t("checkout.1")}
             </Link>
             <i class="fa-solid fa-arrow-right mx-2"></i>
-            <span>Order Complete</span>
+            <span>{t("checkout.2")}</span>
           </div>
         </div>
         <div className="checkout--bottom--section mt-3">
@@ -85,13 +87,13 @@ const Checkout = () => {
                   data-aos="fade-right"
                 >
                   <h3>
-                    <span>1.</span> Billing Details
+                    <span>1.</span> {t("checkout.3")}
                   </h3>
                   <div className="input--form">
                     <div className="row my-4">
                       <div className="col-lg-6 col-md-6 col-12">
                         <input
-                          placeholder="First name"
+                          placeholder={t("checkout.4")}
                           type="text"
                           name="name"
                           className="mb-3"
@@ -101,7 +103,7 @@ const Checkout = () => {
                       <div className="col-lg-6 col-md-6 col-12">
                         <input
                           onChange={(e) => setLastName(e.target.value)}
-                          placeholder="Last name"
+                          placeholder={t("checkout.5")}
                           type="text"
                           name="lastname"
                         />
@@ -111,7 +113,7 @@ const Checkout = () => {
                       <div className="col-lg-6 col-md-6 col-12">
                         <input
                           onChange={(e) => setPhone(e.target.value)}
-                          placeholder="Phone"
+                          placeholder={t("checkout.6")}
                           type="tel"
                           name="phone"
                           className="mb-3"
@@ -120,7 +122,7 @@ const Checkout = () => {
                       <div className="col-lg-6 col-md-6 col-12">
                         <input
                           onChange={(e) => setEmail(e.target.value)}
-                          placeholder="Email address"
+                          placeholder={t("checkout.7")}
                           type="email"
                           name="lastname"
                         />
@@ -133,7 +135,7 @@ const Checkout = () => {
                       <div className="col-lg-6 col-md-6 col-12">
                         <input
                           onChange={(e) => setCity(e.target.value)}
-                          placeholder="Town / City"
+                          placeholder={t("checkout.8")}
                           type="text"
                           name="lastname"
                         />
@@ -143,7 +145,7 @@ const Checkout = () => {
                       <div className="col-lg-6 col-md-6 col-12">
                         <input
                           onChange={(e) => setStreet(e.target.value)}
-                          placeholder="Street address"
+                          placeholder={t("checkout.9")}
                           type="text"
                           name="name"
                           className="mb-3"
@@ -152,7 +154,7 @@ const Checkout = () => {
                       <div className="col-lg-6 col-md-6 col-12">
                         <input
                           onChange={(e) => setPost(e.target.value)}
-                          placeholder="Post Code"
+                          placeholder={t("checkout.10")}
                           type="text"
                           name="lastname"
                         />
@@ -161,7 +163,7 @@ const Checkout = () => {
                   </div>
                   <div className="textarea mt-4">
                     <textarea
-                      placeholder="Notes about your order, e.g. special notes for delivery. (optional)"
+                      placeholder={t("checkout.11")}
                       className="text-area"
                       cols="30"
                       rows="10"
@@ -169,23 +171,24 @@ const Checkout = () => {
                     ></textarea>
                   </div>
                   <h3 className="mt-5">
-                    <span>2.</span> Payment Information
+                    <span>2. </span>
+                    {t("checkout.12")}
                   </h3>
                   <form className="checkbox--form d-flex flex-column mx-2 my-3">
                     <div className="checkbox--form--one my-4">
                       {" "}
                       <input type="radio" name="radio" id="radio" />
-                      <label>&nbsp; Direct Bank Transfer</label>
+                      <label>&nbsp; {t("checkout.13")}</label>
                     </div>
                     <div className="checkbox--form--two">
                       {" "}
                       <input type="radio" name="radio" id="radio" />
-                      <label>&nbsp; Cash on Delivery</label>
+                      <label>&nbsp; {t("checkout.14")}</label>
                     </div>
                     <hr />
                   </form>
                   <button className="button w-100 my-3" type="submit">
-                    Place Order
+                    {t("checkout.15")}
                   </button>
                 </div>
               </form>
@@ -195,11 +198,11 @@ const Checkout = () => {
                 className="checkout--bottom--right--section p-3 mt-5"
                 data-aos="fade-left"
               >
-                <h5>Your Order</h5>
+                <h5>{t("checkout.16")}</h5>
                 <br />
                 <div className="d-flex align-items-center justify-content-between p-2">
-                  <h6>Product</h6>
-                  <h6>Subtotal</h6>
+                  <h6>{t("checkout.17")}</h6>
+                  <h6>{t("checkout.18")}</h6>
                 </div>
                 <div className="product--section">
                   <table>
@@ -282,9 +285,9 @@ const Checkout = () => {
                   <hr />
                 </div>
                 <div className="subtotal--section d-flex align-items-center justify-content-between">
-                  <h6>SubTotal</h6>
+                  <h6>{t("checkout.18")}</h6>
                   <span className="product--price fs-5 fw-bold">
-                    £
+                    £ &nbsp;
                     {coupon === "Hello20"
                       ? Math.round(cartTotal) * 0.8
                       : Math.round(cartTotal)}
@@ -292,19 +295,25 @@ const Checkout = () => {
                 </div>
                 <hr />{" "}
                 <div className="shipping--section d-flex align-items-center justify-content-between">
-                  <h6>Shipping</h6>
+                  <h6>{t("checkout.19")}</h6>
                   <div className="shipping--section--options">
                     <form className="checkbox--form d-flex flex-column mx-2 my-3 ">
                       <div className="checkbox--form--one mb-2 d-flex justify-content-between align-items-center">
-                        <label className="me-3">&nbsp; Flat rate</label>
+                        <label className="me-3">
+                          &nbsp; {t("checkout.20")}
+                        </label>
                         <input type="radio" name="radio" id="radio" />
                       </div>
                       <div className="checkbox--form--two mb-2 d-flex justify-content-between align-items-center">
-                        <label className="me-3">&nbsp; Free shipping</label>
+                        <label className="me-3">
+                          &nbsp; {t("checkout.21")}
+                        </label>
                         <input type="radio" name="radio" id="radio" />
                       </div>
                       <div className="checkbox--form--three d-flex justify-content-between align-items-center">
-                        <label className="me-3">&nbsp; Local pickup</label>
+                        <label className="me-3">
+                          &nbsp; {t("checkout.22")}
+                        </label>
                         <input type="radio" name="radio" id="radio" />
                       </div>
                     </form>
@@ -312,24 +321,34 @@ const Checkout = () => {
                 </div>
                 <hr />
                 <div className="total--section d-flex justify-content-between align-items-center">
-                  <h6>Total</h6>
-                  <span className="product--price fs-4 fw-bold">
-                    £{" "}
-                    {coupon === "Hello20"
-                      ? Math.round(cartTotal) * 0.8
-                      : Math.round(cartTotal)}
-                  </span>
+                  <h6>{t("checkout.23")}</h6>
+                  <>
+                    <span className="product--price fs-4 fw-bold">
+                      {coupon === "Hello20" ? (
+                        <>
+                          <span className="discounted--price text-decoration-line-through">
+                            £ {Math.round(cartTotal)}
+                          </span>
+                          <span> £ {Math.round(cartTotal) * 0.8}</span>
+                        </>
+                      ) : (
+                        <>
+                          <span>£ </span> {Math.round(cartTotal)}
+                        </>
+                      )}
+                    </span>
+                  </>
                 </div>
-                <h6 className="my-3 ms-1">Do you have any coupon?</h6>
+                <h6 className="my-3 ms-1">{t("checkout.24")}</h6>
                 <form onSubmit={formCoupon} className="d-flex">
                   <input
                     type="text"
                     className="input--coupon"
-                    placeholder="Coupon code"
+                    placeholder={t("checkout.25")}
                     onChange={(e) => setCouponValue(e.target.value)}
                   />
                   <button type="submit" className="button ms-3">
-                    Apply Coupon
+                    {t("checkout.26")}
                   </button>
                 </form>
               </div>

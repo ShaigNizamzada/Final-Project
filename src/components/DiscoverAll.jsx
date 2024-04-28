@@ -12,7 +12,7 @@ const DiscoverAll = () => {
   }, []);
   const [product] = useContext(ProductContext);
   return (
-    <div className="container-fluid discover--all--section mt-5 px-4">
+    <div className="container-fluid discover--all--section mt-5 container-fluid">
       <div className="row">
         <div className="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
           <div className="discover--all-first mt-3" data-aos="flip-left">

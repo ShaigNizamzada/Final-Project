@@ -11,12 +11,15 @@ import SingleProduct from "../components/SingleProduct";
 import Slider from "react-slick";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Blog from "./Blog";
+// import Blog from "./Blog";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import slugify from "react-slugify";
 import { useTranslation } from "react-i18next";
 import VideoNfs from "../components/VideoNfs";
+import Sponsor from "../components/Sponsor";
+import NotebookAdv from "../components/NotebookAdv";
+
 const Home = () => {
   const { t } = useTranslation();
   const blogs = useSelector((p) => p);
@@ -99,10 +102,10 @@ const Home = () => {
       <div className="videoNfs-section">
         <VideoNfs />
       </div>
-      <div className="row category--store--games mt-5">
+      <div className="row category--store--games mt-5 container-fluid">
         <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
           <div
-            className="popular--by--category--section ms-3 p-3 mb-2"
+            className="popular--by--category--section ms-3 p-3"
             data-aos="fade-right"
           >
             <h3>{t("home.1")}</h3>
@@ -141,10 +144,11 @@ const Home = () => {
       </div>
       <StarWars />
       <DiscoverAll />
-      <div className="blog--section container-fluid">
+      <NotebookAdv />
+      <div className="blog--section container-fluid my-5">
         <div className="row">
-          <div className="d-flex justify-content-between p-4 mt-3">
-            <h3 className="">{t("home.9")}</h3>
+          <div className="d-flex justify-content-between mb-2">
+            <h3 className="mb-1">{t("home.9")}</h3>
             <Link to="/blog" className="more--articles--button">
               <button className="btn btn-dark rounded-4">{t("home.10")}</button>
             </Link>
@@ -191,7 +195,8 @@ const Home = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div>{" "}
+      <Sponsor />
     </>
   );
 };

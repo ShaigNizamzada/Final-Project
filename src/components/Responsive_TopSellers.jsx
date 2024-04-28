@@ -42,7 +42,7 @@ function Responsive_TopSellers() {
     ],
   };
   return (
-    <div className="slider-container mt-5 mx-3 ">
+    <div className="slider-container container-fluid mt-5">
       <div className="slider-container-header-section d-flex justify-content-between my-4">
         <h3 className="ms-2">{t("resTopSel.0")}</h3>
 

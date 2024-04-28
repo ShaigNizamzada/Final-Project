@@ -27,10 +27,10 @@ function Responsive_Hero() {
     ],
   };
   return (
-    <div className="slider-container mt-5">
+    <div className="slider-container container-fluid mt-5 pe-0 ms-2">
       <Slider {...settings}>
         <div className="responsivehero--first--slide responsivehero--slide">
-          <div className="available--on--section mt-3" data-aos="fade-up">
+          <div className="available--on--section" data-aos="fade-up">
             <span>{t("resHero.0")}</span>
             <h3 className="text-light">Hogwarts Legasy</h3>
             <p>{t("resHero.1")}</p>
@@ -40,7 +40,7 @@ function Responsive_Hero() {
           </div>
         </div>
         <div className="responsivehero--second--slide responsivehero--slide">
-          <div className="available--on--section mt-3" data-aos="fade-up">
+          <div className="available--on--section" data-aos="fade-up">
             <span>{t("resHero.3")}</span>
             <h3 className="text-light">Need For Speed Unbound</h3>
             <p>{t("resHero.4")}</p>
@@ -50,7 +50,7 @@ function Responsive_Hero() {
           </div>
         </div>
         <div className="responsivehero--third--slide responsivehero--slide">
-          <div className="available--on--section mt-3" data-aos="fade-up">
+          <div className="available--on--section" data-aos="fade-up">
             <span>{t("resHero.5")}</span>
             <h3 className="text-light">
               The Legend of Zelda <br /> Tears of the Kingdom
@@ -62,7 +62,7 @@ function Responsive_Hero() {
           </div>
         </div>
         <div className="responsivehero--fourth--slide responsivehero--slide">
-          <div className="available--on--section mt-3" data-aos="fade-up">
+          <div className="available--on--section" data-aos="fade-up">
             <span>{t("resHero.6")}</span>
             <h3 className="text-light">DIABLO IV</h3>
             <p>{t("resHero.7")}</p>

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
 const Register = () => {
+  const { t } = useTranslation();
   const [fullname, setFullname] = useState("");
   const [tel, setTel] = useState("");
   const [email, setEmail] = useState("");
@@ -50,11 +52,11 @@ const Register = () => {
         className="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-8 register--section--body"
         onSubmit={registerSubmit}
       >
-        <h3 className="my-4 fw-bold">SIGNUP</h3>
+        <h3 className="my-4 fw-bold">{t("register.0")}</h3>
         <form className="mt-4">
           <div className="mb-4">
             <label>
-              Full Name <span className="text-danger">*</span>
+              {t("register.1")} <span className="text-danger">*</span>
             </label>
             <input
               onChange={(e) => setFullname(e.target.value)}
@@ -64,7 +66,7 @@ const Register = () => {
           </div>
           <div className="mb-4">
             <label>
-              Tel. Number <span className="text-danger">*</span>
+              {t("register.2")} <span className="text-danger">*</span>
             </label>
             <input
               onChange={(e) => setTel(e.target.value)}
@@ -74,7 +76,7 @@ const Register = () => {
           </div>
           <div className="mb-4">
             <label>
-              Email Adress <span className="text-danger">*</span>
+              {t("register.3")} <span className="text-danger">*</span>
             </label>
             <input
               onChange={(e) => setEmail(e.target.value)}
@@ -84,7 +86,7 @@ const Register = () => {
           </div>
           <div className="mb-3">
             <label>
-              Password <span className="text-danger">*</span>
+              {t("register.4")} <span className="text-danger">*</span>
             </label>
             <div className="password--section">
               <div className="password--input--section">
@@ -108,7 +110,8 @@ const Register = () => {
           </div>
           <div className="mb-3">
             <label>
-              Again Password <span className="text-danger">*</span>
+              {t("register.5")}
+              <span className="text-danger">*</span>
             </label>
             <div className="password--section">
               <div className="password--input--section">
@@ -132,12 +135,12 @@ const Register = () => {
           </div>
           <div className="pt-2 pb-3">
             <Link to="/login" className="have--account">
-              <h6>Already have an account?</h6>
+              <h6>{t("register.6")}</h6>
             </Link>
           </div>
           <div className="register--button--section">
             <button type="submit" className="button register--button px-4 mt-3">
-              Sign up
+              {t("register.7")}
             </button>
           </div>
         </form>

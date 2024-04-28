@@ -7,7 +7,9 @@ import SingleProductSale from "../components/SingleProductSale";
 import swal from "sweetalert";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 const Cart = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     Aos.init();
   }, []);
@@ -22,7 +24,7 @@ const Cart = () => {
   } = useCart();
   return isEmpty ? (
     <>
-      <h1 className="text-center mt-5">Your Cart is empty</h1>
+      <h1 className="text-center mt-5">{t("cart.0")}</h1>
       <div className="d-flex justify-content-center flex-column align-items-center">
         <img
           width={400}
@@ -33,7 +35,7 @@ const Cart = () => {
       </div>
       <div className="d-flex justify-content-center mt-5">
         <Link to="/sale" className="button">
-          Go to the Products
+          {t("cart.1")}
         </Link>
       </div>
     </>
@@ -43,17 +45,17 @@ const Cart = () => {
         <div className="cart--top--section">
           <div className="link--to--pages--section d-flex p-4 align-items-center gap-2 fs-5">
             <Link to="/cart" className="link">
-              Shopping Cart
+              {t("cart.2")}
             </Link>
             <i class="fa-solid fa-arrow-right mx-2"></i>
             <Link to="/checkout" className="link link--checkout">
-              Checkout
+              {t("cart.3")}
             </Link>
             <i class="fa-solid fa-arrow-right mx-2"></i>
-            <span>Order Complete</span>
+            <span>{t("cart.4")}</span>
           </div>
         </div>
-        <h2 className="text-center my-4">Shopping List</h2>
+        <h2 className="text-center my-4">{t("cart.5")}</h2>
         <div className="row">
           <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
             <div className="cart--left--section" data-aos="fade-right">
@@ -62,10 +64,10 @@ const Cart = () => {
                   <tr>
                     <th></th>
                     <th scope="col"></th>
-                    <th scope="col">Product</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Subtotal</th>
+                    <th scope="col">{t("cart.6")}</th>
+                    <th scope="col">{t("cart.7")}</th>
+                    <th scope="col">{t("cart.8")}</th>
+                    <th scope="col">{t("cart.9")}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -158,25 +160,25 @@ const Cart = () => {
                 }}
                 className="button my-4"
               >
-                Remove Cart
+                {t("cart.10")}
               </button>
             </div>
           </div>
           <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
             <div className="cart--right--section p-4" data-aos="fade-left">
-              <h3 className="fw-bold">Cart Totals</h3>
+              <h3 className="fw-bold">{t("cart.11")}</h3>
               <div className="subtotal--section d-flex pt-3 justify-content-between align-items-center">
-                <h6>Subtotal</h6>
+                <h6>{t("cart.12")}</h6>
                 <p className="discounted--price"> £ {Math.round(cartTotal)}</p>
               </div>
               <hr />
               <div className="shipping--section d-flex pt-3 justify-content-between align-items-center">
-                <h6>Shipping</h6>
-                <p>Will be updated during checkout.</p>
+                <h6>{t("cart.13")}</h6>
+                <p>{t("cart.14")}</p>
               </div>
               <hr />
               <div className="total--section d-flex pt-3 justify-content-between align-items-center">
-                <h6>Total</h6>
+                <h6>{t("cart.15")}</h6>
                 <p className="product--price fs-4 fw-bold">
                   £ {Math.round(cartTotal)}
                 </p>
@@ -184,14 +186,14 @@ const Cart = () => {
               <div className="proceed--to--checkout--section">
                 <Link to="/checkout">
                   <button className="button mt-2 align-items-center justify-content-center">
-                    Proceed To Checkout
+                    {t("cart.16")}
                   </button>
                 </Link>
               </div>
             </div>
           </div>
         </div>
-        <h2 className="fw-bold">They buy with these goods</h2>
+        <h2 className="fw-bold">{t("cart.17")}</h2>
         <div className="col-lg-7 ms-2 pb-5">
           <div className="row" data-aos="fade-up">
             {product.slice(10, 14).map((item) => (
