@@ -143,7 +143,11 @@
     "12": "Woodmart-ı necə təkmilləşdirəcəyimizi bizə deyin. Xüsusiyyət sorğularına səs vermək və şərh vermək üçün səhifəmizə keçin.",
     "13": "Rəyiniz",
     "14": "Woodmart-ın ən yaxşı versiyasını yaratmağa kömək edin. Bizim səhifəmizə keçin və fikirlərinizi təklif edin.",
-    "15": "Rəy paylaşın"
+    "15": "Rəy paylaşın",
+    "16": "Ünvan :",
+    "17": "Səməd Vurğun 34, küçə 1000. AF MALL, 2-ci mərtəbə",
+    "18": "Telefon :",
+    "19": "E-Poçt :"
   },
   "description": {
     "0": "Onlayn video oyun mağazası",
@@ -244,5 +248,25 @@
     "24": "Kuponunuz var?",
     "25": "Kupon kodu",
     "26": "Kuponu Tətbiq Edin"
+  },
+  "policy": {
+    "0": "BİZ KİMİK?",
+    "1": "Saytımız",
+    "2": "XTemos Studio-nu ziyarət etdiyiniz üçün təşəkkür edirik. Biz vebsayt qurma təcrübənizi artırmaq üçün məhsullar yaradan şirkətik. Zəhmət olmasa, xidmətlərimizdən istifadə etmək üçün sənəd sifarişinə razılıq verərək, bu Məxfilik Siyasətini oxuyun.",
+    "3": "Hansı Şəxsi Məlumatları Alırıq və Nə üçün Toplayırıq",
+    "4": "Şərhlər",
+    "5": "Ziyarətçilər saytda şərhlər buraxdıqda, spam aşkarlanmasına kömək etmək üçün şərh formasında göstərilən məlumatları, həmçinin ziyarətçinin IP ünvanı və brauzer istifadəçi agenti sətirini toplayırıq. E-poçt ünvanınızdan yaradılmış anonim sətir (həmçinin hash adlanır) ondan istifadə edib-etmədiyinizi görmək üçün Gravatar xidmətinə təqdim edilə bilər. T Gravatar xidmətinin məxfilik siyasəti burada mövcuddur: https://automattic.com/privacy/. Şərhiniz təsdiqləndikdən sonra profil şəkliniz şərhinizin kontekstində ictimaiyyətə görünür.",
+    "6": "Media",
+    "7": "Şəkilləri vebsayta yükləsəniz, daxil edilmiş yer məlumatları (EXIF GPS) olan şəkilləri yükləməkdən çəkinməlisiniz.",
+    "8": "Əlaqə formaları",
+    "9": "Saytımızda şərh buraxsanız, adınızı, e-poçt ünvanınızı və veb saytınızı kukilərdə saxlamağa qoşula bilərsiniz. Bunlar sizin rahatlığınız üçündür ki, başqa bir şərh yazdığınız zaman yenidən yo detallarını doldurmaq məcburiyyətində qalmayasınız. Bu peçenyelər bir il müddətində qalacaq. Əgər hesabınız varsa və bu sayta daxil olsanız, qaşlarınızın kukiləri qəbul edib-etmədiyini müəyyən etmək üçün müvəqqəti kuki təyin edəcəyik. Bu kuki heç bir şəxsi məlumat ehtiva etmir və siz brauzerinizi bağladığınız zaman silinir. Siz daxil olduğunuz zaman, giriş məlumatınızı və ekran seçimlərinizi yadda saxlamaq üçün bir neçə kuki hazırlayacağıq. Giriş kukiləri iki gün, scre options kukiləri isə bir il davam edir. “Məni yadda saxla” seçsəniz, giriş iki həftə davam edəcək. Hesabınızdan çıxsanız, giriş kukiləri silinəcək. Əgər məqaləni redaktə etsəniz və ya dərc etsəniz, brauzerinizdə əlavə kuki yadda saxlanılacaq. Kukiyə heç bir şəxsi məlumat daxil deyil və sadəcə redaktə etdiyiniz məqalənin İD-ni göstərir. 1 gündən sonra başa çatır.",
+    "10": "Digər Vebsaytlardan Daxili Məzmun",
+    "11": "Bu saytdakı məqalələrə daxil edilmiş məzmun (məsələn, videolar, şəkillər, məqalələr və s.) daxil ola bilər. Digər veb-saytlardan daxil edilmiş məzmun, ziyarətçinin digər veb-saytı ziyarət etdiyi kimi davranır. Bu vebsaytlar sizin haqqınızda məlumat toplaya, kukilərdən istifadə edə, əlavə üçüncü tərəf izləmə yerləşdirə, daxil edilmiş məzmunla qarşılıqlı əlaqənizə nəzarət edə, o cümlədən hesabınız varsa və həmin vebsayta daxil olmusunuzsa, daxil edilmiş məzmunla qarşılıqlı əlaqənizi izləyə bilər.",
+    "12": "Məlumatlarınızı Nə qədər Saxlayırıq",
+    "13": "Şərh buraxsanız, şərh və onun metadatası qeyri-müəyyən müddətə saxlanılır. Bu ona görədir ki, biz hər hansı təqib şərhlərini moderasiya növbəsində saxlamaq əvəzinə avtomatik olaraq tanıya və təsdiq edə bilək. Veb saytımızda qeydiyyatdan keçən istifadəçilər üçün (əgər varsa) onların təqdim etdiyi şəxsi məlumatları da istifadəçi profilində saxlayırıq. Bütün istifadəçilər istənilən vaxt şəxsi məlumatlarını görə, redaktə edə və ya silə bilər (istifadəçi adını dəyişə bilmədikləri istisna olmaqla). Veb sayt administratorları da həmin məlumatları görə və redaktə edə bilərlər.",
+    "14": "Məlumatlarınız üzərində hansı hüquqlarınız var",
+    "15": "Bu saytda hesabınız varsa və ya şərhləriniz varsa, sizin haqqınızda saxladığımız şəxs məlumatlarının, o cümlədən sizə təqdim etdiyiniz hər hansı məlumatın ixrac edilmiş faylını əldə etməyi tələb edə bilərsiniz. səndən tut. Bu, inzibati, hüquqi və ya təhlükəsizlik məqsədləri üçün saxlamağa borclu olduğumuz hər hansı məlumatı əhatə etmir.",
+    "16": "Məlumatlarınızı Göndərdiyimiz Yer",
+    "17": "Visitor comments may be checked through an automated spam detection service."
   }
 }

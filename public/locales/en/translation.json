@@ -143,7 +143,11 @@
     "12": "Tell us how to improve Woodmart. Go to our to vote & comment on feature requests.",
     "13": "Your feedback",
     "14": "Help us create the best version of Woodmart. Go to our & suggest your ideas.",
-    "15": "Share Feedback"
+    "15": "Share Feedback",
+    "16": "Address :",
+    "17": "34 Samad Vurgun, street 1000. AF Mall, 2nd Floor",
+    "18": "Phone :",
+    "19": "Email :"
   },
   "description": {
     "0": "Online video game store",
@@ -244,5 +248,25 @@
     "24": "Do you have any coupon?",
     "25": "Coupon code",
     "26": "Apply Coupon"
+  },
+  "policy": {
+    "0": "WHO WE ARE",
+    "1": "Our website is",
+    "2": "Thank you for visiting XTemos Studio. We are company, creating products to enhance your website building experienc Please read this Privacy Policy, providing consent to document order to have permission to use our services.",
+    "3": "What Personal Data We Collect and Why We Collect It",
+    "4": "Comments",
+    "5": "When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor’s IP address and browser user agent string to help spam detection. An anonymiz string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. T Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment.",
+    "6": "Media",
+    "7": "If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) include Visitors to the website can download and extract any location da from images on the website.",
+    "8": "Contact Forms",
+    "9": "If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These a for your convenience so that you do not have to fill in yo details again when you leave another comment. These cookies will la for one year. If you have an account and you log in to th site, we will set a temporary cookie to determine if your brows accepts cookies. This cookie contains no personal data and is discard when you close your browser. When you log in, we will also s up several cookies to save your login information and your scre display choices. Login cookies last for two days, and scre options cookies last for a year. If you select “Remember Me”, yo login will persist for two weeks. If you log out of your accoun the login cookies will be removed. If you edit or publish  article, an additional cookie will be saved in your browser. Th cookie includes no personal data and simply indicates the po ID of the article you just edited. It expires after 1 day.",
+    "10": "Embedded Content from Other Websites",
+    "11": "Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from oth websites behaves in the exact same way as if the visitor has visited the other website. These websites may collect data abo you, use cookies, embed additional third-party tracking, a monitor your interaction with that embedded content, includi tracing your interaction with the embedded content if you have  account and are logged in to that website.",
+    "12": "How Long We Retain Your Data",
+    "13": "If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and appro any follow-up comments automatically instead of holding them in moderation queue. For users that register on our website (if any), we also store the personal information they provide in the user profile. All users can see, edit, or delete their person information at any time (except they cannot change their username). Website administrators can also see and edit that information.",
+    "14": "What Rights You Have Over Your Data",
+    "15": "If you have an account on this site, or have left comments, you can request to receive an exported file of the person data we hold about you, including any data you have provided to u You can also request that we erase any personal data we hold abo you. This does not include any data we are obliged to keep f administrative, legal, or security purposes.",
+    "16": "Where We Send Your Data",
+    "17": "Visitor comments may be checked through an automated spam detection service."
   }
 }

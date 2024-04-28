@@ -1,20 +1,16 @@
 .notebookAdv {
-  .notebookAdv--body {
-    position: relative;
-    img {
-      //   position: relative;
-      width: 100%;
-      height: auto;
-    }
-    .notebookAdv--text--section {
-      position: absolute;
-      top: 10%;
-      right: 0;
-      text-align: end;
-      line-height: 2;
-      .link {
-        text-decoration: none;
-      }
+  background-image: url("https://www.gameshub.com/wp-content/uploads/sites/5/2023/07/rog-strix-scar-16-2023-g634.jpg");
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .notebookAdv--text--section{
+    padding: 475px 18px;
+  }
+  .button--section{
+    .link{
+      text-decoration: none;
     }
   }
 }
