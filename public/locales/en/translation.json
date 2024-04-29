@@ -5,7 +5,10 @@
     "2": "About",
     "3": "Contact",
     "4": "Blog",
-    "5": "Search for products..."
+    "5": "Search for products...",
+    "6": "Search Area",
+    "7": "Product Name",
+    "8": "Search"
   },
   "footer": {
     "0": "Payment Methods : ",
@@ -268,5 +271,9 @@
     "15": "If you have an account on this site, or have left comments, you can request to receive an exported file of the person data we hold about you, including any data you have provided to u You can also request that we erase any personal data we hold abo you. This does not include any data we are obliged to keep f administrative, legal, or security purposes.",
     "16": "Where We Send Your Data",
     "17": "Visitor comments may be checked through an automated spam detection service."
+  },
+  "proDet": {
+    "0": "",
+    "1": ""
   }
 }

@@ -120,7 +120,7 @@ const Header = () => {
 
               <Modal size="xl" show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                  <Modal.Title>Search Area</Modal.Title>
+                  <Modal.Title>{t("navbar.6")}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                   <div className="input-group mb-3">
@@ -128,10 +128,10 @@ const Header = () => {
                       onChange={(e) => setQuery(e.target.value)}
                       type="text"
                       className="form-control"
-                      placeholder="Product Name"
+                      placeholder={t("navbar.7")}
                     />
                     <button className="button" type="button" id="button-addon2">
-                      Search
+                      {t("navbar.8")}
                     </button>
                   </div>
                   <ListGroup>

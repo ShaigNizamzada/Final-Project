@@ -302,7 +302,7 @@ const Checkout = () => {
                         <label className="me-3">
                           &nbsp; {t("checkout.20")}
                         </label>
-                        <input type="radio" name="radio" id="radio" />
+                        <input type="radio" name="radio" id="radio" checked/>
                       </div>
                       <div className="checkbox--form--two mb-2 d-flex justify-content-between align-items-center">
                         <label className="me-3">

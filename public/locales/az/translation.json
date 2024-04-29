@@ -5,7 +5,10 @@
     "2": "Haqqımızda",
     "3": "Əlaqə",
     "4": "Bloq",
-    "5": "Məhsulları axtarın..."
+    "5": "Məhsulları axtarın...",
+    "6": "Axtarış",
+    "7": "Məhsulun adı",
+    "8": "Axtar"
   },
   "footer": {
     "0": "Ödəmə metodları : ",
@@ -49,7 +52,7 @@
   "resHero": {
     "0": "İndi Nintendo Switch sistemində",
     "1": "Sehrbazlıq dünyası sizi gözləyir Hoqvartsda, Hoqsmiddə, Qadağan olunmuş Meşədə, Yerüstü ərazidə sərbəst gəzin",
-    "2": "Indi Al",
+    "2": "İndi Al",
     "3": "20% Endirim",
     "4": "Zamanla yarışın, polisləri üstələyin və The Grand, Lakeshore-un son küçəsinə çatmaq üçün həftəlik seçmə yarışlarına qatılın.",
     "5": "Artıq mövcuddur",

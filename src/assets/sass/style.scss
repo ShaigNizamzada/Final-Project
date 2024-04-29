@@ -38,7 +38,7 @@ html {
 @import "Wishlist";
 @import "Checkout";
 @import "NotebookAdv";
-
+@import "ScrollBar";
 :root {
   --header-background-dark: #212121;
   --header-background-light: #e0dede;
@@ -294,7 +294,16 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3) !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+  .image--nfs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .link{
+      text-decoration: none;
+    }
   }
 }
 //  MARQUEE Section

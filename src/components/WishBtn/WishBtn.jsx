@@ -1,9 +1,8 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useWishlist } from "react-use-wishlist";
 import swal from "sweetalert";
 const WishBtn = ({ product }) => {
-  const navigate = useNavigate();
   const { addWishlistItem, removeWishlistItem, inWishlist } = useWishlist();
   const toggleWish = (myProduct) => {
     if (inWishlist(myProduct.id)) {
