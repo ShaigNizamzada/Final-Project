@@ -44,7 +44,7 @@ const Cart = () => {
       <div className="container-fluid cart--section">
         <div className="cart--top--section">
           <div className="link--to--pages--section d-flex p-4 align-items-center gap-2 fs-5">
-            <Link to="/cart" className="link">
+            <Link to="/cart" className="link text-decoration-underline">
               {t("cart.2")}
             </Link>
             <i class="fa-solid fa-arrow-right mx-2"></i>

@@ -70,7 +70,10 @@ const Checkout = () => {
               {t("checkout.0")}
             </Link>
             <i class="fa-solid fa-arrow-right mx-2"></i>
-            <Link to="/checkout" className="link--checkout link">
+            <Link
+              to="/checkout"
+              className="link--checkout link text-decoration-underline"
+            >
               {t("checkout.1")}
             </Link>
             <i class="fa-solid fa-arrow-right mx-2"></i>
@@ -302,7 +305,7 @@ const Checkout = () => {
                         <label className="me-3">
                           &nbsp; {t("checkout.20")}
                         </label>
-                        <input type="radio" name="radio" id="radio" checked/>
+                        <input type="radio" name="radio" id="radio" checked />
                       </div>
                       <div className="checkbox--form--two mb-2 d-flex justify-content-between align-items-center">
                         <label className="me-3">

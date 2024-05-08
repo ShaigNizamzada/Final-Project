@@ -39,6 +39,7 @@ html {
 @import "Checkout";
 @import "NotebookAdv";
 @import "ScrollBar";
+@import "Dashboard";
 :root {
   --header-background-dark: #212121;
   --header-background-light: #e0dede;
@@ -87,6 +88,7 @@ html {
   i,
   .link {
     color: var(--header-text-dark);
+    text-decoration: none;
   }
   .social-media-icon {
     i {
@@ -158,6 +160,7 @@ html {
   i,
   .link {
     color: var(--header-text-light);
+    text-decoration: none;
   }
   .social-media-icon {
     i {
@@ -301,7 +304,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    .link{
+    .link {
       text-decoration: none;
     }
   }

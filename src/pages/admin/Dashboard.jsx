@@ -2,25 +2,24 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { removeBlog } from "../../tools/action/blogAction";
+import { useTranslation } from "react-i18next";
 const Dashboard = () => {
+  const { t } = useTranslation();
   const blogs = useSelector((p) => p);
   const dispatch = useDispatch();
   return (
-    <div className="container">
-      <h1 className="text-center my-3">Dashboard</h1>
+    <div className="container dashboard--section">
+      <h1 className="text-center my-3">{t("account.2")}</h1>
       <div className="d-flex align-items-center justify-content-center my-4">
         <div className="col-9">
-          <Link to="/dashboard/add">
-            <button className="button">Add Blog</button>
-          </Link>
-          <table class="table">
+          <table class="table--shopping--list mb-4">
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Photo</th>
-                <th scope="col">Title</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Delete</th>
+                <th scope="col">{t("account.10")}</th>
+                <th scope="col">{t("account.11")}</th>
+                <th scope="col">{t("account.12")}</th>
+                <th scope="col">{t("account.13")}</th>
               </tr>
             </thead>
             <tbody>
@@ -32,7 +31,9 @@ const Dashboard = () => {
                   </td>
                   <td>{item.title}</td>
                   <td>
-                    <button className="btn btn-outline-warning">Edit</button>
+                    <button className="btn btn-outline-warning">
+                      {t("account.12")}
+                    </button>
                   </td>
                   <td>
                     <button
@@ -46,6 +47,9 @@ const Dashboard = () => {
               ))}
             </tbody>
           </table>
+          <Link to="/dashboard/add" className="link">
+            <button className="button">{t("account.14")}</button>
+          </Link>
         </div>
       </div>
     </div>

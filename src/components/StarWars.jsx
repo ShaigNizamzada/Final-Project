@@ -13,12 +13,10 @@ const StarWars = () => {
       <div className="starwars--section my-5">
         <div className="row">
           <div className="col-xl-6 col-lg-6 col-12">
-            <div className="starwars--left--section" data-aos="zoom-in-right">
-              {/* <img
-                src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/07/wd-vgs-sw-j-d.jpg?id=6973"
-                alt="starwars"
-              /> */}
-            </div>
+            <div
+              className="starwars--left--section"
+              data-aos="zoom-in-right"
+            ></div>
           </div>
           <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
             <div className="starwars--right--section" data-aos="zoom-in-left">

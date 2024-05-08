@@ -19,7 +19,7 @@ const SingleProduct = ({ title, photo, rating, price, id, alldata }) => {
             alt="tech"
           />
           <span className="hot">HOT</span>
-          <div className="add--to--cart--section d-flex flex-column align-items-center  justify-content-center">
+          <div className="add--to--cart--section d-flex flex-column align-items-center justify-content-center">
             <CardBtn product={alldata} />
             <WishBtn product={alldata} />
           </div>

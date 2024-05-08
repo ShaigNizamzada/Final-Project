@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addBlog } from "../tools/action/blogAction";
+import { useTranslation } from "react-i18next";
 
 const BlogForm = () => {
+  const { t } = useTranslation();
   const [img, setImg] = useState("");
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
@@ -25,7 +27,7 @@ const BlogForm = () => {
   return (
     <form onSubmit={formSubmit}>
       <div className="mb-3">
-        <label className="form-label">Image URL</label>
+        <label className="form-label">{t("account.15")}</label>
         <input
           type="text"
           onChange={(e) => setImg(e.target.value)}
@@ -33,7 +35,7 @@ const BlogForm = () => {
         />
       </div>
       <div className="mb-3">
-        <label className="form-label">Title</label>
+        <label className="form-label">{t("account.11")}</label>
         <input
           type="text"
           className="form-control"
@@ -41,20 +43,19 @@ const BlogForm = () => {
         />
       </div>
       <div className="mb-3">
-        <label className="form-label">Description</label>
-        <div class="form-floating">
+        <label className="form-label">{t("account.16")}</label>
+        <div>
           <textarea
             onChange={(e) => setDesc(e.target.value)}
             class="form-control"
-            placeholder="Leave a comment here"
-            id="floatingTextarea2"
+            placeholder={t("account.17")}
+
             style={{ height: 300 }}
           ></textarea>
-          <label for="floatingTextarea2">Description</label>
         </div>
       </div>
       <button type="submit" className="button">
-        Add Blog
+      {t("account.14")}
       </button>
     </form>
   );

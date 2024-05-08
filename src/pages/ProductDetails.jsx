@@ -10,7 +10,9 @@ import swal from "sweetalert";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useWishlist } from "react-use-wishlist";
+import { useTranslation } from "react-i18next";
 const ProductDetails = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     Aos.init();
   }, []);
@@ -26,7 +28,7 @@ const ProductDetails = () => {
   return (
     <>
       {product.length === 0 ? (
-        <h1>Loading</h1>
+        <h1>{t("proDet.0")}</h1>
       ) : (
         <div className="container-fluid product--details">
           <div className="row product--details--section pt-3">
@@ -51,33 +53,35 @@ const ProductDetails = () => {
                   >
                     <div className="link--to--pages mb-4">
                       <Link to="/" className="link">
-                        Home
+                        {t("proDet.1")}
                       </Link>
                       <span> / </span>
                       <Link to="/sale" className="link">
-                        Sale
+                        {t("proDet.2")}
                       </Link>
                       <span> / </span>
-                      <span>{detailProduct[0].title}</span>
+                      <span className="text-decoration-underline">
+                        {detailProduct[0].title}
+                      </span>
                     </div>
                     <h1>{detailProduct[0].title}</h1>
                     <div className="rating--section d-flex align-items-center">
                       <i class="fa-solid fa-star me-2"></i>
                       <span className="fs-5">{detailProduct[0].rating}</span>
-                      <span className="ms-2">(2 customer reviews)</span>
+                      <span className="ms-2">({t("proDet.3")})</span>
                     </div>
                     <p className="my-5">{detailProduct[0].description_short}</p>
                     <div className="release--date--section d-flex justify-content-between gap-5 mt-5">
                       <div className="release--date">
-                        <h6>Release Date</h6>
+                        <h6>{t("proDet.4")}</h6>
                         {detailProduct[0].release_date}
                       </div>
                       <div className="publisher">
-                        <h6>Publisher</h6>
+                        <h6>{t("proDet.5")}</h6>
                         {detailProduct[0].publisher}
                       </div>
                       <div className="developer">
-                        <h6>Developer</h6>
+                        <h6>{t("proDet.6")}</h6>
                         {detailProduct[0].developer}
                       </div>
                     </div>
@@ -108,7 +112,7 @@ const ProductDetails = () => {
                               className="me-1"
                             />
                             <Link className="link" to="/sale">
-                              Mild Language, Violence
+                              {t("proDet.7")}
                             </Link>
                           </div>
                         </div>
@@ -122,7 +126,7 @@ const ProductDetails = () => {
                               className="me-1"
                             />
                             <Link className="link" to="/sale">
-                              12 Support language
+                              {t("proDet.8")}
                             </Link>
                           </div>
                         </div>
@@ -136,7 +140,7 @@ const ProductDetails = () => {
                               className="me-1"
                             />
                             <Link className="link" to="/sale">
-                              Single Player
+                              {t("proDet.9")}
                             </Link>
                           </div>
                         </div>
@@ -146,18 +150,19 @@ const ProductDetails = () => {
                 </div>
                 <div className="col-md-5 col-sm-12 col-12">
                   <div
-                    className="product--details--right--section mt-5"
+                    className="product--details--right--section mt-5 pt-4"
                     data-aos="fade-left"
                   >
                     <h4 className="product--price mb-3">
                       £{detailProduct[0].price}
                     </h4>
                     <p className="mt-3">
-                      <span className="fs-5 fw-bold"> Platform: </span>{" "}
+                      <span className="fs-5 fw-bold"> {t("proDet.10")} </span>{" "}
                       {detailProduct[0].platform}
                     </p>
                     <p>
-                      <span className="fs-5 fw-bold"> Edition: </span> Standart
+                      <span className="fs-5 fw-bold"> {t("proDet.11")} </span>{" "}
+                      Standart
                     </p>
                     <div className="buy--the--product--section d-flex mt-5">
                       <button
@@ -176,7 +181,7 @@ const ProductDetails = () => {
                           }
                         }}
                       >
-                        Add to cart
+                        {t("proDet.12")}
                       </button>
                     </div>
                     <div className="share--section mt-2 d-flex justify-content-between align-items-center">
@@ -184,12 +189,12 @@ const ProductDetails = () => {
                         <WishBtn product={detailProduct[0]} />
                         <span className="fs-5 ms-2">
                           {inWishlist(detailProduct[0].id)
-                            ? "Added to wishlist"
-                            : "Add to wishlist"}
+                            ? t("proDet.26")
+                            : t("proDet.27")}
                         </span>
                       </div>
                       <div className="share--right--section d-flex justify-content-center align-items-center">
-                        <p className="mt-3">Share:</p>
+                        <p className="mt-3">{t("proDet.13")}</p>
                         <div className="social--media--icons ms-2">
                           <i class="fa-brands fa-facebook-f me-2"></i>
                           <i class="fa-brands fa-x-twitter me-2"></i>
@@ -204,7 +209,7 @@ const ProductDetails = () => {
             </div>
           </div>
           <div className="long--description--section mt-5" data-aos="fade-up">
-            <h1>Description</h1>
+            <h1>{t("proDet.14")}</h1>
             <div className="row">
               <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                 {" "}
@@ -229,21 +234,21 @@ const ProductDetails = () => {
                 className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12"
                 data-aos="fade-right"
               >
-                <h4>Specification</h4>
+                <h4>{t("proDet.15")}</h4>
                 <div className="overview--title d-flex mt-5 mb-3">
                   <img
                     src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-specification-overview-d.svg"
                     alt=""
                   />
-                  <span className="fw-bold fs-5 ms-2">Overview</span>
+                  <span className="fw-bold fs-5 ms-2">{t("proDet.16")}</span>
                 </div>
                 <div className="overview--inner--section d-flex align-items-center justify-content-between">
                   <div className="left-section">
-                    <h6>Platform</h6>
-                    <h6>Multiplayer</h6>
-                    <h6>Release date</h6>
-                    <h6>Publisher</h6>
-                    <h6>Developer</h6>
+                    <h6>{t("proDet.17")}</h6>
+                    <h6>{t("proDet.18")}</h6>
+                    <h6>{t("proDet.19")}</h6>
+                    <h6>{t("proDet.20")}</h6>
+                    <h6>{t("proDet.21")}</h6>
                   </div>
                   <div className="right-section text-end">
                     <p>{detailProduct[0].platform}</p>
@@ -259,12 +264,12 @@ const ProductDetails = () => {
                     src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-specification-languages-w.svg"
                     alt=""
                   />
-                  <span className="fw-bold fs-5 ms-2">Languages</span>
+                  <span className="fw-bold fs-5 ms-2">{t("proDet.22")}</span>
                 </div>
                 <div className="language--inner--section d-flex align-items-center justify-content-between">
                   <div className="left-section">
-                    <h6>Language</h6>
-                    <h6>Audio</h6>
+                    <h6>{t("proDet.23")}</h6>
+                    <h6>{t("proDet.24")}</h6>
                   </div>
                   <div className="right-section text-end">
                     <p>{detailProduct[0].language}</p>
@@ -276,7 +281,7 @@ const ProductDetails = () => {
                 className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12"
                 data-aos="fade-left"
               >
-                <h4>Another Games</h4>
+                <h4 className="px-2 pt-1">{t("proDet.25")}</h4>
                 <div className="row mt-5 ms-1">
                   {product.slice(randomNumber, randomNumber + 8).map((item) => (
                     <SingleProductSale

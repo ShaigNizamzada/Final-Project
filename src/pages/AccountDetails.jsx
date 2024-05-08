@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 const AccountDetails = () => {
+  const { t } = useTranslation();
   const [fullname, setFullname] = useState(localStorage.getItem("fullname"));
   const [tel, setTel] = useState(localStorage.getItem("tel"));
   const [email, setEmail] = useState(localStorage.getItem("email"));
@@ -18,7 +20,7 @@ const AccountDetails = () => {
   };
   return (
     <>
-      <h2 className="text-center fw-bold my-3">Account Details</h2>
+      <h2 className="text-center fw-bold my-3">{t("account.4")}</h2>
       <div className="d-flex flex-column w-100 justify-content-center align-items-center">
         <div className="col-5" onSubmit={AccountSubmit}>
           <form className="mt-4">
@@ -54,7 +56,7 @@ const AccountDetails = () => {
             </div>
             <div className="login-button-section">
               <button type="submit" className="button login-button px-4 mt-3">
-                Change
+                {t("account.5")}
               </button>
             </div>
             <div className="login-button-section">
@@ -63,7 +65,7 @@ const AccountDetails = () => {
                 type="submit"
                 className="button login-button px-4 mt-3"
               >
-                Change Password
+                {t("account.6")}
               </Link>
             </div>
           </form>

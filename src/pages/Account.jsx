@@ -1,22 +1,24 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const Account = () => {
+  const { t } = useTranslation();
   return (
-    <div className="d-flex flex-column w-100 justify-content-center align-items-center">
+    <div className="d-flex flex-column w-100 justify-content-center align-items-center my-profile">
       <img
         src="https://cdn-icons-png.freepik.com/256/552/552848.png"
         alt=""
         className="profile--icon"
       />
-      <h1 className="my-4">My Account</h1>
+      <h1 className="my-4">{t("account.0")}</h1>
       <div className="d-flex gap-2">
-        <Link to="/accountdetails">
-          <button className="button mb-3">Details</button>
+        <Link to="/accountdetails" className="link">
+          <button className="button mb-3">{t("account.1")}</button>
         </Link>
         {localStorage.getItem("email") === "admin@admin.com" ? (
-          <Link to="/dashboard">
-            <button className="button">Dashboard</button>
+          <Link to="/dashboard" className="link">
+            <button className="button">{t("account.2")}</button>
           </Link>
         ) : (
           ""
@@ -33,7 +35,7 @@ const Account = () => {
             window.location.assign("/login");
           }}
         >
-          Logout
+          {t("account.3")}
         </button>{" "}
       </div>
     </div>
