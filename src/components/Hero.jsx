@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
+import slug from "react-slugify";
 function CustomSlide(props) {
   useEffect(() => {
     Aos.init();
@@ -64,7 +65,7 @@ function CustomSlides() {
                 </div>
                 <div className="take--it--now--section d-flex">
                   {" "}
-                  <Link className="take--it--now" to="/sale">
+                  <Link className="take--it--now" to="/sale/dead-island-2">
                     <button className="button me-2">{t("hero.2")}</button>
                   </Link>
                   <span className="fs-5 pt-2 ps-3">{t("hero.3")}</span>
@@ -109,7 +110,7 @@ function CustomSlides() {
                 </div>
                 <div className="take--it--now--section d-flex">
                   {" "}
-                  <Link className="take--it--now" to="/sale">
+                  <Link className="take--it--now" to="/sale/starfield">
                     <button className="button me-2">{t("hero.2")}</button>
                   </Link>
                   <span className="fs-5 pt-2 ps-3">{t("hero.3")}</span>
@@ -155,7 +156,10 @@ function CustomSlides() {
 
                 <div className="take--it--now--section d-flex">
                   {" "}
-                  <Link className="take--it--now" to="/sale">
+                  <Link
+                    className="take--it--now"
+                    to="/sale/s-t-a-l-k-e-r-2-heart-of-chornobyl"
+                  >
                     <button className="button me-2">{t("hero.2")}</button>
                   </Link>
                   <span className="fs-5 pt-2 ps-3">{t("hero.3")}</span>

@@ -12,7 +12,7 @@
   },
   "footer": {
     "0": "Payment Methods : ",
-    "1": "Payment Currency",
+    "1": "Payment Currency : UK Pound (£)",
     "2": "The online store of equipment and electronics is one of the leading online stores. The band was released in 25 volumes.",
     "3": "Useful Links",
     "4": "About Us",
@@ -81,7 +81,12 @@
     "7": "Racing",
     "8": "RPG",
     "9": "Our Latest Articles",
-    "10": "More Articles"
+    "10": "More Articles",
+    "11": "Looking for a Gaming Laptop?",
+    "12": "ROG makes the best hardware for PC gaming, eSports, and overclocking.",
+    "13": "Our innovations deliver top performance and premium experiences for everyone.",
+    "14": "Discover Now",
+    "15": "Our Partners"
   },
   "sale": {
     "0": "Home",

@@ -292,7 +292,7 @@ const Checkout = () => {
                   <span className="product--price fs-5 fw-bold">
                     £ &nbsp;
                     {coupon === "Hello20"
-                      ? Math.round(cartTotal) * 0.8
+                      ? Math.round(Math.round(cartTotal) * 0.8)
                       : Math.round(cartTotal)}
                   </span>
                 </div>
@@ -332,7 +332,10 @@ const Checkout = () => {
                           <span className="discounted--price text-decoration-line-through">
                             £ {Math.round(cartTotal)}
                           </span>
-                          <span> £ {Math.round(cartTotal) * 0.8}</span>
+                          <span>
+                            {" "}
+                            £ {Math.round(Math.round(cartTotal) * 0.8)}
+                          </span>
                         </>
                       ) : (
                         <>

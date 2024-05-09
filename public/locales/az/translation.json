@@ -12,7 +12,7 @@
   },
   "footer": {
     "0": "Ödəmə metodları : ",
-    "1": "Ödəniş valyutası",
+    "1": "Ödəniş valyutası : Funt sterlinq (£)",
     "2": "Avadanlıq və elektronika onlayn mağazası aparıcı onlayn mağazalardan biridir. Qrup 25 cilddə buraxıldı.",
     "3": "Faydalı Linklər",
     "4": "Haqqımızda",
@@ -81,7 +81,12 @@
     "7": "Yarış",
     "8": "RPG",
     "9": "Bizim Son Məqalələrimiz",
-    "10": "Daha çox Məqalələr"
+    "10": "Daha çox Məqalələr",
+    "11": "Oyun Noutbuku axtarırsınız?",
+    "12": "ROG kompüter oyunları, eSports və overclock üçün ən yaxşı avadanlığı yaradır.",
+    "13": "Yeniliklərimiz hər kəs üçün yüksək performans və premium təcrübələr təqdim edir.",
+    "14": "Kəşf Et",
+    "15": "Partnerlerimiz"
   },
   "sale": {
     "0": "Ana Səhifə",

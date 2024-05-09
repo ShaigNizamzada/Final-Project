@@ -55,7 +55,7 @@ const Cart = () => {
             <span>{t("cart.4")}</span>
           </div>
         </div>
-        <h2 className="text-center my-4">{t("cart.5")}</h2>
+        <h2 className="text-center mt-4 mb-5">{t("cart.5")}</h2>
         <div className="row">
           <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
             <div className="cart--left--section" data-aos="fade-right">

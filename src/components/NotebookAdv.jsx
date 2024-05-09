@@ -1,23 +1,19 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const NotebookAdv = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="notebookAdv container-fluid my-4">
         <div className="notebookAdv--body">
           <div className="notebookAdv--text--section">
             <p className="notebookAdv--text text-light fw-bold fs-2">
-              Looking For a Gaming Laptop?
+              {t("home.11")}
             </p>
-            <p className="text-light fs-4">
-              ROG makes the best hardware for PC gaming, eSports, and
-              overclocking
-            </p>
-            <p className="text-light fs-4">
-              Our innovations deliver top performance and premium experiences
-              for everyone.
-            </p>
+            <p className="text-light fs-4">{t("home.12")}</p>
+            <p className="text-light fs-4">{t("home.13")}</p>
             <div className="button--section d-flex">
               <button className="btn btn-light">
                 <Link
@@ -25,7 +21,7 @@ const NotebookAdv = () => {
                   target="_blank"
                   className="link text-dark"
                 >
-                  Discover Now!
+                  {t("home.14")}
                 </Link>
               </button>
             </div>

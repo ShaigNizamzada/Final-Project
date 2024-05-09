@@ -1,10 +1,12 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
+import { useTranslation } from "react-i18next";
 const Sponsor = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="marquee--container container-fluid my-5">
-        <h3 className="mb-5">Our Partners</h3>
+        <h3 className="mb-5">{t("home.15")}</h3>
         <Marquee play pauseOnClick>
           <div className="marquee--section">
             <img
