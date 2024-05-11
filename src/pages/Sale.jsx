@@ -48,9 +48,7 @@ const Sale = () => {
               <div className="text--section">
                 <p>{t("sale.2")}</p>
                 <h1 className="text-light">{t("sale.3")}</h1>
-                <p>
-                {t("sale.4")}
-                </p>
+                <p>{t("sale.4")}</p>
               </div>
             </div>
           </div>
@@ -76,7 +74,7 @@ const Sale = () => {
                     onChange={handleRange}
                   />
                   <p>
-                  {t("sale.5")}: <span className="fw-bold">£0 — £100</span>{" "}
+                    {t("sale.5")}: <span className="fw-bold">£0 — £100</span>{" "}
                   </p>
                 </div>
                 {/* {product.filter(
@@ -87,28 +85,28 @@ const Sale = () => {
                 <h4>{t("sale.6")}</h4>
                 <ul className="d-flex flex-column flex-wrap gap-2">
                   <li className="fs-4" onClick={() => setCategory("")}>
-                  {t("sale.7")}
+                    {t("sale.7")}
                   </li>
                   <li className="fs-4" onClick={() => setCategory("Action")}>
-                  {t("sale.8")}
+                    {t("sale.8")}
                   </li>
                   <li className="fs-4" onClick={() => setCategory("Adventure")}>
-                  {t("sale.9")}
+                    {t("sale.9")}
                   </li>
                   <li className="fs-4" onClick={() => setCategory("Casual")}>
-                  {t("sale.10")}
+                    {t("sale.10")}
                   </li>
                   <li className="fs-4" onClick={() => setCategory("Horror")}>
-                  {t("sale.11")}
+                    {t("sale.11")}
                   </li>
                   <li className="fs-4" onClick={() => setCategory("Indie")}>
-                  {t("sale.12")}
+                    {t("sale.12")}
                   </li>
                   <li className="fs-4" onClick={() => setCategory("Racing")}>
-                  {t("sale.13")}
+                    {t("sale.13")}
                   </li>
                   <li className="fs-4" onClick={() => setCategory("RPG")}>
-                  {t("sale.14")}
+                    {t("sale.14")}
                   </li>
                 </ul>
               </div>

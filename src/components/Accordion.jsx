@@ -25,7 +25,7 @@ const items = [
 ];
 const App = () => {
   const onChange = (key) => {
-    console.log(key);
+    // console.log(key);
   };
   return <Collapse items={items} onChange={onChange} />;
 };

@@ -172,7 +172,7 @@ const ProductDetails = () => {
                             addItem(detailProduct[0]);
                             swal({
                               title: "",
-                              text: "Product Added",
+                              text: `${t("swal.0")}`,
                               icon: "success",
                               timer: 1500,
                             });

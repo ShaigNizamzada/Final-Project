@@ -1,9 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import swal from "sweetalert";
 
 const CardBtn = ({ product }) => {
+  const [t] = useTranslation();
   const { addItem, removeItem, inCart } = useCart();
   const toggleCart = (myProduct) => {
     if (inCart(myProduct.id)) {
@@ -11,7 +13,7 @@ const CardBtn = ({ product }) => {
       if (localStorage.getItem("login") === "true") {
         swal({
           title: "",
-          text: "Product Removed",
+          text: `${t("swal.1")}`,
           icon: "success",
           timer: 1500,
         });
@@ -21,7 +23,7 @@ const CardBtn = ({ product }) => {
       if (localStorage.getItem("login") === "true") {
         swal({
           title: "",
-          text: "Product Added",
+          text: `${t("swal.0")}`,
           icon: "success",
           timer: 1500,
         });

@@ -326,5 +326,14 @@
     "15": "Image URL",
     "16": "Description",
     "17": "Leave a comment here..."
+  },
+  "swal": {
+    "0": "Product Added.",
+    "1": "Product Removed.",
+    "2": "Cart has been updated.",
+    "3": "Coupon has been applied.",
+    "4": "Coupon has not been found!",
+    "5": "Please fill the inputs!",
+    "6": "Your shopping has been successfully done."
   }
 }

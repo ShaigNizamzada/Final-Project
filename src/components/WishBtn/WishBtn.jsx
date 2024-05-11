@@ -1,8 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { useWishlist } from "react-use-wishlist";
 import swal from "sweetalert";
 const WishBtn = ({ product }) => {
+  const { t } = useTranslation();
   const { addWishlistItem, removeWishlistItem, inWishlist } = useWishlist();
   const toggleWish = (myProduct) => {
     if (inWishlist(myProduct.id)) {
@@ -10,7 +12,7 @@ const WishBtn = ({ product }) => {
       if (localStorage.getItem("login") === "true") {
         swal({
           title: "",
-          text: "Product Removed",
+          text: `${t("swal.1")}`,
           icon: "success",
           timer: 1500,
         });
@@ -20,7 +22,7 @@ const WishBtn = ({ product }) => {
       if (localStorage.getItem("login") === "true") {
         swal({
           title: "",
-          text: "Product Added",
+          text: `${t("swal.0")}`,
           icon: "success",
           timer: 1500,
         });

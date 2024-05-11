@@ -80,7 +80,7 @@ const Cart = () => {
                               removeItem(item.id);
                               swal({
                                 title: "",
-                                text: "Product Removed",
+                                text: `${t("swal.1")}`,
                                 icon: "success",
                                 timer: 1500,
                               });
@@ -153,7 +153,7 @@ const Cart = () => {
                   emptyCart();
                   swal({
                     title: "",
-                    text: "Cart has been updated",
+                    text: `${t("swal.2")}`,
                     icon: "success",
                     timer: 1500,
                   });

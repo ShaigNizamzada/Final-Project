@@ -326,5 +326,14 @@
     "15": "Foto URL",
     "16": "Açıqlama",
     "17": "Bir Rəy Yazın..."
+  },
+  "swal": {
+    "0": "Məhsul Əlavə Olundu.",
+    "1": "Məhsul Silindi.",
+    "2": "Səbət yeniləndi.",
+    "3": "Kupon tətbiq edildi.",
+    "4": "Kupon mövcud deyil!",
+    "5":"Zəhmət olmasa xanaları doldurun!",
+    "6":"Alış-verişiniz uğurla tamamlandı."
   }
 }

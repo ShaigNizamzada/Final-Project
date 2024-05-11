@@ -18,14 +18,14 @@ const Checkout = () => {
     if (couponValue === "Hello20") {
       swal({
         title: "",
-        text: "Coupon has been applied",
+        text: `${t("swal.3")}`,
         icon: "success",
         timer: 1500,
       });
     } else {
       swal({
         title: "",
-        text: "Coupon has not been found",
+        text: `${t("swal.4")}`,
         icon: "error",
         timer: 1500,
       });
@@ -48,14 +48,14 @@ const Checkout = () => {
     if ((!name, !lastName, !phone, !email, !city, !street, !post)) {
       swal({
         title: "",
-        text: "Please fill the inputs",
+        text: `${t("swal.5")}`,
         icon: "error",
         timer: 1500,
       });
     } else {
       swal({
         title: "",
-        text: "Your shopping has been successfully done",
+        text: `${t("swal.6")}`,
         icon: "success",
         timer: 1500,
       });
@@ -219,7 +219,7 @@ const Checkout = () => {
                                   removeItem(item.id);
                                   swal({
                                     title: "",
-                                    text: "Product Removed",
+                                    text: `${t("swal.1")}`,
                                     icon: "success",
                                     timer: 1500,
                                   });
