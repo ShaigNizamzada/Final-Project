@@ -35,7 +35,8 @@ const Checkout = () => {
     Aos.init();
   }, []);
   //   const [product] = useContext(ProductContext);
-  const { items, updateItemQuantity, removeItem, cartTotal } = useCart();
+  const { items, updateItemQuantity, removeItem, cartTotal, emptyCart } =
+    useCart();
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [phone, setPhone] = useState("");
@@ -59,6 +60,10 @@ const Checkout = () => {
         icon: "success",
         timer: 1500,
       });
+      setTimeout(() => {
+        window.location.assign("/thankyou");
+      }, 2000);
+      emptyCart();
     }
   };
   return (

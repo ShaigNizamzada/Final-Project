@@ -11,6 +11,15 @@ import { Select } from "antd";
 import i18n from "../i18n/i18next";
 import { useTranslation } from "react-i18next";
 const Header = () => {
+  const [collapsed, setCollapsed] = useState(true);
+
+  const handleToggle = () => {
+    setCollapsed(!collapsed);
+  };
+
+  const handleCloseLink = () => {
+    setCollapsed(true);
+  };
   const toggleLang = (lang) => {
     i18n.changeLanguage(lang);
   };
@@ -33,9 +42,9 @@ const Header = () => {
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
           <img
-            src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-logo-white.svg"
+            src="https://uix.store/intro/motta/images/logo.svg"
             alt=""
-            className="woodmart--logo"
+            className="woodmart--logo mb-1"
           />
         </NavLink>
         <button
@@ -46,33 +55,53 @@ const Header = () => {
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onClick={handleToggle}
         >
           <i class="fa-solid fa-bars hamburger-menu"></i>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div
+          className={`collapse navbar-collapse ${collapsed ? "" : "show"}`}
+          id="navbarSupportedContent"
+        >
           <ul className="navbar-nav ms-3 mb-2 mb-lg-0">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/">
+              <NavLink className="nav-link" to="/" onClick={handleCloseLink}>
                 {t("navbar.0")}
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/sale">
+              <NavLink
+                className="nav-link"
+                to="/sale"
+                onClick={handleCloseLink}
+              >
                 {t("navbar.1")}
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/about">
+              <NavLink
+                className="nav-link"
+                to="/about"
+                onClick={handleCloseLink}
+              >
                 {t("navbar.2")}
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contact">
+              <NavLink
+                className="nav-link"
+                to="/contact"
+                onClick={handleCloseLink}
+              >
                 {t("navbar.3")}
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/blog">
+              <NavLink
+                className="nav-link"
+                to="/blog"
+                onClick={handleCloseLink}
+              >
                 {t("navbar.4")}
               </NavLink>
             </li>

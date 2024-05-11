@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 const VideoNfs = () => {
   const { t } = useTranslation();
   return (
-    <div className="main--video mx-3 my-3">
+    <div className="main--video ms-2 my-3">
       <div className="overlay"></div>
       <video src={videoBg} autoPlay loop muted></video>
       <div className="image--nfs">

@@ -335,5 +335,10 @@
     "4": "Kupon mövcud deyil!",
     "5":"Zəhmət olmasa xanaları doldurun!",
     "6":"Alış-verişiniz uğurla tamamlandı."
+  },
+  "thankyou":{
+    "0":"Sifarişiniz üçün təşəkkür edirik!",
+    "1":"Məhsullarınız uğurla icra olundu! Sifarişləriniz haqqında məlumat daxil olmaqla, qısa müddətdə ətraflı təsdiq e-poçtu alacaqsınız. Hər hansı bir sualınız varsa, əlaqə səhifəsindəki e-poçt vasitəsilə müştəri dəstək komandamızla əlaqə saxlamaqdan çekinmeyin.",
+    "2":"Tövsiyə olunan Məhsullar"
   }
 }
