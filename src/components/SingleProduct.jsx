@@ -1,13 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import slug from "react-slugify";
 import WishBtn from "./WishBtn/WishBtn";
-import { ProductContext } from "../context/ProductContext";
+
 import CardBtn from "./CardBtn/CardBtn";
 import Rating from "./Rating";
 
 const SingleProduct = ({ title, photo, rating, price, id, alldata }) => {
-  const [product] = useContext(ProductContext);
   return (
     <>
       <div className="card--section">

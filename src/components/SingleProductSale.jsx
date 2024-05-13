@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, /* useNavigate */ } from "react-router-dom";
+import { Link /* useNavigate */ } from "react-router-dom";
 import slug from "react-slugify";
 import WishBtn from "./WishBtn/WishBtn";
 // import { useCart } from "react-use-cart";

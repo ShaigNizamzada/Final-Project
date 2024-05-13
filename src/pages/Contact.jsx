@@ -164,7 +164,10 @@ const Contact = () => {
         <div className="location--section my-5">
           <div className="row">
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-              <div className="location--left--section p-5" data-aos="fade-right">
+              <div
+                className="location--left--section p-5"
+                data-aos="fade-right"
+              >
                 <h3 className="fw-bold">{t("contact.16")}</h3>
                 <p className="fs-4">{t("contact.17")}</p>
                 <h3 className="fw-bold">{t("contact.18")}</h3>
@@ -177,6 +180,7 @@ const Contact = () => {
               <div className="location--right--section" data-aos="fade-left">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d694.5648682158744!2d49.84137860785438!3d40.3766701248358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307da5b946a205%3A0x5caf7c58eaeba592!2sAleksandrit%20Lazer-%20Keratin%20Studio!5e0!3m2!1str!2saz!4v1714338626846!5m2!1str!2saz"
+                  title="Location map"
                   width={700}
                   height={450}
                   style={{ border: 0 }}

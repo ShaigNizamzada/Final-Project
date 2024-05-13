@@ -19,6 +19,7 @@ import { useTranslation } from "react-i18next";
 import VideoNfs from "../components/VideoNfs";
 import Sponsor from "../components/Sponsor";
 import NotebookAdv from "../components/NotebookAdv";
+import CounterUp from "../components/CounterUp";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -197,6 +198,7 @@ const Home = () => {
         </div>
       </div>{" "}
       <Sponsor />
+      <CounterUp />
     </>
   );
 };

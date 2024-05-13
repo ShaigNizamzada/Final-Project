@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
@@ -11,13 +11,6 @@ const Register = () => {
   const [againPassword, setAgainPassword] = useState("");
   const [showPassword, setshowPassword] = useState(false);
   const [showAgainPassword, setAgainshowPassword] = useState(false);
-  const adminData = {
-    name: "Admin",
-    tel: "123",
-    email: "admin@admin.com",
-    password: "123",
-    againpassword: "123",
-  };
   const registerSubmit = (e) => {
     e.preventDefault();
     if (!fullname || !tel || !email || !password || !againPassword) {
@@ -27,7 +20,7 @@ const Register = () => {
         icon: "error",
         timer: 1500,
       });
-    } else if (email == localStorage.getItem("email")) {
+    } else if (email === localStorage.getItem("email")) {
       swal({
         title: "",
         text: "This Email has been registered!",

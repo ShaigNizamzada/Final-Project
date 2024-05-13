@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ProductContext } from "../context/ProductContext";
 import SingleProductSale from "../components/SingleProductSale";
-import { Select, Slider } from "antd";
+import { Select } from "antd";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";

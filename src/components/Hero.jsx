@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
-import slug from "react-slugify";
 function CustomSlide(props) {
   useEffect(() => {
     Aos.init();

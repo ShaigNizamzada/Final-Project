@@ -41,6 +41,7 @@ html {
 @import "ScrollBar";
 @import "Dashboard";
 @import "ThankYou";
+@import "CounterOn";
 :root {
   --header-background-dark: #212121;
   --header-background-light: #e0dede;
@@ -82,7 +83,8 @@ html {
   .about-text,
   .sale--section--bottom--left,
   .checkout--top--section,
-  .checkout--bottom--right--section {
+  .checkout--bottom--right--section,
+  .counter--on--section {
     background-color: var(--header-background-dark) !important;
     color: var(--header-text-dark);
   }
@@ -140,7 +142,8 @@ html {
   .about-text,
   .sale--section--bottom--left,
   .checkout--top--section,
-  .checkout--bottom--right--section {
+  .checkout--bottom--right--section,
+  .counter--on--section {
     background-color: var(--footer-background-light) !important;
     color: var(--header-text-light);
   }
