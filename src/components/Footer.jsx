@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="col-lg-3 col-md-3 col-sm-6 col-12">
             <Link className=" ms-3">
               <img
-                src="https://woodmart.b-cdn.net/games/wp-content/uploads/sites/14/2023/05/wd-vgs-logo-white.svg"
+                src="https://uix.store/intro/motta/images/logo.svg"
                 alt=""
                 className="mb-3 woodmart--logo"
                 width={230}

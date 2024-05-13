@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ProductContext } from "../context/ProductContext";
 import SingleProductSale from "../components/SingleProductSale";
-import { Slider } from "antd";
+import { Select, Slider } from "antd";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
@@ -13,25 +13,37 @@ const Sale = () => {
   }, []);
   const [product] = useContext(ProductContext);
   const [category, setCategory] = useState("");
-
-  const [price, setPrice] = useState({
-    minPrice: 0,
-    maxPrice: 100,
-  });
-  const handleRange = (event) => {
-    setPrice({
-      ...price,
-      minPrice: event[0],
-      maxPrice: event[1],
-    });
+  const [state, setState] = useState(product);
+  const handleChange = (value) => {
+    console.log(`selected ${value}`);
+    if (value === "all") {
+      setState(product);
+      return;
+    } else if (value === "low-to-high") {
+      let copy = [...state];
+      const sortedProducts = copy.sort((a, b) => a.price - b.price);
+      setState(sortedProducts);
+    } else if (value === "high-to-low") {
+      let copy = [...state];
+      const sortedProducts = copy.sort((a, b) => b.price - a.price);
+      setState(sortedProducts);
+    } else if (value === "a-z") {
+      let copy = [...state];
+      const sortedProducts = copy.sort((a, b) =>
+        a.title.localeCompare(b.title)
+      );
+      setState(sortedProducts);
+    } else if (value === "z-a") {
+      let copy = [...state];
+      const sortedProducts = copy.sort((a, b) =>
+        b.title.localeCompare(a.title)
+      );
+      setState(sortedProducts);
+    }
   };
 
-  const filteredPrice = product.filter(
-    (item) => item.price >= price.minPrice && item.price <= price.maxPrice
-  );
-  const filteredProduct = filteredPrice.filter(
-    (item) => item.category === category
-  );
+  const filteredProduct = state.filter((item) => item.category === category);
+
   return (
     <>
       <div className="sale--section">
@@ -56,33 +68,9 @@ const Sale = () => {
         <div className="sale--section--bottom mt-5">
           <div className="row">
             <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 ">
-              <div
-                className="sale--section--bottom--left mt-4 p-4"
-                data-aos="fade-right"
-              >
-                <div className="price-slider">
-                  <h4>{t("sale.5")}</h4>
-                  <div className="d-flex justify-content-between">
-                    <span>£ {price.minPrice}</span>
-                    <span>£ {price.maxPrice}</span>
-                  </div>
-                  <Slider
-                    range
-                    max={100}
-                    step={15}
-                    defaultValue={[0, 100]}
-                    onChange={handleRange}
-                  />
-                  <p>
-                    {t("sale.5")}: <span className="fw-bold">£0 — £100</span>{" "}
-                  </p>
-                </div>
-                {/* {product.filter(
-                  (item) =>
-                    item.price >= price.minPrice && item.price <= price.maxPrice
-                )} */}
-                <hr className="mx-3" />
-                <h4>{t("sale.6")}</h4>
+              <div className="sale--section--bottom--left mt-2 p-4">
+                <h2 className="text-center">{t("sale.6")}</h2>
+                <hr />
                 <ul className="d-flex flex-column flex-wrap gap-2">
                   <li className="fs-4" onClick={() => setCategory("")}>
                     {t("sale.7")}
@@ -112,14 +100,44 @@ const Sale = () => {
               </div>
             </div>
             <div className="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
-              <div
-                className="row sale--section--right--left ms-1 mt-4"
-                data-aos="fade-left"
-              >
-                {/* <SingleProductSaleList /> */}
-
+              <div className="d-flex justify-content-between align-items center">
+                <h4>All Games</h4>
+                <div className="filter--section me-2">
+                  {" "}
+                  <Select
+                    defaultValue="All"
+                    style={{
+                      width: 120,
+                    }}
+                    onChange={handleChange}
+                    options={[
+                      {
+                        value: "all",
+                        label: "All",
+                      },
+                      {
+                        value: "a-z",
+                        label: "A-Z",
+                      },
+                      {
+                        value: "z-a",
+                        label: "Z-A",
+                      },
+                      {
+                        value: "low-to-high",
+                        label: "Low-to-High",
+                      },
+                      {
+                        value: "high-to-low",
+                        label: "High-to-Low",
+                      },
+                    ]}
+                  />
+                </div>
+              </div>
+              <div className="row sale--section--right--left ms-1 mt-4">
                 {!category
-                  ? filteredPrice.map((item) => (
+                  ? state.map((item) => (
                       <SingleProductSale
                         key={item.id}
                         title={item.title}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
@@ -11,13 +11,26 @@ const Register = () => {
   const [againPassword, setAgainPassword] = useState("");
   const [showPassword, setshowPassword] = useState(false);
   const [showAgainPassword, setAgainshowPassword] = useState(false);
+  const adminData = {
+    name: "Admin",
+    tel: "123",
+    email: "admin@admin.com",
+    password: "123",
+    againpassword: "123",
+  };
   const registerSubmit = (e) => {
     e.preventDefault();
-
     if (!fullname || !tel || !email || !password || !againPassword) {
       swal({
         title: "",
         text: "Please fill the inputs",
+        icon: "error",
+        timer: 1500,
+      });
+    } else if (email == localStorage.getItem("email")) {
+      swal({
+        title: "",
+        text: "This Email has been registered!",
         icon: "error",
         timer: 1500,
       });
@@ -62,6 +75,7 @@ const Register = () => {
               onChange={(e) => setFullname(e.target.value)}
               type="text"
               className="form-control"
+              name="fullname"
             />
           </div>
           <div className="mb-4">
@@ -72,6 +86,7 @@ const Register = () => {
               onChange={(e) => setTel(e.target.value)}
               type="tel"
               className="form-control"
+              name="tel"
             />
           </div>
           <div className="mb-4">
@@ -82,6 +97,7 @@ const Register = () => {
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               className="form-control"
+              name="email"
             />
           </div>
           <div className="mb-3">
@@ -94,6 +110,7 @@ const Register = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   type={showPassword ? "text" : "password"}
                   className="form-control p-2"
+                  name="password"
                 />
                 <div
                   className="show--password--icon"
@@ -119,6 +136,7 @@ const Register = () => {
                   onChange={(e) => setAgainPassword(e.target.value)}
                   type={showAgainPassword ? "text" : "password"}
                   className="form-control p-2"
+                  name="againpassword"
                 />
                 <div
                   className="show--password--icon"

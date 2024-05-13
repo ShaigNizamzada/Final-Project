@@ -295,10 +295,7 @@ const Checkout = () => {
                 <div className="subtotal--section d-flex align-items-center justify-content-between">
                   <h6>{t("checkout.18")}</h6>
                   <span className="product--price fs-5 fw-bold">
-                    £ &nbsp;
-                    {coupon === "Hello20"
-                      ? Math.round(Math.round(cartTotal) * 0.8)
-                      : Math.round(cartTotal)}
+                    £ {Math.round(cartTotal)}
                   </span>
                 </div>
                 <hr />{" "}
