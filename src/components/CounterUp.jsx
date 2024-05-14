@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import CountUp from "react-countup";
+import { useTranslation } from "react-i18next";
 import ScrollTrigger from "react-scroll-trigger";
 const CounterUp = () => {
+  const { t } = useTranslation();
   const [counterOn, setCounterOn] = useState(false);
   return (
     <ScrollTrigger
@@ -19,7 +21,7 @@ const CounterUp = () => {
                 )}
                 +
               </h1>
-              <p className="fs-3 text-center mt-3">Total Games Available</p>
+              <p className="fs-3 text-center mt-3">{t("counterup.0")}</p>
             </div>
           </div>
           <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
@@ -31,7 +33,7 @@ const CounterUp = () => {
                 )}
                 +
               </h1>
-              <p className="fs-3 text-center mt-3">Customers Served</p>
+              <p className="fs-3 text-center mt-3">{t("counterup.1")}</p>
             </div>
           </div>
           <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
@@ -43,7 +45,7 @@ const CounterUp = () => {
                 )}
                 +
               </h1>
-              <p className="fs-3 text-center mt-3">Positive Reviews</p>
+              <p className="fs-3 text-center mt-3">{t("counterup.2")}</p>
             </div>
           </div>
           <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
@@ -55,7 +57,7 @@ const CounterUp = () => {
                 )}
                 +
               </h1>
-              <p className="fs-3 text-center mt-3">Industry Partnerships</p>
+              <p className="fs-3 text-center mt-3">{t("counterup.3")}</p>
             </div>
           </div>
         </div>

@@ -336,9 +336,15 @@
     "5": "Please fill the inputs!",
     "6": "Your shopping has been successfully done."
   },
-  "thankyou":{
-    "0":"Thank you for your order!",
-    "1":"Your products has been successfully processed! You'll receive a  detailed confirmation email shortly, including information about your orders. If you have any questions, feel free to reach out to our customer support team at email in contact page.",
-    "2":"Recommended Products"
+  "thankyou": {
+    "0": "Thank you for your order!",
+    "1": "Your products has been successfully processed! You'll receive a  detailed confirmation email shortly, including information about your orders. If you have any questions, feel free to reach out to our customer support team at email in contact page.",
+    "2": "Recommended Products"
+  },
+  "counterup": {
+    "0": "Total Games Available",
+    "1": "Customers Served",
+    "2": "Positive Reviews",
+    "3": "Industry Partnerships"
   }
 }
