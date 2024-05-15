@@ -7,16 +7,16 @@ const Login = () => {
   const [showPassword, setshowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const adminData = {
-    adminFullname: "Admin",
-    adminEmail: "admin@admin.com",
-    adminPassword: "123",
-    adminTel: "123",
-  };
-  localStorage.setItem("fullname", adminData.adminFullname);
-  localStorage.setItem("email", adminData.adminEmail);
-  localStorage.setItem("tel", adminData.adminTel);
-  localStorage.setItem("password", adminData.adminPassword);
+  // const adminData = {
+  //   adminFullname: "Admin",
+  //   adminEmail: "admin@admin.com",
+  //   adminPassword: "123",
+  //   adminTel: "123",
+  // };
+  // localStorage.setItem("fullname", adminData.adminFullname);
+  // localStorage.setItem("email", adminData.adminEmail);
+  // localStorage.setItem("tel", adminData.adminTel);
+  // localStorage.setItem("password", adminData.adminPassword);
   const loginSubmit = (e) => {
     e.preventDefault();
     if (!email || !password) {

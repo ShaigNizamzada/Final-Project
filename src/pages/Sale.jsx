@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ProductContext } from "../context/ProductContext";
 import SingleProductSale from "../components/SingleProductSale";
-import { Select } from "antd";
+import { Select, Slider } from "antd";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
@@ -15,7 +15,7 @@ const Sale = () => {
   const [category, setCategory] = useState("");
   const [state, setState] = useState(product);
   const handleChange = (value) => {
-    console.log(`selected ${value}`);
+    // console.log(`selected ${value}`);
     if (value === "all") {
       setState(product);
       return;
@@ -41,8 +41,23 @@ const Sale = () => {
       setState(sortedProducts);
     }
   };
-
-  const filteredProduct = state.filter((item) => item.category === category);
+  const [price, setPrice] = useState({
+    minPrice: 0,
+    maxPrice: 100,
+  });
+  const handleRange = (event) => {
+    setPrice({
+      ...price,
+      minPrice: event[0],
+      maxPrice: event[1],
+    });
+  };
+  const filteredPrice = state.filter(
+    (item) => item.price >= price.minPrice && item.price <= price.maxPrice
+  );
+  const filteredProduct = filteredPrice.filter(
+    (item) => item.category === category
+  );
 
   return (
     <>
@@ -69,6 +84,23 @@ const Sale = () => {
           <div className="row">
             <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 ">
               <div className="sale--section--bottom--left mt-2 p-4">
+                <div className="price-slider">
+                  <h4>{t("sale.5")}</h4>
+                  <div className="d-flex justify-content-between">
+                    <span>£ {price.minPrice}</span>
+                    <span>£ {price.maxPrice}</span>
+                  </div>
+                  <Slider
+                    range
+                    max={100}
+                    step={15}
+                    defaultValue={[0, 100]}
+                    onChange={handleRange}
+                  />
+                  <p>
+                    {t("sale.5")}: <span className="fw-bold">£0 — £100</span>{" "}
+                  </p>
+                </div>
                 <h2 className="text-center">{t("sale.6")}</h2>
                 <hr />
                 <ul className="d-flex flex-column flex-wrap gap-2">
@@ -137,7 +169,7 @@ const Sale = () => {
               </div>
               <div className="row sale--section--right--left ms-1 mt-4">
                 {!category
-                  ? state.map((item) => (
+                  ? filteredPrice.map((item) => (
                       <SingleProductSale
                         key={item.id}
                         title={item.title}
