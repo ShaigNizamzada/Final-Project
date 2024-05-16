@@ -13,7 +13,7 @@ import { Provider } from "react-redux";
 import { WishlistProvider } from "react-use-wishlist";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./i18n/i18next";
-import configureStore from "./tools/store/configureStore";
+import configureStore from "./tools/store/ConfigureStore";
 // REDUX START
 const store = configureStore();
 store.subscribe(() => {
