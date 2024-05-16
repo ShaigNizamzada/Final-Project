@@ -25,12 +25,6 @@ const BlogForm = ({ comingblog, editdata }) => {
         img: img,
         desc: desc,
       });
-      // swal({
-      //   title: "",
-      //   text: `${t("swal.10")}`,
-      //   icon: "success",
-      //   timer: 1500,
-      // });
     }
   };
   return (

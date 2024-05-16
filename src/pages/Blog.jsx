@@ -15,16 +15,24 @@ const Blog = () => {
       <div className="container-fluid" data-aos="zoom-in-up">
         <div className="row">
           {blogs.map((item) => (
-            <div className="col-xl-4 col-lg-6 col-12 col-md-6 col-sm-12 g-3">
+            <div
+              key={item.id}
+              className="col-xl-4 col-lg-6 col-12 col-md-6 col-sm-12 g-3"
+            >
               <div className="blog--section">
                 <Link to={`/blog/${slugify(item.title)}`}>
                   <div className="blog--image--section">
-                    <img className="blog--image" src={item.img} alt="" style={{ objectFit: "contain" }} />
+                    <img
+                      className="blog--image"
+                      src={item.img}
+                      alt=""
+                      style={{ objectFit: "contain" }}
+                    />
                   </div>
                 </Link>
                 <div className="blog--top--section d-flex flex-column">
-                  <span className="text-center">{item.date_day}</span>
-                  <span className="text-center">{item.date_month}</span>
+                  <span className="text-center">16</span>
+                  <span className="text-center">May</span>
                 </div>
                 <div className="blog--body--section">
                   <h6 className="text-center blog--text text-light">Blog</h6>

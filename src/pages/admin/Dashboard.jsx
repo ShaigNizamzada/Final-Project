@@ -1,7 +1,10 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { removeBlog } from "../../tools/action/blogAction";
+import {
+  removeBlog,
+  removeBlogFromDatabase,
+} from "../../tools/action/blogAction";
 import { useTranslation } from "react-i18next";
 import slugify from "react-slugify";
 const Dashboard = () => {
@@ -41,7 +44,7 @@ const Dashboard = () => {
                   </td>
                   <td>
                     <button
-                      onClick={() => dispatch(removeBlog({ id: item.id }))}
+                      onClick={() => dispatch(removeBlogFromDatabase(item.id))}
                       className="btn btn-outline-danger"
                     >
                       X
