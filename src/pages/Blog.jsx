@@ -19,7 +19,7 @@ const Blog = () => {
               <div className="blog--section">
                 <Link to={`/blog/${slugify(item.title)}`}>
                   <div className="blog--image--section">
-                    <img className="blog--image" src={item.img} alt="" />
+                    <img className="blog--image" src={item.img} alt="" style={{ objectFit: "contain" }} />
                   </div>
                 </Link>
                 <div className="blog--top--section d-flex flex-column">

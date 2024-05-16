@@ -22,7 +22,7 @@ const Login = () => {
     if (!email || !password) {
       swal({
         title: "",
-        text: "Please fill the inputs",
+        text: `${t("swal.5")}`,
         icon: "error",
         timer: 1500,
       });
@@ -34,7 +34,7 @@ const Login = () => {
         localStorage.setItem("login", "true");
         swal({
           title: "",
-          text: "You have successfully been logged in",
+          text: `${t("swal.7")}`,
           icon: "success",
           timer: 1500,
         });
@@ -44,7 +44,7 @@ const Login = () => {
       } else {
         swal({
           title: "",
-          text: "Email or password is wrong",
+          text: `${t("swal.8")}`,
           icon: "error",
           timer: 1500,
         });

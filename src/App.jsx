@@ -28,6 +28,7 @@ import TopToBtn from "./components/TopToScroll/TopToBtn";
 import Checkout from "./pages/Checkout";
 import PreLoader from "./components/PreLoader";
 import ThankYou from "./pages/ThankYou";
+import EditBlog from "./pages/admin/update/EditBlog";
 const App = () => {
   const [loading, setLoading] = useState(false);
   // useEffect(() => {
@@ -75,6 +76,7 @@ const App = () => {
               ></Route>
               <Route path="/dashboard" element={<Dashboard />}></Route>
               <Route path="/dashboard/add" element={<AddBlog />}></Route>
+              <Route path="/dashboard/edit/:slug" element={<EditBlog />}></Route>
               <Route path="/blog/:slug" element={<BlogDetails />}></Route>
               <Route path="/checkout" element={<Checkout />}></Route>
               <Route path="/thankyou" element={<ThankYou />}></Route>

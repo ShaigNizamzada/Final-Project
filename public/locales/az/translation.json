@@ -334,11 +334,16 @@
     "3": "Kupon tətbiq edildi.",
     "4": "Kupon mövcud deyil!",
     "5": "Zəhmət olmasa xanaları doldurun!",
-    "6": "Alış-verişiniz uğurla tamamlandı."
+    "6": "Alış-verişiniz uğurla tamamlandı.",
+    "7": "Siz uğurla daxil oldunuz.",
+    "8": "E-poçt və ya şifrə səhvdir!",
+    "9": "Bu E-poçt qeydiyyatdan keçib!",
+    "10": "Siz qeydiyyatdan keçdiniz.",
+    "11": "Şifrələr fərqlidir!"
   },
   "thankyou": {
     "0": "Sifarişiniz üçün təşəkkür edirik!",
-    "1": "Məhsullarınız uğurla icra olundu! Sifarişləriniz haqqında məlumat daxil olmaqla, qısa müddətdə ətraflı təsdiq e-poçtu alacaqsınız. Hər hansı bir sualınız varsa, əlaqə səhifəsindəki e-poçt vasitəsilə müştəri dəstək komandamızla əlaqə saxlamaqdan çekinmeyin.",
+    "1": "Məhsullarınız uğurla icra olundu! Sifarişləriniz haqqında məlumat daxil olmaqla, qısa müddətdə ətraflı təsdiq e-poçtu alacaqsınız. Hər hansı bir sualınız varsa, əlaqə səhifəsindəki e-poçt vasitəsilə müştəri dəstək komandamızla əlaqə saxlamaqdan çəkinməyin.",
     "2": "Tövsiyə olunan Məhsullar"
   },
   "counterup": {
@@ -346,5 +351,10 @@
     "1": "Müştəri Xidməti",
     "2": "Müsbət Rəy",
     "3": "Şirkət Partnyorları"
+  },
+  "sort": {
+    "0": "Hamısı",
+    "1": "Ucuzdan Bahaya",
+    "2": "Bahadan Ucuza"
   }
 }

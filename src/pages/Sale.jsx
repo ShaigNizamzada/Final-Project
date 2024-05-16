@@ -85,7 +85,7 @@ const Sale = () => {
             <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 ">
               <div className="sale--section--bottom--left mt-2 p-4">
                 <div className="price-slider">
-                  <h4>{t("sale.5")}</h4>
+                  <h3>{t("sale.5")}</h3>
                   <div className="d-flex justify-content-between">
                     <span>£ {price.minPrice}</span>
                     <span>£ {price.maxPrice}</span>
@@ -101,7 +101,7 @@ const Sale = () => {
                     {t("sale.5")}: <span className="fw-bold">£0 — £100</span>{" "}
                   </p>
                 </div>
-                <h2 className="text-center">{t("sale.6")}</h2>
+                <h3>{t("sale.6")}</h3>
                 <hr />
                 <ul className="d-flex flex-column flex-wrap gap-2">
                   <li className="fs-4" onClick={() => setCategory("")}>
@@ -133,7 +133,7 @@ const Sale = () => {
             </div>
             <div className="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
               <div className="d-flex justify-content-between align-items center">
-                <h4>All Games</h4>
+                <h4>{t("sale.1")}</h4>
                 <div className="filter--section me-2">
                   {" "}
                   <Select
@@ -145,7 +145,7 @@ const Sale = () => {
                     options={[
                       {
                         value: "all",
-                        label: "All",
+                        label: `${t("sort.0")}`,
                       },
                       {
                         value: "a-z",
@@ -157,11 +157,11 @@ const Sale = () => {
                       },
                       {
                         value: "low-to-high",
-                        label: "Low-to-High",
+                        label: `${t("sort.1")}`,
                       },
                       {
                         value: "high-to-low",
-                        label: "High-to-Low",
+                        label: `${t("sort.2")}`,
                       },
                     ]}
                   />

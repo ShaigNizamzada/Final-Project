@@ -1,27 +1,36 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { addBlog } from "../tools/action/blogAction";
+// import { useDispatch } from "react-redux";
+// import { addBlog } from "../tools/action/blogAction";
 import { useTranslation } from "react-i18next";
-
-const BlogForm = () => {
+import swal from "sweetalert";
+const BlogForm = ({ comingblog, editdata }) => {
   const { t } = useTranslation();
-  const [img, setImg] = useState("");
-  const [title, setTitle] = useState("");
-  const [desc, setDesc] = useState("");
-  const dispatch = useDispatch();
+  const [img, setImg] = useState(editdata ? editdata.img : "");
+  const [title, setTitle] = useState(editdata ? editdata.title : "");
+  const [desc, setDesc] = useState(editdata ? editdata.desc : "");
+  // const dispatch = useDispatch();
 
   const formSubmit = (e) => {
     e.preventDefault();
     if (!title || !desc || !img) {
-      alert("please fill the input");
+      swal({
+        title: "",
+        text: `${t("swal.5")}`,
+        icon: "error",
+        timer: 1500,
+      });
     } else {
-      dispatch(
-        addBlog({
-          img: img,
-          title: title,
-          desc: desc,
-        })
-      );
+      comingblog({
+        title: title,
+        img: img,
+        desc: desc,
+      });
+      // swal({
+      //   title: "",
+      //   text: `${t("swal.10")}`,
+      //   icon: "success",
+      //   timer: 1500,
+      // });
     }
   };
   return (
@@ -32,6 +41,7 @@ const BlogForm = () => {
           type="text"
           onChange={(e) => setImg(e.target.value)}
           className="form-control"
+          value={img}
         />
       </div>
       <div className="mb-3">
@@ -40,6 +50,7 @@ const BlogForm = () => {
           type="text"
           className="form-control"
           onChange={(e) => setTitle(e.target.value)}
+          value={title}
         />
       </div>
       <div className="mb-3">
@@ -49,13 +60,13 @@ const BlogForm = () => {
             onChange={(e) => setDesc(e.target.value)}
             class="form-control"
             placeholder={t("account.17")}
-
             style={{ height: 300 }}
+            value={desc}
           ></textarea>
         </div>
       </div>
       <button type="submit" className="button">
-      {t("account.14")}
+        {editdata ? t("account.12") : t("account.14")}
       </button>
     </form>
   );

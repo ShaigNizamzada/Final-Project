@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { removeBlog } from "../../tools/action/blogAction";
 import { useTranslation } from "react-i18next";
+import slugify from "react-slugify";
 const Dashboard = () => {
   const { t } = useTranslation();
   const blogs = useSelector((p) => p);
@@ -12,6 +13,7 @@ const Dashboard = () => {
       <h1 className="text-center my-3">{t("account.2")}</h1>
       <div className="d-flex align-items-center justify-content-center my-4">
         <div className="col-9">
+          <hr />
           <table class="table--shopping--list mb-4">
             <thead>
               <tr>
@@ -31,9 +33,11 @@ const Dashboard = () => {
                   </td>
                   <td>{item.title}</td>
                   <td>
-                    <button className="btn btn-outline-warning">
-                      {t("account.12")}
-                    </button>
+                    <Link to={`/dashboard/edit/${slugify(item.title)}`}>
+                      <button className="btn btn-outline-warning">
+                        {t("account.12")}
+                      </button>
+                    </Link>
                   </td>
                   <td>
                     <button

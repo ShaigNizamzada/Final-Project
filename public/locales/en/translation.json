@@ -334,7 +334,12 @@
     "3": "Coupon has been applied.",
     "4": "Coupon has not been found!",
     "5": "Please fill the inputs!",
-    "6": "Your shopping has been successfully done."
+    "6": "Your shopping has been successfully done.",
+    "7": "You have successfully been logged in.",
+    "8": "Email or password is wrong!",
+    "9": "This Email has been registered!",
+    "10": "You have been registered.",
+    "11": "Passwords are different!"
   },
   "thankyou": {
     "0": "Thank you for your order!",
@@ -346,5 +351,10 @@
     "1": "Customers Served",
     "2": "Positive Reviews",
     "3": "Industry Partnerships"
+  },
+  "sort": {
+    "0": "All",
+    "1": "Low-to-High",
+    "2": "High-to-Low"
   }
 }

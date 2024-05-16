@@ -16,14 +16,14 @@ const Register = () => {
     if (!fullname || !tel || !email || !password || !againPassword) {
       swal({
         title: "",
-        text: "Please fill the inputs",
+        text: `${t("swal.5")}`,
         icon: "error",
         timer: 1500,
       });
     } else if (email === localStorage.getItem("email")) {
       swal({
         title: "",
-        text: "This Email has been registered!",
+        text: `${t("swal.9")}`,
         icon: "error",
         timer: 1500,
       });
@@ -38,14 +38,14 @@ const Register = () => {
         }, 2000);
         swal({
           title: "",
-          text: "You have been registered",
+          text: `${t("swal.10")}`,
           icon: "success",
           timer: 1500,
         });
       } else {
         swal({
           title: "",
-          text: "Passwords are different",
+          text: `${t("swal.11")}`,
           icon: "error",
           timer: 1500,
         });
