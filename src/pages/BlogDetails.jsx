@@ -2,7 +2,9 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import slugify from "react-slugify";
+import { useTranslation } from "react-i18next";
 const BlogDetails = () => {
+  const { t } = useTranslation();
   const { slug } = useParams();
   const blogs = useSelector((p) => p);
   const blogDetails = blogs.filter((p) => slugify(p.title) === slug);
@@ -12,14 +14,14 @@ const BlogDetails = () => {
       <div className="blog--details--section">
         <div className="blog--details--top--section">
           <h1 className="py-3 fw-bold ps-3">
-            Blog{" "}
+            {t("navbar.4")}
             <div className="d-flex mt-2">
               <Link className="link" to="/">
-                <h6>Home</h6>
+                <h6>{t("navbar.0")}</h6>
               </Link>
               <h6>&nbsp;/&nbsp;</h6>
               <Link className="link" to="/blog">
-                <h6>Blog</h6>
+                <h6>{t("navbar.4")}</h6>
               </Link>
             </div>
           </h1>
@@ -28,7 +30,9 @@ const BlogDetails = () => {
           <div className="row">
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <div className="blog--details--body--section">
-                <h6 className="text-center blog--text text-light">Blog</h6>
+                <h6 className="text-center blog--text text-light">
+                  {t("navbar.4")}
+                </h6>
                 <h4 className="display-5 text-center mb-3">
                   {blogDetails[0].title}
                 </h4>

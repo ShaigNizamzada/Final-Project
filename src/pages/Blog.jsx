@@ -4,14 +4,16 @@ import { Link } from "react-router-dom";
 import slugify from "react-slugify";
 import Aos from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import { useTranslation } from "react-i18next";
 const Blog = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     Aos.init();
   }, []);
   const blogs = useSelector((p) => p);
   return (
     <>
-      <h1 className="py-3 blog--top--title fw-bold ps-3">Blog</h1>
+      <h1 className="py-3 blog--top--title fw-bold ps-3">{t("navbar.4")}</h1>
       <div className="container-fluid" data-aos="zoom-in-up">
         <div className="row">
           {blogs.map((item) => (
@@ -35,7 +37,9 @@ const Blog = () => {
                   <span className="text-center">May</span>
                 </div>
                 <div className="blog--body--section">
-                  <h6 className="text-center blog--text text-light">Blog</h6>
+                  <h6 className="text-center blog--text text-light">
+                    {t("navbar.4")}
+                  </h6>
                   <Link
                     className="blog--item--title"
                     to={`/blog/${slugify(item.title)}`}

@@ -320,7 +320,7 @@
     "9": "Yeni Şifrə Təkrar",
     "10": "Foto",
     "11": "Başlıq",
-    "12": "Düzəliş",
+    "12": "Redaktə Et",
     "13": "Sil",
     "14": "Blog Əlavə Et",
     "15": "Foto URL",
@@ -339,7 +339,9 @@
     "8": "E-poçt və ya şifrə səhvdir!",
     "9": "Bu E-poçt qeydiyyatdan keçib!",
     "10": "Siz qeydiyyatdan keçdiniz.",
-    "11": "Şifrələr fərqlidir!"
+    "11": "Şifrələr fərqlidir!",
+    "12": "Bloq Əlavə Olundu",
+    "13": "Bloq Redaktə Olundu"
   },
   "thankyou": {
     "0": "Sifarişiniz üçün təşəkkür edirik!",
@@ -356,5 +358,10 @@
     "0": "Hamısı",
     "1": "Ucuzdan Bahaya",
     "2": "Bahadan Ucuza"
+  },
+  "blog": {
+    "0": "Bloq Əlavə Edin",
+    "1": "Bloqu Redaktə Edin",
+    "2": ""
   }
 }

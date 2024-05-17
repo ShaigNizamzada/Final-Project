@@ -339,7 +339,9 @@
     "8": "Email or password is wrong!",
     "9": "This Email has been registered!",
     "10": "You have been registered.",
-    "11": "Passwords are different!"
+    "11": "Passwords are different!",
+    "12": "Blog has been added",
+    "13": "Blog has been edited"
   },
   "thankyou": {
     "0": "Thank you for your order!",
@@ -356,5 +358,10 @@
     "0": "All",
     "1": "Low-to-High",
     "2": "High-to-Low"
+  },
+  "blog": {
+    "0": "Add Blog",
+    "1": "Edit Blog",
+    "2": ""
   }
 }
