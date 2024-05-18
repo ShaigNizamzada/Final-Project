@@ -9,6 +9,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
 const Cart = () => {
+  document.title = "Cart";
   const { t } = useTranslation();
   useEffect(() => {
     Aos.init();

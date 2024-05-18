@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const ChangePassword = () => {
+  document.title = "Change Password";
   const { t } = useTranslation();
   const [oldPassword, setOldpassword] = useState("");
   const [password, setPassword] = useState("");

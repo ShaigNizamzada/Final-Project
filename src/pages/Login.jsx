@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
 const Login = () => {
+  document.title = "Login";
   const { t } = useTranslation();
   const [showPassword, setshowPassword] = useState(false);
   const [email, setEmail] = useState("");

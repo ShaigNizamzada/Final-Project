@@ -1,5 +1,6 @@
 import React from "react";
 const ForgotPassword = () => {
+  document.title = "Forget Password";
   return (
     <div className="d-flex flex-column w-100 justify-content-center align-items-center forgot--password--section">
       <h1 className="my-4">Forgot Password?</h1>

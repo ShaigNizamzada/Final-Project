@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import swal from "sweetalert";
 
 const AddBlog = () => {
+  document.title="Add Blog"
   const { t } = useTranslation();
   const dispatch = useDispatch();
 

@@ -9,6 +9,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
 const Checkout = () => {
+  document.title = "Checkout";
   const { t } = useTranslation();
   const [couponValue, setCouponValue] = useState(0);
   const [coupon, setCoupon] = useState("");

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const Account = () => {
+  document.title = "Account";
   const { t } = useTranslation();
   return (
     <div className="d-flex flex-column w-100 justify-content-center align-items-center my-profile">

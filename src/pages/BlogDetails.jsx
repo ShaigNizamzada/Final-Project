@@ -9,6 +9,7 @@ const BlogDetails = () => {
   const blogs = useSelector((p) => p);
   const blogDetails = blogs.filter((p) => slugify(p.title) === slug);
   console.log(blogDetails);
+  document.title = `${blogDetails[0].title}`;
   return (
     <>
       <div className="blog--details--section">

@@ -4,6 +4,7 @@ import SingleProductSale from "../components/SingleProductSale";
 import { useTranslation } from "react-i18next";
 
 const OrderDone = () => {
+  document.title = "Thank You";
   const { t } = useTranslation();
   const [product] = useContext(ProductContext);
   return (

@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
 const Register = () => {
+  document.title = "Register";
   const { t } = useTranslation();
   const [fullname, setFullname] = useState("");
   const [tel, setTel] = useState("");

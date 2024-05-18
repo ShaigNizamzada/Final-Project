@@ -22,6 +22,7 @@ import NotebookAdv from "../components/NotebookAdv";
 import CounterUp from "../components/CounterUp";
 
 const Home = () => {
+  document.title = "Home";
   const { t } = useTranslation();
   const blogs = useSelector((p) => p);
   useEffect(() => {
@@ -163,8 +164,8 @@ const Home = () => {
                   </div>
                 </Link>
                 <div className="blog--top--section d-flex flex-column">
-                  <span className="text-center">{item.date_day}</span>
-                  <span className="text-center">{item.date_month}</span>
+                  <span className="text-center">16</span>
+                  <span className="text-center">May</span>
                 </div>
                 <div className="blog--body--section">
                   <h6 className="text-center blog--text text-light">Blog</h6>

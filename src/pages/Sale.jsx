@@ -7,6 +7,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
 const Sale = () => {
+  document.title = "Sale";
   const { t } = useTranslation();
   useEffect(() => {
     Aos.init();

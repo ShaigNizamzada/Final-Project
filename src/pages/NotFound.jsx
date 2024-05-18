@@ -1,6 +1,7 @@
 import React from "react";
 
 const NotFound = () => {
+  document.title = "Not Found";
   return (
     <div className="container notFound">
       {/* <iframe src="https://lottie.host/embed/8c60d954-6500-4b3e-9841-114523ebe603/HBVJL0T8Ia.json"></iframe> */}

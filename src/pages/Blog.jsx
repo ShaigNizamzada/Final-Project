@@ -6,6 +6,7 @@ import Aos from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { useTranslation } from "react-i18next";
 const Blog = () => {
+  document.title = "Blog";
   const { t } = useTranslation();
   useEffect(() => {
     Aos.init();

@@ -8,6 +8,7 @@ import {
 import { useTranslation } from "react-i18next";
 import slugify from "react-slugify";
 const Dashboard = () => {
+  document.title="Dashboard"
   const { t } = useTranslation();
   const blogs = useSelector((p) => p);
   const dispatch = useDispatch();

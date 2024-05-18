@@ -6,6 +6,7 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 import swal from "sweetalert";
 import { useTranslation } from "react-i18next";
 const Contact = () => {
+  document.title = "Contact";
   const { t } = useTranslation();
   useEffect(() => {
     Aos.init();

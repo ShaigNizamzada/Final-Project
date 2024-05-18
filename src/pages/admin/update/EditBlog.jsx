@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import swal from "sweetalert";
 
 const EditBlog = () => {
+  document.title="Edit Blog"
   const { t } = useTranslation();
   const { slug } = useParams();
   const blogs = useSelector((p) => p);

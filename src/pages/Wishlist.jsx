@@ -4,6 +4,7 @@ import SingleProductSale from "../components/SingleProductSale";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 const Wishlist = () => {
+  document.title = "Wishlist";
   const { t } = useTranslation();
   const { items, isWishlistEmpty } = useWishlist();
   return isWishlistEmpty ? (
@@ -17,7 +18,7 @@ const Wishlist = () => {
       </div>
       <div className="d-flex justify-content-center mt-5">
         <Link to="/sale" className="button">
-        {t("wishlist.1")}
+          {t("wishlist.1")}
         </Link>
       </div>
     </>

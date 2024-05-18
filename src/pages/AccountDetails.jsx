@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 const AccountDetails = () => {
+  document.title = "Account Details";
   const { t } = useTranslation();
   const [fullname, setFullname] = useState(localStorage.getItem("fullname"));
   const [tel, setTel] = useState(localStorage.getItem("tel"));

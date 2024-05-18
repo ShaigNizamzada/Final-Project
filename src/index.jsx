@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./assets/sass/style.scss";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -14,6 +14,7 @@ import { WishlistProvider } from "react-use-wishlist";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./i18n/i18next";
 import configureStore from "./tools/store/ConfigureStore";
+import PreLoader from "./components/PreLoader";
 // REDUX START
 const store = configureStore();
 
@@ -31,7 +32,7 @@ const result = (
   </ProductProvider>
 );
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById("root"));
+ReactDOM.render( <PreLoader />, document.getElementById("root"));
 
 store.dispatch(getBlogsFromDatabase()).then(() => {
   ReactDOM.render(result, document.getElementById("root"));
