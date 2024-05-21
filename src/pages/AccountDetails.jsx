@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 const AccountDetails = () => {
   document.title = "Account Details";
+  let activeUser = localStorage.getItem("activeUser");
+  let activeUserParse = JSON.parse(activeUser);
   const { t } = useTranslation();
   const [fullname, setFullname] = useState(localStorage.getItem("fullname"));
   const [tel, setTel] = useState(localStorage.getItem("tel"));
@@ -27,7 +29,7 @@ const AccountDetails = () => {
           <form className="mt-4">
             <div className="mb-4">
               <input
-                value={fullname}
+                value={activeUserParse.fullname}
                 onChange={(e) => setFullname(e.target.value)}
                 type="text"
                 className="form-control p-2"
@@ -37,7 +39,7 @@ const AccountDetails = () => {
             </div>
             <div className="mb-4">
               <input
-                value={tel}
+                value={activeUserParse.tel}
                 onChange={(e) => setTel(e.target.value)}
                 type="tel"
                 className="form-control p-2"
@@ -47,7 +49,7 @@ const AccountDetails = () => {
             </div>
             <div className="mb-4">
               <input
-                value={email}
+                value={activeUserParse.email}
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 className="form-control p-2"

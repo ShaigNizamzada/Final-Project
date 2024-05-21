@@ -25,7 +25,7 @@ const ProductDetails = () => {
     (item) => slug(item.title.toString()) === url
   );
   const randomNumber = Math.floor(Math.random() * 35);
-  document.title = `${detailProduct[0].title}`;
+  // document.title = `${detailProduct[0].title}`;
   return (
     <>
       {product.length === 0 ? (

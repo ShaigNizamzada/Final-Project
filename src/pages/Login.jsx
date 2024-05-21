@@ -8,19 +8,30 @@ const Login = () => {
   const [showPassword, setshowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const adminData = {
-  //   adminFullname: "Admin",
-  //   adminEmail: "admin@admin.com",
-  //   adminPassword: "123",
-  //   adminTel: "123",
-  // };
-  // localStorage.setItem("fullname", adminData.adminFullname);
-  // localStorage.setItem("email", adminData.adminEmail);
-  // localStorage.setItem("tel", adminData.adminTel);
-  // localStorage.setItem("password", adminData.adminPassword);
+  const adminData = {
+    name: "Admin",
+    email: "admin@admin.com",
+    password: "123",
+    tel: "123",
+  };
+
   const loginSubmit = (e) => {
     e.preventDefault();
-    if (!email || !password) {
+    const registeredUsers = JSON.parse(
+      localStorage.getItem("registeredUsers") || []
+    );
+    const user = registeredUsers.find(
+      (u) => u.email === email && u.password === password
+    );
+    if (user) {
+      localStorage.setItem("login", true);
+      localStorage.setItem("activeUser", JSON.stringify(user));
+      window.location.assign("/");
+    } else if (adminData.email === email && adminData.password === password) {
+      localStorage.setItem("email", "admin@admin.com");
+      localStorage.setItem("password", "123");
+      window.location.assign("/");
+    } else if (!email || !password) {
       swal({
         title: "",
         text: `${t("swal.5")}`,
@@ -28,28 +39,12 @@ const Login = () => {
         timer: 1500,
       });
     } else {
-      if (
-        email === localStorage.getItem("email") &&
-        password === localStorage.getItem("password")
-      ) {
-        localStorage.setItem("login", "true");
-        swal({
-          title: "",
-          text: `${t("swal.7")}`,
-          icon: "success",
-          timer: 1500,
-        });
-        setTimeout(() => {
-          window.location.assign("/");
-        }, 2000);
-      } else {
-        swal({
-          title: "",
-          text: `${t("swal.8")}`,
-          icon: "error",
-          timer: 1500,
-        });
-      }
+      swal({
+        title: "",
+        text: `${t("swal.8")}`,
+        icon: "error",
+        timer: 1500,
+      });
     }
   };
   return (

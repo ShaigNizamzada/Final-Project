@@ -341,7 +341,8 @@
     "10": "You have been registered.",
     "11": "Passwords are different!",
     "12": "Blog has been added",
-    "13": "Blog has been edited"
+    "13": "Blog has been edited",
+    "14": "This email is existing!"
   },
   "thankyou": {
     "0": "Thank you for your order!",

@@ -3,46 +3,65 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
 const Register = () => {
-  document.title = "Register";
   const { t } = useTranslation();
-  const [fullname, setFullname] = useState("");
-  const [tel, setTel] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [againPassword, setAgainPassword] = useState("");
+  document.title = "Register";
+  const [user, setUser] = useState({
+    fullname: "",
+    tel: "",
+    email: "",
+    password: "",
+    againPassword: "",
+  });
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
   const [showPassword, setshowPassword] = useState(false);
   const [showAgainPassword, setAgainshowPassword] = useState(false);
   const registerSubmit = (e) => {
     e.preventDefault();
-    if (!fullname || !tel || !email || !password || !againPassword) {
+    if (
+      !user.fullname ||
+      !user.tel ||
+      !user.email ||
+      !user.password ||
+      !user.againPassword
+    ) {
       swal({
         title: "",
         text: `${t("swal.5")}`,
         icon: "error",
         timer: 1500,
       });
-    } else if (email === localStorage.getItem("email")) {
-      swal({
-        title: "",
-        text: `${t("swal.9")}`,
-        icon: "error",
-        timer: 1500,
-      });
     } else {
-      if (password === againPassword) {
-        localStorage.setItem("fullname", fullname);
-        localStorage.setItem("email", email);
-        localStorage.setItem("tel", tel);
-        localStorage.setItem("password", password);
-        setTimeout(() => {
-          window.location.assign("/login");
-        }, 2000);
-        swal({
-          title: "",
-          text: `${t("swal.10")}`,
-          icon: "success",
-          timer: 1500,
-        });
+      if (user.password === user.againPassword) {
+        const registeredUsers =
+          JSON.parse(localStorage.getItem("registeredUsers")) || [];
+        const existingUser = registeredUsers.find(
+          (u) => u.email === user.email
+        );
+        if (existingUser) {
+          swal({
+            title: "",
+            text: `${t("swal.14")}`,
+            icon: "error",
+            timer: 1500,
+          });
+        } else {
+          registeredUsers.push(user);
+          localStorage.setItem(
+            "registeredUsers",
+            JSON.stringify(registeredUsers)
+          );
+          setTimeout(() => {
+            window.location.assign("/login");
+          }, 2000);
+          swal({
+            title: "",
+            text: `${t("swal.10")}`,
+            icon: "success",
+            timer: 1500,
+          });
+        }
       } else {
         swal({
           title: "",
@@ -66,7 +85,7 @@ const Register = () => {
               {t("register.1")} <span className="text-danger">*</span>
             </label>
             <input
-              onChange={(e) => setFullname(e.target.value)}
+              onChange={handleChange}
               type="text"
               className="form-control"
               name="fullname"
@@ -77,7 +96,7 @@ const Register = () => {
               {t("register.2")} <span className="text-danger">*</span>
             </label>
             <input
-              onChange={(e) => setTel(e.target.value)}
+              onChange={handleChange}
               type="tel"
               className="form-control"
               name="tel"
@@ -88,7 +107,7 @@ const Register = () => {
               {t("register.3")} <span className="text-danger">*</span>
             </label>
             <input
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleChange}
               type="email"
               className="form-control"
               name="email"
@@ -101,7 +120,7 @@ const Register = () => {
             <div className="password--section">
               <div className="password--input--section">
                 <input
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={handleChange}
                   type={showPassword ? "text" : "password"}
                   className="form-control p-2"
                   name="password"
@@ -127,10 +146,10 @@ const Register = () => {
             <div className="password--section">
               <div className="password--input--section">
                 <input
-                  onChange={(e) => setAgainPassword(e.target.value)}
+                  onChange={handleChange}
                   type={showAgainPassword ? "text" : "password"}
                   className="form-control p-2"
-                  name="againpassword"
+                  name="againPassword"
                 />
                 <div
                   className="show--password--icon"

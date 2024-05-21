@@ -11,6 +11,8 @@ import { Select } from "antd";
 import i18n from "../i18n/i18next";
 import { useTranslation } from "react-i18next";
 const Header = () => {
+  let activeUser = localStorage.getItem("activeUser");
+  let activeUserParse = JSON.parse(activeUser);
   const [collapsed, setCollapsed] = useState(true);
 
   const handleToggle = () => {
@@ -38,7 +40,7 @@ const Header = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <nav className="navbar navbar-expand-lg py-4">
+    <nav className="navbar navbar-expand-lg py-4 ">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
           <img
@@ -199,7 +201,7 @@ const Header = () => {
                 <div>
                   <NavLink to="/account" className="my-profile">
                     <i class="fa-regular fa-user me-2"></i>
-                    {localStorage.getItem("fullname")}
+                    {activeUserParse.fullname}
                   </NavLink>
                 </div>
               ) : (
@@ -251,6 +253,7 @@ const Header = () => {
               </div>
             </div>
             <Select
+              className="language--change"
               defaultValue="en"
               style={{
                 width: 60,

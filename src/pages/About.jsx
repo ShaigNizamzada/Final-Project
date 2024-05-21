@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Responsive_AboutUs from "../components/Responsive_AboutUs";
+import ResponsiveAboutUs from "../components/Responsive_AboutUs";
 import AccordionEn from "../components/AccordionEn";
 import AccordionAz from "../components/AccordionAz";
 import Aos from "aos";
@@ -23,7 +23,7 @@ const About = () => {
           </div>
         </div>
         <div className="carousel--section" data-aos="fade-up">
-          <Responsive_AboutUs></Responsive_AboutUs>
+          <ResponsiveAboutUs />
         </div>
         <div className="row my-5 bottom--section">
           <div className="col-xl-5 col-lg-5 col-sm-12 col-12">

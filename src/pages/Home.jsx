@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-import Responsive_categories from "../components/Responsive_categories";
-import Responsive_TopSellers from "../components/Responsive_TopSellers";
-import Responsive_Hero from "../components/Responsive_Hero";
+import ResponsiveCategories from "../components/Responsive_categories";
+import ResponsiveTopSellers from "../components/Responsive_TopSellers";
+import ResponsiveHero from "../components/Responsive_Hero";
 import Hero from "../components/Hero";
 import { ProductContext } from "../context/ProductContext";
 import SingleProduct2 from "../components/SingleProduct2";
@@ -95,11 +95,11 @@ const Home = () => {
         </div>
       </div>
       <div className="responsive--categories--section" data-aos="flip-up">
-        <Responsive_categories />
+        <ResponsiveCategories />
       </div>
-      <Responsive_TopSellers />
+      <ResponsiveTopSellers />
       <div className="responsive--hero--section" data-aos="zoom-in-down">
-        <Responsive_Hero />
+        <ResponsiveHero />
       </div>
       <div className="videoNfs-section">
         <VideoNfs />

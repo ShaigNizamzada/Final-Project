@@ -1,14 +1,11 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import {
-  removeBlog,
-  removeBlogFromDatabase,
-} from "../../tools/action/blogAction";
+import { removeBlogFromDatabase } from "../../tools/action/blogAction";
 import { useTranslation } from "react-i18next";
 import slugify from "react-slugify";
 const Dashboard = () => {
-  document.title="Dashboard"
+  document.title = "Dashboard";
   const { t } = useTranslation();
   const blogs = useSelector((p) => p);
   const dispatch = useDispatch();
