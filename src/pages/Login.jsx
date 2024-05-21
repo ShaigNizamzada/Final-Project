@@ -20,7 +20,7 @@ const Login = () => {
     const registeredUsers = JSON.parse(
       localStorage.getItem("registeredUsers") || []
     );
-    const user = registeredUsers.find(
+    const user = registeredUsers.find(  
       (u) => u.email === email && u.password === password
     );
     if (user) {

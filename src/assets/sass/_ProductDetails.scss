@@ -92,4 +92,26 @@
       }
     }
   }
+  .review--section {
+    .review--inner--section {
+      padding: 24px !important;
+      border: 1px solid rgb(223, 222, 222);
+      border-radius: 12px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      .thumbs--section {
+        .fa-thumbs-up {
+          cursor: pointer;
+        }
+        .fa-thumbs-down {
+          cursor: pointer;
+        }
+        .fa-thumbs-up:hover {
+          color: green;
+        }
+        .fa-thumbs-down:hover {
+          color: red;
+        }
+      }
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import slug from "react-slugify";
 import { ProductContext } from "../context/ProductContext";
@@ -11,12 +11,29 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useWishlist } from "react-use-wishlist";
 import { useTranslation } from "react-i18next";
-const ProductDetails = () => {
+import Rating from "../components/Rating";
+const ProductDetails = ({ rating }) => {
   const { t } = useTranslation();
   useEffect(() => {
     Aos.init();
   }, []);
   const [product] = useContext(ProductContext);
+  const [countLike, setCountLike] = useState(0);
+  const [countDislike, setCountDislike] = useState(0);
+  const handleLikeClick = (e) => {
+    setCountLike((prevValue) => (prevValue === 0 ? 1 : 0));
+  };
+  const handleDislikeClick = (e) => {
+    setCountDislike((prevValue) => (prevValue === 0 ? 1 : 0));
+  };
+  const [countLikeSecond, setCountLikeSecond] = useState(0);
+  const [countDislikeSecond, setCountDislikeSecond] = useState(0);
+  const handleLikeClickSecond = (e) => {
+    setCountLikeSecond((prevValue) => (prevValue === 0 ? 1 : 0));
+  };
+  const handleDislikeClickSecond = (e) => {
+    setCountDislikeSecond((prevValue) => (prevValue === 0 ? 1 : 0));
+  };
   const { addItem } = useCart();
   const { inWishlist } = useWishlist();
   const { url } = useParams();
@@ -24,7 +41,7 @@ const ProductDetails = () => {
   const detailProduct = product.filter(
     (item) => slug(item.title.toString()) === url
   );
-  const randomNumber = Math.floor(Math.random() * 35);
+  // const randomNumber = Math.floor(Math.random() * 35);
   // document.title = `${detailProduct[0].title}`;
   return (
     <>
@@ -67,8 +84,13 @@ const ProductDetails = () => {
                     </div>
                     <h1>{detailProduct[0].title}</h1>
                     <div className="rating--section d-flex align-items-center">
-                      <i class="fa-solid fa-star me-2"></i>
-                      <span className="fs-5">{detailProduct[0].rating}</span>
+                      <Rating
+                        value={detailProduct[0].rating}
+                        color={"#fcc419"}
+                      />
+                      <span className="fs-5">
+                        &nbsp; {detailProduct[0].rating}
+                      </span>
                       <span className="ms-2">({t("proDet.3")})</span>
                     </div>
                     <p className="my-5">{detailProduct[0].description_short}</p>
@@ -284,7 +306,7 @@ const ProductDetails = () => {
               >
                 <h4 className="px-2 pt-1">{t("proDet.25")}</h4>
                 <div className="row mt-5 ms-1">
-                  {product.slice(randomNumber, randomNumber + 8).map((item) => (
+                  {product.slice(10, 18).map((item) => (
                     <SingleProductSale
                       key={item.id}
                       title={item.title}
@@ -295,6 +317,74 @@ const ProductDetails = () => {
                       id={item.id}
                     />
                   ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="review--section m-5">
+            <h1 className="p-2 mb-5">Customer Reviews</h1>
+            <div className="row">
+              <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div className="review--first review--inner--section p-2">
+                  <div className="d-flex justify-content-between">
+                    <h5>Emma Norton</h5>
+                    <p>May 6,2024</p>
+                  </div>
+                  <Rating value={detailProduct[0].rating} color={"#fcc419"} />
+                  <p className="my-4">
+                    I’ve heard the argument that “lorem ipsum” is effective in
+                    wireframing or design because it helps people focus on the
+                    actual layout, or color scheme, or whatever. The entire
+                    structure of the page or app flow is FOR THE WORDS.
+                  </p>
+                  <div className="thumbs--section">
+                    <i
+                      onClick={handleLikeClick}
+                      class={`fa-regular fa-thumbs-up me-1 ${
+                        countLike === 1 ? "text-success" : ""
+                      }`}
+                    ></i>
+                    <span className="me-2">{countLike}</span>
+                    <i
+                      onClick={handleDislikeClick}
+                      class={`fa-regular fa-thumbs-down me-1  ${
+                        countDislike === 1 ? "text-danger" : ""
+                      }`}
+                    ></i>
+                    <span>{countDislike}</span>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div className="review--second review--inner--section p-2">
+                  <div className="d-flex justify-content-between">
+                    <h5>Oliwia Whitley</h5>
+                    <p>April 3,2024</p>
+                  </div>
+                  <Rating value={detailProduct[0].rating} color={"#fcc419"} />
+                  <p className="my-4">
+                    A seemingly elegant design can quickly begin to bloat with
+                    unexpected content or break under the weight of actual
+                    activity. Fake data can ensure a nice looking layout but it
+                    doesn’t reflect what a living, breathing application must
+                    endure. Real data does.
+                  </p>
+                  <div className="thumbs--section">
+                    <i
+                      onClick={handleLikeClickSecond}
+                      class={`fa-regular fa-thumbs-up me-1 ${
+                        countLikeSecond === 1 ? "text-success" : ""
+                      }`}
+                    ></i>
+                    <span className="me-2">{countLikeSecond}</span>
+                    <i
+                      onClick={handleDislikeClickSecond}
+                      class={`fa-regular fa-thumbs-down me-1  ${
+                        countDislikeSecond === 1 ? "text-danger" : ""
+                      }`}
+                    ></i>
+                    <span>{countDislikeSecond}</span>
+                  </div>
                 </div>
               </div>
             </div>
