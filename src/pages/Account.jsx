@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const Account = () => {
-  // let activeUser = localStorage.getItem("activeUser");
-  // let activeUserParse = JSON.parse(activeUser);
+  let activeUser = localStorage.getItem("activeUser");
+  let activeUserParse = JSON.parse(activeUser);
 
   document.title = "Account";
   const { t } = useTranslation();
@@ -20,10 +20,10 @@ const Account = () => {
         <Link to="/accountdetails" className="link">
           <button className="button mb-3">{t("account.1")}</button>
         </Link>
-        {localStorage.getItem("email") ? (
+        {activeUserParse.email === "admin@admin.com" ? (
           <Link to="/dashboard" className="link">
             <button className="button">{t("account.2")}</button>
-          </Link>
+          </Link> //dashboard admin login olanda gorsenir
         ) : (
           ""
         )}

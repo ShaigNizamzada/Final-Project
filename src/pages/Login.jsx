@@ -9,11 +9,11 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const adminData = {
-    name: "Admin",
+    fullname: "Admin",
     email: "admin@admin.com",
     password: "123",
     tel: "123",
-  };
+  }; // ADMIN DATAM. register olmadan burdan deyerleri goturur.
 
   const loginSubmit = (e) => {
     e.preventDefault();
@@ -28,8 +28,8 @@ const Login = () => {
       localStorage.setItem("activeUser", JSON.stringify(user));
       window.location.assign("/");
     } else if (adminData.email === email && adminData.password === password) {
-      localStorage.setItem("email", JSON.stringify(adminData.email));
-      localStorage.setItem("password", JSON.stringify(adminData.email));
+      localStorage.setItem("activeUser", JSON.stringify(adminData));
+      localStorage.setItem("login", true);
       window.location.assign("/");
     } else if (!email || !password) {
       swal({

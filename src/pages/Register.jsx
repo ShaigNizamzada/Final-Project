@@ -11,7 +11,7 @@ const Register = () => {
     email: "",
     password: "",
     againPassword: "",
-  });
+  }); // inputdaki valuelari elde edirem.
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };

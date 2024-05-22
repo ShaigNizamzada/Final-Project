@@ -13,9 +13,6 @@ import { useTranslation } from "react-i18next";
 const Header = () => {
   let activeUser = localStorage.getItem("activeUser");
   let activeUserParse = JSON.parse(activeUser);
-  let admin = localStorage.getItem("email");
-  let adminParse = JSON.parse(admin);
-  console.log(adminParse);
   const [collapsed, setCollapsed] = useState(true);
 
   const handleToggle = () => {
@@ -200,19 +197,11 @@ const Header = () => {
             </div>
 
             <div className="header-user-section">
-              {localStorage.getItem("login") === "true" &&
-              localStorage.getItem("activeUser") ? (
+              {localStorage.getItem("login") === "true" ? (
                 <div>
                   <NavLink to="/account" className="my-profile">
                     <i class="fa-regular fa-user me-2"></i>
                     {activeUserParse.fullname}
-                  </NavLink>
-                </div>
-              ) : localStorage.getItem("email") ? (
-                <div>
-                  <NavLink to="/account" className="my-profile">
-                    <i class="fa-regular fa-user me-2"></i>
-                    Admin
                   </NavLink>
                 </div>
               ) : (
@@ -223,36 +212,28 @@ const Header = () => {
               <NavLink
                 className="favorite mx-3 position-relative"
                 to={
-                  localStorage.getItem("login") === "true" ||
-                  adminParse === "admin@admin.com"
+                  localStorage.getItem("login") === "true"
                     ? "/wishlist"
                     : "/login"
                 }
               >
                 <i class="fa-regular fa-heart fs-5"></i>
                 <span className="position-absolute translate-middle badge rounded-pill bg-danger wishlist--icon">
-                  {localStorage.getItem("login") === "true" ||
-                  adminParse === "admin@admin.com"
+                  {localStorage.getItem("login") === "true"
                     ? totalWishlistItems
                     : 0}
                 </span>
               </NavLink>
               <Link
                 to={
-                  localStorage.getItem("login") === "true" ||
-                  adminParse === "admin@admin.com"
-                    ? "/cart"
-                    : "/login"
+                  localStorage.getItem("login") === "true" ? "/cart" : "/login"
                 }
                 type="button"
                 className="btn position-relative shopping-cart p-0 mx-2"
               >
                 <i class="bi bi-cart3 fs-5"></i>
                 <span className="position-absolute translate-middle badge rounded-pill bg-danger">
-                  {localStorage.getItem("login") === "true" ||
-                  adminParse === "admin@admin.com"
-                    ? totalItems
-                    : 0}
+                  {localStorage.getItem("login") === "true" ? totalItems : 0}
                 </span>
               </Link>
               <div

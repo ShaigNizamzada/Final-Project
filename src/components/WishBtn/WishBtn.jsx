@@ -4,17 +4,12 @@ import { Link } from "react-router-dom";
 import { useWishlist } from "react-use-wishlist";
 import swal from "sweetalert";
 const WishBtn = ({ product }) => {
-  let admin = localStorage.getItem("email");
-  let adminParse = JSON.parse(admin);
   const { t } = useTranslation();
   const { addWishlistItem, removeWishlistItem, inWishlist } = useWishlist();
   const toggleWish = (myProduct) => {
     if (inWishlist(myProduct.id)) {
       removeWishlistItem(myProduct.id);
-      if (
-        localStorage.getItem("login") === "true" ||
-        adminParse === "admin@admin.com"
-      ) {
+      if (localStorage.getItem("login") === "true") {
         swal({
           title: "",
           text: `${t("swal.1")}`,
@@ -24,10 +19,7 @@ const WishBtn = ({ product }) => {
       }
     } else {
       addWishlistItem(myProduct);
-      if (
-        localStorage.getItem("login") === "true" ||
-        adminParse === "admin@admin.com"
-      ) {
+      if (localStorage.getItem("login") === "true") {
         swal({
           title: "",
           text: `${t("swal.0")}`,
@@ -41,10 +33,7 @@ const WishBtn = ({ product }) => {
     <Link
       key={product.id}
       onClick={() => {
-        if (
-          localStorage.getItem("login") === "true" ||
-          adminParse === "admin@admin.com"
-        ) {
+        if (localStorage.getItem("login") === "true") {
           toggleWish(product);
         } else {
           window.location.assign("/login");

@@ -325,7 +325,7 @@ const ProductDetails = ({ rating }) => {
             <h1 className="p-2 mb-5">Customer Reviews</h1>
             <div className="row">
               <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div className="review--first review--inner--section p-2">
+                <div className="review--first review--inner--section p-2 mb-2">
                   <div className="d-flex justify-content-between">
                     <h5>Emma Norton</h5>
                     <p>May 6,2024</p>
@@ -335,7 +335,7 @@ const ProductDetails = ({ rating }) => {
                     I’ve heard the argument that “lorem ipsum” is effective in
                     wireframing or design because it helps people focus on the
                     actual layout, or color scheme, or whatever. The entire
-                    structure of the page or app flow is FOR THE WORDS.
+                    structure of the page or app flow is THE WORDS.
                   </p>
                   <div className="thumbs--section">
                     <i
@@ -356,7 +356,7 @@ const ProductDetails = ({ rating }) => {
                 </div>
               </div>
               <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div className="review--second review--inner--section p-2">
+                <div className="review--second review--inner--section p-2 mb-2">
                   <div className="d-flex justify-content-between">
                     <h5>Oliwia Whitley</h5>
                     <p>April 3,2024</p>
@@ -366,8 +366,7 @@ const ProductDetails = ({ rating }) => {
                     A seemingly elegant design can quickly begin to bloat with
                     unexpected content or break under the weight of actual
                     activity. Fake data can ensure a nice looking layout but it
-                    doesn’t reflect what a living, breathing application must
-                    endure. Real data does.
+                    doesn’t reflect what a living, Real data does.
                   </p>
                   <div className="thumbs--section">
                     <i
