@@ -5,12 +5,17 @@ import { useCart } from "react-use-cart";
 import swal from "sweetalert";
 
 const CardBtn = ({ product }) => {
+  let admin = localStorage.getItem("email");
+  let adminParse = JSON.parse(admin);
   const [t] = useTranslation();
   const { addItem, removeItem, inCart } = useCart();
   const toggleCart = (myProduct) => {
     if (inCart(myProduct.id)) {
       removeItem(myProduct.id);
-      if (localStorage.getItem("login") === "true") {
+      if (
+        localStorage.getItem("login") === "true" ||
+        adminParse === "admin@admin.com"
+      ) {
         swal({
           title: "",
           text: `${t("swal.1")}`,
@@ -20,7 +25,10 @@ const CardBtn = ({ product }) => {
       }
     } else {
       addItem(myProduct);
-      if (localStorage.getItem("login") === "true") {
+      if (
+        localStorage.getItem("login") === "true" ||
+        adminParse === "admin@admin.com"
+      ) {
         swal({
           title: "",
           text: `${t("swal.0")}`,
@@ -34,7 +42,10 @@ const CardBtn = ({ product }) => {
     <Link
       key={product.id}
       onClick={() => {
-        if (localStorage.getItem("login") === "true") {
+        if (
+          localStorage.getItem("login") === "true" ||
+          adminParse === "admin@admin.com"
+        ) {
           toggleCart(product);
         } else {
           window.location.assign("/login");

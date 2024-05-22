@@ -20,7 +20,7 @@ const Login = () => {
     const registeredUsers = JSON.parse(
       localStorage.getItem("registeredUsers") || []
     );
-    const user = registeredUsers.find(  
+    const user = registeredUsers.find(
       (u) => u.email === email && u.password === password
     );
     if (user) {
@@ -28,8 +28,8 @@ const Login = () => {
       localStorage.setItem("activeUser", JSON.stringify(user));
       window.location.assign("/");
     } else if (adminData.email === email && adminData.password === password) {
-      localStorage.setItem("email", "admin@admin.com");
-      localStorage.setItem("password", "123");
+      localStorage.setItem("email", JSON.stringify(adminData.email));
+      localStorage.setItem("password", JSON.stringify(adminData.email));
       window.location.assign("/");
     } else if (!email || !password) {
       swal({
