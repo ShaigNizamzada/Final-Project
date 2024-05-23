@@ -240,8 +240,9 @@ const ProductDetails = ({ rating }) => {
               </div>
               <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                 <iframe
+                  width="560"
                   height="315"
-                  src="https://www.youtube.com/embed/AWFaj4IQ4ro?si=0_-G8G5V-ortnk9E"
+                  src="https://www.youtube.com/embed/9ewiJJe_nYI?si=NJBcrKoaUJCQ6jz3"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
