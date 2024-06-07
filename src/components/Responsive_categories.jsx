@@ -56,7 +56,7 @@ function Responsive_categories() {
     ],
   };
   return (
-    <div className="slider-container my-5 container-fluid ms-2">
+    <div className="slider-container my-5 container-fluid mx-3">
       <Slider {...settings}>
         <div className="action--section category--section">
           <Link to="/sale">
