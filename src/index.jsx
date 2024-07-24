@@ -32,7 +32,7 @@ const result = (
   </ProductProvider>
 );
 
-ReactDOM.render( <PreLoader />, document.getElementById("root"));
+ReactDOM.render(<PreLoader />, document.getElementById("root"));
 
 store.dispatch(getBlogsFromDatabase()).then(() => {
   ReactDOM.render(result, document.getElementById("root"));
