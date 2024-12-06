@@ -1,5 +1,4 @@
 const products = [
-  // ---------------------------------------ACTION GAMES-------------------------------
   {
     id: 1,
     title: "Dead Island 2",
@@ -930,4 +929,4 @@ const products = [
     rating: "4.1",
   },
 ];
-// https://mocki.io/v1/d401f166-37b2-444d-8191-6c1e456be69d
+// https://mocki.io/v1/68bdd72c-a4b4-4145-b8e7-0f21be02f685
