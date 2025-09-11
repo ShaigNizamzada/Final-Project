@@ -1,15 +1,15 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
 import slugify from "react-slugify";
 import { useTranslation } from "react-i18next";
 const BlogDetails = () => {
   const { t } = useTranslation();
   const { slug } = useParams();
-  const blogs = useSelector((p) => p);
+  const blogs = []; // Removed Redux - replace with actual blog data source
   const blogDetails = blogs.filter((p) => slugify(p.title) === slug);
   console.log(blogDetails);
-  document.title = `${blogDetails[0].title}`;
+  document.title =
+    blogDetails.length > 0 ? `${blogDetails[0].title}` : "Blog Details";
   return (
     <>
       <div className="blog--details--section">

@@ -12,7 +12,6 @@ import Slider from "react-slick";
 import Aos from "aos";
 import "aos/dist/aos.css";
 // import Blog from "./Blog";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import slugify from "react-slugify";
 import { useTranslation } from "react-i18next";
@@ -24,7 +23,7 @@ import CounterUp from "../components/CounterUp";
 const Home = () => {
   document.title = "Home";
   const { t } = useTranslation();
-  const blogs = useSelector((p) => p);
+  const blogs = []; // Removed Redux - replace with actual blog data source
   useEffect(() => {
     Aos.init();
   }, []);
@@ -76,7 +75,7 @@ const Home = () => {
         </div>
         <div className="col-xl-3 discounted-games mt-4" data-aos="fade-left">
           <span className="me-3 fs-5">
-            <i class="fa-solid fa-percent"></i>
+            <i className="fa-solid fa-percent"></i>
           </span>
           <span className="fs-5 fw-bolder">{t("home.0")}</span>
           <div className="me-2 mt-3">
@@ -189,7 +188,7 @@ const Home = () => {
                     />
                     <span className="text-light mx-2">Mr.Mackay</span>
                     <Link to={`/blog/${slugify(item.title)}`}>
-                      <i class="fa-regular fa-comment text-light"></i>
+                      <i className="fa-regular fa-comment text-light"></i>
                     </Link>
                   </div>
                 </div>

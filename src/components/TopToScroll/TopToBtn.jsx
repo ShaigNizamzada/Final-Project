@@ -32,7 +32,7 @@ const TopToBtn = () => {
         display: visible ? "block" : "none",
       }}
     >
-      <i class="fa-solid fa-arrow-up top--to--scroll--icon"></i>
+      <i className="fa-solid fa-arrow-up top--to--scroll--icon"></i>
     </button>
   );
 };

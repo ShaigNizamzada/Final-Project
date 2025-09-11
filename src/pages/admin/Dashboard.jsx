@@ -1,14 +1,11 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { removeBlogFromDatabase } from "../../tools/action/blogAction";
 import { useTranslation } from "react-i18next";
 import slugify from "react-slugify";
 const Dashboard = () => {
   document.title = "Dashboard";
   const { t } = useTranslation();
-  const blogs = useSelector((p) => p);
-  const dispatch = useDispatch();
+
   return (
     <div className="container dashboard--section">
       <h1 className="text-center my-3">{t("account.2")}</h1>
@@ -26,7 +23,7 @@ const Dashboard = () => {
               </tr>
             </thead>
             <tbody>
-              {blogs.map((item, c) => (
+              {/* {blogs.map((item, c) => (
                 <tr key={c}>
                   <th scope="row">{c + 1}</th>
                   <td>
@@ -41,15 +38,10 @@ const Dashboard = () => {
                     </Link>
                   </td>
                   <td>
-                    <button
-                      onClick={() => dispatch(removeBlogFromDatabase(item.id))}
-                      className="btn btn-outline-danger"
-                    >
-                      X
-                    </button>
+                    <button className="btn btn-outline-danger">X</button>
                   </td>
                 </tr>
-              ))}
+              ))} */}
             </tbody>
           </table>
           <Link to="/dashboard/add" className="link">

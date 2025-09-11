@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-// import { useDispatch } from "react-redux";
-// import { addBlog } from "../tools/action/blogAction";
 import { useTranslation } from "react-i18next";
 import swal from "sweetalert";
 const BlogForm = ({ comingblog, editdata }) => {
@@ -8,7 +6,6 @@ const BlogForm = ({ comingblog, editdata }) => {
   const [img, setImg] = useState(editdata ? editdata.img : "");
   const [title, setTitle] = useState(editdata ? editdata.title : "");
   const [desc, setDesc] = useState(editdata ? editdata.desc : "");
-  // const dispatch = useDispatch();
 
   const formSubmit = (e) => {
     e.preventDefault();

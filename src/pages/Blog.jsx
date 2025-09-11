@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import slugify from "react-slugify";
 import Aos from "aos";
@@ -11,7 +10,7 @@ const Blog = () => {
   useEffect(() => {
     Aos.init();
   }, []);
-  const blogs = useSelector((p) => p);
+  const blogs = []; // Removed Redux - replace with actual blog data source
   return (
     <>
       <h1 className="py-3 blog--top--title fw-bold ps-3">{t("navbar.4")}</h1>
@@ -61,7 +60,7 @@ const Blog = () => {
                     />
                     <span className="text-light mx-2">Mr.Mackay</span>
                     <Link to={`/blog/${slugify(item.title)}`}>
-                      <i class="fa-regular fa-comment text-light"></i>
+                      <i className="fa-regular fa-comment text-light"></i>
                     </Link>
                   </div>
                 </div>
