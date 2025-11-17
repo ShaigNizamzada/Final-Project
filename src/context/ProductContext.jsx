@@ -6,7 +6,7 @@ export const ProductProvider = ({ children }) => {
   const [product, setProduct] = useState([]);
   useEffect(() => {
     axios
-      .get("https://mocki.io/v1/9162906b-cf7a-48ad-928d-60f96792861f")
+      .get("https://mocki.io/v1/def3861b-5312-446a-bb5e-f4a0181b0a69")
       .then((res) => setProduct(res.data));
   }, []);
   return (
